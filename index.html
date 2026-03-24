@@ -3,110 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio featuring Accessible Studio - The Accessible Video Editor">
-    <title>My Apps</title>
+    <meta name="description" content="Accessible Studio - An NVDA-accessible video editor, photo editor, and file converter.">
+    <title>Accessible Studio</title>
     <style>
         :root {
-            /* Using CSS variables for easier theme management */
-            --bg-color: #0f172a; 
-            --text-color: #f8fafc;
-            --accent-color: #3b82f6;
-            --hover-bg: #1e293b;
-            --border-radius: 12px;
-            --transition-speed: 0.3s;
+            --bg-color: #0d1117;
+            --surface-color: #161b22;
+            --text-color: #e6edf3;
+            --text-muted: #8b949e;
+            --accent-color: #2f81f7;
+            --accent-hover: #1f6feb;
+            --border-radius: 8px;
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            /* System fonts look cleaner and load instantly */
             font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
         }
 
-        main {
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 40px 20px;
         }
 
         header {
-            margin-bottom: 30px;
+            text-align: center;
+            margin-bottom: 50px;
         }
 
         h1 {
+            font-size: 3rem;
             margin: 0 0 10px 0;
-            font-size: 2rem;
+            color: #ffffff;
         }
 
-        p.subtitle {
-            color: #94a3b8;
-            margin: 0;
-            line-height: 1.5;
-        }
-
-        .link-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .app-link {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            text-decoration: none;
-            color: var(--text-color);
-            border: 2px solid var(--accent-color);
-            border-radius: var(--border-radius);
-            transition: background-color var(--transition-speed), transform var(--transition-speed);
-        }
-
-        .app-link span.app-name {
+        .tagline {
             font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: var(--border-radius);
+            font-size: 1.2rem;
             font-weight: bold;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .btn:hover, .btn:focus-visible {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            outline: 2px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        section {
+            background-color: var(--surface-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            border: 1px solid #30363d;
+        }
+
+        h2 {
+            margin-top: 0;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-box h3 {
             margin-bottom: 5px;
         }
 
-        .app-link span.app-desc {
+        .feature-box p {
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        code {
+            background-color: #21262d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #ff7b72;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
             font-size: 0.9rem;
-            color: #cbd5e1;
-        }
-
-        /* Improved focus and hover states for accessibility */
-        .app-link:hover, .app-link:focus-visible {
-            background-color: var(--hover-bg);
-            transform: translateY(-2px);
-            outline: none;
-        }
-
-        .app-link:active {
-            transform: translateY(0);
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
 
-    <main>
+    <div class="container">
         <header>
-            <h1>My Apps</h1>
-            <p class="subtitle">Tools built with accessibility in mind.</p>
+            <h1>Accessible Studio</h1>
+            <p class="tagline">The fully accessible, AI-powered media suite.</p>
+            <a href="https://github.com/demon-of-fire/accessable-studio/releases" class="btn" aria-label="Download the latest version for Windows">Download for Windows</a>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted);">No installation required. Just extract and run.</p>
         </header>
 
-        <nav class="link-container" aria-label="Applications">
-            <a href="#" class="app-link">
-                <span class="app-name">Accessible Studio</span>
-                <span class="app-desc">An Accessible Video Editor</span>
-            </a>
-        </nav>
-    </main>
+        <section id="about">
+            <h2>Built for Everyone</h2>
+            <p>Accessible Studio is an NVDA-accessible video editor, photo editor, and file converter. It's fully keyboard-navigable, screen-reader friendly, and can be entirely controlled via natural language commands. Simply plug in a free Google Gemini API key to unlock context-aware editing and real-time project control.</p>
+            <p><strong>Note:</strong> You'll need <a href="https://ffmpeg.org" style="color: var(--accent-color);">FFmpeg</a> installed on your system to use the video and audio features.</p>
+        </section>
+
+        <section id="features">
+            <h2>The Toolkit</h2>
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <h3>🎬 Video Editor</h3>
+                    <p>Timeline-based editing with multi-track support. Trim, split, add text overlays, and apply effects with ease.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>🖼️ Photo Editor</h3>
+                    <p>Canvas-based editing. Crop, rotate, apply filters, and seamlessly remove or blur backgrounds.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>🔄 File Converter</h3>
+                    <p>Instantly convert between major video, audio, image, and document formats.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>🤖 AI Assistant</h3>
+                    <p>Tell the editor what to do. "Trim the first 5 seconds" or "Make it cinematic" actually works.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-commands">
+            <h2>Just Tell It What To Do</h2>
+            <p>The built-in assistant bar lets you type what you want to happen. Press <code>Enter</code> and it's done.</p>
+            <ul>
+                <li><strong>Video:</strong> <em>"split at 10 seconds"</em>, <em>"set speed to 2x"</em>, <em>"remove audio from this clip"</em></li>
+                <li><strong>Color & Filters:</strong> <em>"make it cinematic"</em>, <em>"boost saturation"</em>, <em>"black and white"</em></li>
+                <li><strong>Photos:</strong> <em>"remove the person in the middle"</em>, <em>"describe the image"</em></li>
+                <li><strong>Smart Tools:</strong> <em>"auto color correct"</em>, <em>"close gaps"</em>, <em>"export as mp4"</em></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>Released under the MIT License. Built with Electron.</p>
+    </footer>
 
 </body>
 </html>
