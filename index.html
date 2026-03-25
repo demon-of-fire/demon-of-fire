@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Accessible Studio - An NVDA-accessible video editor, photo editor, and file converter.">
-    <title>Accessible Studio</title>
+    <title>Accessible Studio | Apps & Mods</title>
     <style>
         :root {
             --bg-color: #0d1117;
@@ -14,27 +14,134 @@
             --accent-color: #2f81f7;
             --accent-hover: #1f6feb;
             --border-radius: 8px;
+            /* Drastically improved line-height for readability */
+            --line-height: 1.8; 
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
             font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
+            line-height: var(--line-height);
+            letter-spacing: 0.3px;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Accessible Navigation Bar --- */
+        .site-header {
+            background-color: var(--surface-color);
+            border-bottom: 1px solid #30363d;
+            padding: 15px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             align-items: center;
         }
 
-        .container {
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* Hamburger Button */
+        .menu-toggle {
+            background: none;
+            border: 2px solid var(--text-muted);
+            border-radius: 6px;
+            color: var(--text-color);
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .menu-toggle:hover, .menu-toggle:focus-visible {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        /* Navigation Menu */
+        .main-nav {
+            width: 100%;
+            display: none;
+            margin-top: 15px;
+        }
+
+        .main-nav.is-open {
+            display: block;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .main-nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px;
+            border-radius: 6px;
+            display: block;
+            border: 1px solid transparent;
+        }
+
+        .main-nav a:hover, .main-nav a:focus-visible {
+            background-color: #21262d;
+            border-color: var(--text-muted);
+            outline: none;
+        }
+
+        .main-nav a[aria-current="page"] {
+            border-left: 4px solid var(--accent-color);
+            background-color: #1f242c;
+            font-weight: bold;
+        }
+
+        /* Responsive Nav for larger screens */
+        @media (min-width: 768px) {
+            .menu-toggle { display: none; }
+            .main-nav { 
+                display: block; 
+                width: auto; 
+                margin-top: 0;
+            }
+            .main-nav ul {
+                flex-direction: row;
+                gap: 20px;
+            }
+            .main-nav a[aria-current="page"] {
+                border-left: none;
+                border-bottom: 4px solid var(--accent-color);
+                background-color: transparent;
+            }
+        }
+
+        /* --- Main Content --- */
+        main {
+            flex: 1;
             width: 90%;
             max-width: 800px;
+            margin: 0 auto;
             padding: 40px 20px;
         }
 
-        header {
+        header.hero {
             text-align: center;
             margin-bottom: 50px;
         }
@@ -42,6 +149,7 @@
         h1 {
             font-size: 3rem;
             margin: 0 0 10px 0;
+            line-height: 1.2;
             color: #ffffff;
         }
 
@@ -85,91 +193,104 @@
             color: var(--accent-color);
         }
 
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .feature-box h3 {
-            margin-bottom: 5px;
-        }
-
-        .feature-box p {
-            margin: 0;
-            color: var(--text-muted);
-        }
-
-        code {
-            background-color: #21262d;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            color: #ff7b72;
-        }
-
-        footer {
+        /* --- Footer --- */
+        .site-footer {
+            background-color: var(--surface-color);
+            border-top: 1px solid #30363d;
+            padding: 30px 20px;
             text-align: center;
-            padding: 20px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
             margin-top: auto;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .footer-nav a {
+            color: var(--text-muted);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .footer-nav a:hover, .footer-nav a:focus-visible {
+            color: var(--text-color);
+            outline: 2px solid var(--accent-color);
+            outline-offset: 4px;
+        }
+
+        .copyright {
+            color: #6e7681;
+            font-size: 0.9rem;
+            margin: 0;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
+    <header class="site-header">
+        <a href="#" class="brand-name">My Apps</a>
+        
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
+            <span aria-hidden="true">☰</span> Menu
+        </button>
+
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="#apps" aria-current="page">Accessible Studio</a></li>
+                <li><a href="#mods">Game Mods (Coming Soon)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <header class="hero">
             <h1>Accessible Studio</h1>
             <p class="tagline">The fully accessible, AI-powered media suite.</p>
-            <a href="https://github.com/demon-of-fire/accessable-studio/releases" class="btn" aria-label="Download the latest version for Windows">Download for Windows</a>
-            <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted);">No installation required. Just extract and run.</p>
+            <a href="https://github.com/demon-of-fire/accessable-studio/releases" class="btn" aria-label="Download the latest version of Accessible Studio for Windows">Download for Windows</a>
+            <p style="margin-top: 15px; font-size: 0.95rem; color: var(--text-muted);">No installation required. Just extract and run.</p>
         </header>
 
         <section id="about">
             <h2>Built for Everyone</h2>
-            <p>Accessible Studio is an NVDA-accessible video editor, photo editor, and file converter. It's fully keyboard-navigable, screen-reader friendly, and can be entirely controlled via natural language commands. Simply plug in a free Google Gemini API key to unlock context-aware editing and real-time project control.</p>
-            <p><strong>Note:</strong> You'll need <a href="https://ffmpeg.org" style="color: var(--accent-color);">FFmpeg</a> installed on your system to use the video and audio features.</p>
+            <p>Accessible Studio is an NVDA-accessible video editor, photo editor, and file converter. It's fully keyboard-navigable, screen-reader friendly, and can be entirely controlled via natural language commands. Plug in a free Google Gemini API key to unlock context-aware editing and real-time project control.</p>
         </section>
 
-        <section id="features">
-            <h2>The Toolkit</h2>
-            <div class="feature-grid">
-                <div class="feature-box">
-                    <h3>🎬 Video Editor</h3>
-                    <p>Timeline-based editing with multi-track support. Trim, split, add text overlays, and apply effects with ease.</p>
-                </div>
-                <div class="feature-box">
-                    <h3>🖼️ Photo Editor</h3>
-                    <p>Canvas-based editing. Crop, rotate, apply filters, and seamlessly remove or blur backgrounds.</p>
-                </div>
-                <div class="feature-box">
-                    <h3>🔄 File Converter</h3>
-                    <p>Instantly convert between major video, audio, image, and document formats.</p>
-                </div>
-                <div class="feature-box">
-                    <h3>🤖 AI Assistant</h3>
-                    <p>Tell the editor what to do. "Trim the first 5 seconds" or "Make it cinematic" actually works.</p>
-                </div>
-            </div>
+        <section id="mods" style="border-style: dashed;">
+            <h2>Game Accessibility Mods</h2>
+            <p style="color: var(--text-muted);"><em>Mod library currently under construction. Check back later for accessibility enhancements for your favorite games.</em></p>
         </section>
+    </main>
 
-        <section id="ai-commands">
-            <h2>Just Tell It What To Do</h2>
-            <p>The built-in assistant bar lets you type what you want to happen. Press <code>Enter</code> and it's done.</p>
+    <footer class="site-footer">
+        <nav class="footer-nav" aria-label="Legal and Accessibility links">
             <ul>
-                <li><strong>Video:</strong> <em>"split at 10 seconds"</em>, <em>"set speed to 2x"</em>, <em>"remove audio from this clip"</em></li>
-                <li><strong>Color & Filters:</strong> <em>"make it cinematic"</em>, <em>"boost saturation"</em>, <em>"black and white"</em></li>
-                <li><strong>Photos:</strong> <em>"remove the person in the middle"</em>, <em>"describe the image"</em></li>
-                <li><strong>Smart Tools:</strong> <em>"auto color correct"</em>, <em>"close gaps"</em>, <em>"export as mp4"</em></li>
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+                <li><a href="#terms-of-service">Terms of Service</a></li>
+                <li><a href="#accessibility-statement">Accessibility Statement</a></li>
             </ul>
-        </section>
-    </div>
-
-    <footer>
-        <p>Released under the MIT License. Built with Electron.</p>
+        </nav>
+        <p class="copyright">© 2026 Accessible Studio. Released under the MIT License.</p>
     </footer>
 
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.getElementById('main-nav');
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle the ARIA state
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            
+            // Toggle the visual menu class
+            mainNav.classList.toggle('is-open');
+        });
+    </script>
 </body>
 </html>
