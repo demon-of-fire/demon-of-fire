@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Accessibility statement for the Demon of Fire website and applications." />
+  <title>Accessibility Statement – Demon of Fire</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        Demon of Fire
+      </a>
+
+      <button
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-controls="nav-links"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="game-mods.html">Game Mods</a></li>
+        <li><a href="misc-tools.html">Misc Tools</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <div class="container">
+
+      <header class="page-header" aria-labelledby="page-heading">
+        <span class="label" aria-hidden="true">Legal</span>
+        <h1 id="page-heading">Accessibility Statement</h1>
+        <p>Last updated: <time datetime="2024-01-01">January 2024</time></p>
+      </header>
+
+      <div class="prose" style="max-width: 72ch;">
+
+        <h2>Our Commitment</h2>
+        <p>
+          Demon of Fire is committed to ensuring that this website and all
+          published software are accessible to people with disabilities.
+          Accessibility is not an afterthought — it is a core design
+          requirement for every project.
+        </p>
+
+        <h2>Standards Conformance</h2>
+        <p>
+          This website aims to conform to the
+          <a href="https://www.w3.org/TR/WCAG21/" rel="external noopener">
+            Web Content Accessibility Guidelines (WCAG) 2.1
+          </a>
+          at Level AA. The following measures have been taken:
+        </p>
+        <ul>
+          <li>All pages include a skip-to-main-content link.</li>
+          <li>
+            All interactive elements have descriptive accessible names and
+            appropriate ARIA roles where needed.
+          </li>
+          <li>Keyboard navigation is fully supported across all pages.</li>
+          <li>
+            Focus indicators are clearly visible on all interactive elements.
+          </li>
+          <li>
+            Colour contrast ratios meet or exceed WCAG AA requirements for
+            both normal and large text.
+          </li>
+          <li>
+            All images and icons that convey meaning have alternative text;
+            decorative elements are hidden from assistive technology.
+          </li>
+          <li>
+            Page language is declared so screen readers use correct
+            pronunciation rules.
+          </li>
+          <li>The hamburger navigation menu is fully keyboard and screen-reader accessible.</li>
+        </ul>
+
+        <h2>Software Accessibility</h2>
+        <p>
+          Windows desktop applications published on this site are tested
+          against NVDA, JAWS, and Windows Narrator. All controls expose
+          accurate names, roles, and states via Windows UI Automation (UIA).
+          Each application ships with a detailed keyboard shortcut reference.
+        </p>
+
+        <h2>Known Limitations</h2>
+        <p>
+          This site is in active development. Some placeholder pages may not
+          yet meet the full WCAG 2.1 AA standard. Issues are being addressed
+          as the site matures. If you encounter a barrier, please report it
+          using the contact method below.
+        </p>
+
+        <h2>Feedback and Contact</h2>
+        <p>
+          If you experience any accessibility barrier on this website or in
+          any published software, please open an issue on the relevant GitHub
+          repository or contact the developer directly. Accessibility reports
+          are treated as high-priority issues.
+        </p>
+
+        <h2>Technical Approach</h2>
+        <p>
+          This website is built with plain HTML, CSS, and minimal JavaScript.
+          No third-party tracking scripts, no pop-ups that trap keyboard focus,
+          and no time-limited content that cannot be paused.
+        </p>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-brand">Demon of Fire</a>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="accessibility.html" aria-current="page">Accessibility Statement</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </nav>
+        <p class="footer-copy">
+          &copy; <span id="current-year">2024</span> Demon of Fire. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
