@@ -876,6 +876,29 @@ main {
   color: var(--color-text-subtle);
 }
 
+.footer-discord {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  background: #5865F2;
+  color: #fff;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+.footer-discord:hover {
+  background: #4752c4;
+  transform: translateY(-1px);
+}
+.footer-discord:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
 /* ── Responsive Helpers ── */
 @media (max-width: 480px) {
   :root { --gap: 1.25rem; }
