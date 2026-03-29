@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nova Voice Assistant – a Windows voice assistant powered by Google Gemini with full PC control and NVDA screen reader accessibility." />
+  <title>Nova Voice Assistant – Demon of Fire</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
 
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        Demon of Fire
+      </a>
+
+      <button
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-controls="nav-links"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../apps.html" aria-current="page">Apps</a></li>
+        <li><a href="../game-mods.html">Game Mods</a></li>
+        <li><a href="../misc-tools.html">Misc Tools</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <div class="container">
+
+      <!-- Back link -->
+      <a href="../apps.html" class="back-link">Back to Apps</a>
+
+      <!-- Project hero -->
+      <header class="project-hero" aria-labelledby="project-heading">
+        <div>
+          <h1 id="project-heading">Nova Voice Assistant</h1>
+          <span class="card-platform" style="font-size:0.85rem;">Windows</span>
+        </div>
+        <p style="font-size:1.05rem; color:var(--color-text-muted); max-width:65ch; margin-top:0.75rem;">
+          A Windows voice assistant powered by Google Gemini with full PC
+          control and NVDA screen reader accessibility.
+        </p>
+        <div class="project-meta" aria-label="Project metadata">
+          <span class="meta-badge">Windows</span>
+          <span class="meta-badge">Screen-Reader Compatible</span>
+          <span class="meta-badge">Voice Control</span>
+          <span class="meta-badge">Google Gemini</span>
+        </div>
+      </header>
+
+      <!-- Main two-column layout -->
+      <div class="project-body">
+
+        <!-- Left: project content -->
+        <article class="project-content" aria-labelledby="project-heading">
+
+          <h2>Features</h2>
+          <ul>
+            <li><strong>Voice Control</strong> — Talk to Nova to control your PC, search the web, manage files, and more</li>
+            <li><strong>Natural Language</strong> — Just say what you want: "close chrome", "play next song", "what's the score of the game"</li>
+            <li><strong>40+ Actions</strong> — Open/close apps, media controls, volume, brightness, file management, shell commands, web search, and more</li>
+            <li><strong>Follow-Up Mode</strong> — Keep talking back and forth without re-triggering the wake word</li>
+            <li><strong>Type Input</strong> — Ctrl+Shift+Y to type a message instead of speaking</li>
+            <li><strong>Quick Search</strong> — Answers questions, scores, weather by searching in the background (no browser opens)</li>
+            <li><strong>NVDA Accessible</strong> — Every UI element is screen reader compatible. Built for blind and low-vision users</li>
+            <li><strong>Dark/Light Mode</strong> — Fully themed UI with toggle in settings</li>
+            <li><strong>Neural TTS</strong> — Natural-sounding Microsoft Edge neural voices (not robotic SAPI5)</li>
+            <li><strong>Floating Orb</strong> — Minimizes to a small orb like Siri. Click to start listening. Customizable position</li>
+            <li><strong>Ollama Support</strong> — Use local AI models for free, private conversations</li>
+            <li><strong>System Tray</strong> — Runs quietly in the background</li>
+          </ul>
+
+          <h2>Keyboard Shortcuts</h2>
+          <div style="overflow-x:auto;">
+            <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+              <thead>
+                <tr style="border-bottom:2px solid var(--color-border);">
+                  <th style="text-align:left; padding:0.5rem 1rem 0.5rem 0;">Shortcut</th>
+                  <th style="text-align:left; padding:0.5rem 0;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+Shift+T</kbd></td><td style="padding:0.4rem 0;">Start/stop talking</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+Shift+M</kbd></td><td style="padding:0.4rem 0;">Mute/unmute</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+Shift+Y</kbd></td><td style="padding:0.4rem 0;">Type a message</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+Shift+Q</kbd></td><td style="padding:0.4rem 0;">Quit Nova</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>F2</kbd></td><td style="padding:0.4rem 0;">Talk (in Nova window)</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>F3</kbd></td><td style="padding:0.4rem 0;">Mute (in Nova window)</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>F4</kbd></td><td style="padding:0.4rem 0;">Settings (in Nova window)</td></tr>
+                <tr><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Escape</kbd></td><td style="padding:0.4rem 0;">Minimize to tray</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Wake Word</h2>
+          <p>
+            Say <strong>"Hey Nova"</strong> to activate hands-free.
+          </p>
+
+          <h2>Download</h2>
+          <p>
+            Download the latest <strong>Nova.exe</strong> from the
+            <a href="https://github.com/demon-of-fire/nova-voice-assistant/releases" rel="external noopener">
+              GitHub Releases page
+            </a>.
+            No Python or installation required — just run the executable.
+          </p>
+
+          <h2>Settings</h2>
+          <p>Open Settings (<kbd>F4</kbd>) to configure:</p>
+          <ul>
+            <li><strong>AI Model</strong> — Gemini 2.5 Flash (default), 2.5 Pro, 3.0 Preview, or Ollama models</li>
+            <li><strong>Permissions</strong> — Toggle what Nova can do (typing, app control, shell commands, etc.)</li>
+            <li><strong>Voice</strong> — 15 neural voices to choose from</li>
+            <li><strong>Speech Speed</strong> — Adjustable WPM</li>
+            <li><strong>STT Engine</strong> — Google (online), Sphinx (offline), or Whisper (offline)</li>
+            <li><strong>Follow-Up Mode</strong> — Keep conversation going after each response</li>
+            <li><strong>Confirm Actions</strong> — Ask before dangerous operations</li>
+            <li><strong>Dark/Light Mode</strong></li>
+            <li><strong>Orb Position</strong> — Bottom-right, bottom-left, top-right, top-left</li>
+          </ul>
+
+        </article>
+
+        <!-- Right: sidebar -->
+        <aside class="project-sidebar" aria-label="Project information">
+
+          <div class="sidebar-card">
+            <h3>Download</h3>
+            <ul class="sidebar-links" role="list">
+              <li>
+                <a href="https://github.com/demon-of-fire/nova-voice-assistant/releases" rel="external noopener" aria-label="Download Nova Voice Assistant from GitHub Releases">
+                  Download (.zip for Windows)
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/demon-of-fire/nova-voice-assistant" rel="external noopener" aria-label="View Nova Voice Assistant source code on GitHub">
+                  Source Code on GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Details</h3>
+            <ul class="sidebar-list" role="list">
+              <li>Platform: Windows 10/11</li>
+              <li>Language: Python</li>
+              <li>License: MIT</li>
+              <li>Status: Available</li>
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="../index.html" class="footer-brand">Demon of Fire</a>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="../accessibility.html">Accessibility Statement</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Service</a></li>
+          </ul>
+        </nav>
+        <p class="footer-copy">
+          &copy; <span id="current-year">2024</span> Demon of Fire. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
