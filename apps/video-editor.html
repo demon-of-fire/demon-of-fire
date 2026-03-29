@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Accessible Studio – an NVDA-accessible video editor, photo editor, and file converter for Windows by Demon of Fire." />
+  <title>Accessible Studio – Demon of Fire</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        Demon of Fire
+      </a>
+
+      <button
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-controls="nav-links"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../apps.html" aria-current="page">Apps</a></li>
+        <li><a href="../game-mods.html">Game Mods</a></li>
+        <li><a href="../misc-tools.html">Misc Tools</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <div class="container">
+
+      <!-- Back link -->
+      <a href="../apps.html" class="back-link">Back to Apps</a>
+
+      <!-- Project hero -->
+      <header class="project-hero" aria-labelledby="project-heading">
+        <div>
+          <h1 id="project-heading">Accessible Studio</h1>
+          <span class="card-platform" style="font-size:0.85rem;">Windows</span>
+        </div>
+        <p style="font-size:1.05rem; color:var(--color-text-muted); max-width:65ch; margin-top:0.75rem;">
+          An NVDA-accessible video editor, photo editor, and file converter.
+          Fully keyboard-navigable, screen reader friendly, and controlled
+          via natural language commands. Optionally powered by Google Gemini
+          for intelligent image descriptions and real-time project control.
+        </p>
+        <div class="project-meta" aria-label="Project metadata">
+          <span class="meta-badge">Windows</span>
+          <span class="meta-badge">Screen-Reader Compatible</span>
+          <span class="meta-badge">Keyboard First</span>
+          <span class="meta-badge">AI-Powered</span>
+        </div>
+      </header>
+
+      <!-- Main two-column layout -->
+      <div class="project-body">
+
+        <!-- Left: project content -->
+        <article class="project-content" aria-labelledby="project-heading">
+
+          <h2>About</h2>
+          <p>
+            Accessible Studio is the first all-in-one creative suite built with
+            blind and low-vision users as the primary audience. It combines a
+            timeline-based video editor, a canvas photo editor, and a file
+            converter into one fully accessible app — no mouse required.
+          </p>
+          <p>
+            Every control is reachable by keyboard, every timeline event is
+            announced by your screen reader, and the interface uses
+            high-contrast modes compatible with Windows accessibility features.
+          </p>
+
+          <h2>Download</h2>
+          <p>
+            Head to the
+            <a href="https://github.com/demon-of-fire/accessable-studio/releases" rel="external noopener">
+              Releases page on GitHub
+            </a>
+            and download the latest <code>.zip</code> for Windows. Extract it
+            and run <strong>Accessible Studio.exe</strong> — no install required.
+          </p>
+
+          <h2>Getting Started</h2>
+          <ol>
+            <li>
+              <strong>Open the app</strong> — you land on the Video Editor tab
+              by default.
+            </li>
+            <li>
+              <strong>Import media</strong> — click <strong>Import Media</strong>
+              (or press <kbd>Ctrl+I</kbd>) to add video or image files. Click
+              <strong>Import Audio</strong> for music and sound effects.
+            </li>
+            <li>
+              <strong>Edit</strong> — use the toolbar buttons or type natural
+              language commands in the assistant bar at the bottom (e.g.
+              "trim the first 5 seconds", "make it cinematic").
+            </li>
+            <li>
+              <strong>Save your project</strong> — click <strong>Save
+              Project</strong> and it appears in the Projects panel on the right.
+            </li>
+            <li>
+              <strong>Export</strong> — click <strong>Export Video</strong>
+              (or press <kbd>Ctrl+E</kbd>), pick a format and quality, and save
+              your finished video.
+            </li>
+          </ol>
+
+          <h2>Features</h2>
+
+          <h3>Video Editor</h3>
+          <ul>
+            <li>Timeline editing with trim, split, duplicate, and delete</li>
+            <li>35+ filter presets (cinematic, vintage, noir, warm, and more)</li>
+            <li>20+ transition types (fade, dissolve, wipe, slide, zoom…)</li>
+            <li>Text overlays and single/multi-line captions</li>
+            <li>Fade in/out for video and audio independently</li>
+            <li>Clip layering, renaming, and detach/reattach</li>
+            <li>Normalize brightness and volume across all clips</li>
+            <li>Undo/redo, drag-to-move clips, multi-track support</li>
+          </ul>
+
+          <h3>Photo Editor</h3>
+          <ul>
+            <li>Crop, rotate, flip, and resize</li>
+            <li>Brightness, contrast, saturation, and sharpness sliders</li>
+            <li>Filter presets, background removal, and background blur</li>
+            <li>Remove objects from photos</li>
+            <li>Image overlay and insert</li>
+          </ul>
+
+          <h3>File Converter</h3>
+          <ul>
+            <li>Video: MP4, AVI, MKV, MOV, WebM</li>
+            <li>Audio: MP3, WAV, FLAC, OGG, AAC</li>
+            <li>Image: PNG, JPG, WebP, BMP, GIF, TIFF</li>
+            <li>Document: DOCX to TXT, DOCX to HTML, TXT to HTML</li>
+          </ul>
+
+          <h3>AI Assistant</h3>
+          <ul>
+            <li>
+              Natural language control — type commands like "trim the first
+              5 seconds" or "make it cinematic"
+            </li>
+            <li>
+              Connect Google Gemini (free) in Settings for the full experience:
+              real-time timeline editing, photo vision, and complex multi-step
+              commands
+            </li>
+            <li>Works with built-in keyword matching even without an API key</li>
+            <li>Persistent memory across sessions</li>
+          </ul>
+
+          <h3>Accessibility</h3>
+          <ul>
+            <li>ARIA labels on every control</li>
+            <li>Live announcements for all timeline events</li>
+            <li>Full keyboard navigation — no mouse required</li>
+            <li>Focus trapping in dialogs</li>
+            <li>High-contrast themes and adjustable text size</li>
+            <li>Tested with NVDA, JAWS, and Windows Narrator</li>
+            <li>"Where Am I?" button for instant location feedback</li>
+          </ul>
+
+          <h2>Keyboard Shortcuts</h2>
+          <div style="overflow-x:auto;">
+            <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+              <thead>
+                <tr style="border-bottom:2px solid var(--color-border);">
+                  <th style="text-align:left; padding:0.5rem 1rem 0.5rem 0;">Shortcut</th>
+                  <th style="text-align:left; padding:0.5rem 0;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Space</kbd></td><td style="padding:0.4rem 0;">Play / Pause</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>←</kbd> / <kbd>→</kbd></td><td style="padding:0.4rem 0;">Skip 5 seconds back / forward</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>S</kbd></td><td style="padding:0.4rem 0;">Split clip at playhead</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Delete</kbd></td><td style="padding:0.4rem 0;">Delete selected clip</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>M</kbd></td><td style="padding:0.4rem 0;">Mute / Unmute</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>W</kbd></td><td style="padding:0.4rem 0;">"Where Am I?"</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+Z</kbd> / <kbd>Ctrl+Y</kbd></td><td style="padding:0.4rem 0;">Undo / Redo</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+I</kbd></td><td style="padding:0.4rem 0;">Import media</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+E</kbd></td><td style="padding:0.4rem 0;">Export video</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+S</kbd></td><td style="padding:0.4rem 0;">Save project</td></tr>
+                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+B</kbd></td><td style="padding:0.4rem 0;">Focus assistant input</td></tr>
+                <tr><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>F1</kbd></td><td style="padding:0.4rem 0;">Show all keyboard shortcuts</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </article>
+
+        <!-- Right: sidebar -->
+        <aside class="project-sidebar" aria-label="Project information">
+
+          <div class="sidebar-card">
+            <h3>Download</h3>
+            <ul class="sidebar-links" role="list">
+              <li>
+                <a href="https://github.com/demon-of-fire/accessable-studio/releases" rel="external noopener" aria-label="Download Accessible Studio from GitHub Releases">
+                  Download (.zip for Windows)
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/demon-of-fire/accessable-studio" rel="external noopener" aria-label="View Accessible Studio source code on GitHub">
+                  Source Code on GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Details</h3>
+            <ul class="sidebar-list" role="list">
+              <li>Platform: Windows 10/11</li>
+              <li>Language: JavaScript / Electron</li>
+              <li>License: MIT</li>
+              <li>Status: Available</li>
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="../index.html" class="footer-brand">Demon of Fire</a>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="../accessibility.html">Accessibility Statement</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Service</a></li>
+          </ul>
+        </nav>
+        <p class="footer-copy">
+          &copy; <span id="current-year">2024</span> Demon of Fire. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
