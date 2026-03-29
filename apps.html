@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Accessible Windows desktop applications by Demon of Fire, including a voice assistant and video editor." />
+  <title>Apps – Demon of Fire</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        Demon of Fire
+      </a>
+
+      <button
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-controls="nav-links"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apps.html" aria-current="page">Apps</a></li>
+        <li><a href="game-mods.html">Game Mods</a></li>
+        <li><a href="misc-tools.html">Misc Tools</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <div class="container">
+
+      <header class="page-header" aria-labelledby="page-heading">
+        <span class="label" aria-hidden="true">Windows Software</span>
+        <h1 id="page-heading">Apps</h1>
+        <p>
+          Desktop applications for Windows built with accessibility as a
+          core principle. Every app works with popular screen readers and
+          follows Windows accessibility guidelines.
+        </p>
+      </header>
+
+      <section aria-labelledby="apps-heading">
+        <h2 class="section-title" id="apps-heading">Available Projects</h2>
+
+        <div class="card-grid">
+
+          <!-- Voice Assistant Card -->
+          <a
+            href="apps/voice-assistant.html"
+            class="card"
+          >
+            <div class="card-header">
+              <div class="card-title-group">
+                <h3 class="card-title">Nova Voice Assistant</h3>
+                <span class="card-platform" aria-hidden="true">Windows</span>
+              </div>
+            </div>
+            <p class="card-description">
+              A Windows voice assistant powered by Google Gemini with full PC
+              control and NVDA screen reader accessibility. Control your
+              desktop, launch apps, manage files, and more — all by voice.
+            </p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <!-- Accessible Studio Card -->
+          <a
+            href="apps/video-editor.html"
+            class="card"
+          >
+            <div class="card-header">
+              <div class="card-title-group">
+                <h3 class="card-title">Accessible Studio</h3>
+                <span class="card-platform" aria-hidden="true">Windows</span>
+              </div>
+            </div>
+            <p class="card-description">
+              A fully keyboard-navigable video editor, photo editor, and file
+              converter. Screen reader friendly with natural language commands
+              and optional AI assistance.
+            </p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </a>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-brand">Demon of Fire</a>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="accessibility.html">Accessibility Statement</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </nav>
+        <p class="footer-copy">
+          &copy; <span id="current-year">2024</span> Demon of Fire. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
