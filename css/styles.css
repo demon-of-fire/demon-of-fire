@@ -909,3 +909,78 @@ main {
 
   .project-body { gap: 2rem; }
 }
+
+/* ── Card Action Buttons (revamp) ── */
+.card {
+  cursor: default;
+}
+.card:not(.placeholder-card):hover,
+.card:not(.placeholder-card):focus-within {
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.card-title a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+.card-title a:hover,
+.card-title a:focus-visible {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.btn-sm {
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  border-radius: var(--radius-sm);
+}
+
+.card-platform .dot {
+  color: var(--color-accent);
+}
+
+/* ── Version / status badge inside cards ── */
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.18rem 0.6rem;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.card-badge.available::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3ec46d;
+  flex-shrink: 0;
+}
+.card-badge.source-only {
+  color: var(--color-accent);
+  border-color: rgba(224, 92, 42, 0.35);
+}
+
+/* ── Home page: featured project row ── */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--gap);
+  margin-top: 2rem;
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Accessible Windows desktop applications by Demon of Fire, including a voice assistant and video editor." />
+  <meta name="description" content="Accessible Windows desktop applications by Demon of Fire: video editor, media player, voice assistant, and calculator." />
   <title>Apps – Demon of Fire</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -46,56 +46,113 @@
         <h1 id="page-heading">Apps</h1>
         <p>
           Desktop applications for Windows built with accessibility as a
-          core principle. Every app works with popular screen readers and
-          follows Windows accessibility guidelines.
+          core principle. Every app works with popular screen readers,
+          is fully keyboard-navigable, and follows Windows accessibility
+          guidelines. All apps are open source.
         </p>
       </header>
 
       <section aria-labelledby="apps-heading">
         <h2 class="section-title" id="apps-heading">Available Projects</h2>
 
-        <div class="card-grid">
+        <div class="card-grid" role="list">
 
-          <!-- Voice Assistant Card -->
-          <a
-            href="apps/voice-assistant.html"
-            class="card"
-          >
+          <!-- Accessible Studio -->
+          <div class="card" role="listitem" aria-label="Accessible Studio – video editor, photo editor, and file converter">
             <div class="card-header">
               <div class="card-title-group">
-                <h3 class="card-title">Nova Voice Assistant</h3>
-                <span class="card-platform" aria-hidden="true">Windows</span>
+                <h3 class="card-title"><a href="https://github.com/demon-of-fire/accessable-studio" target="_blank" rel="noopener noreferrer">Accessible Studio</a></h3>
+                <span class="card-platform">Windows · Electron</span>
               </div>
-            </div>
-            <p class="card-description">
-              A Windows voice assistant powered by Google Gemini with full PC
-              control and NVDA screen reader accessibility. Control your
-              desktop, launch apps, manage files, and more — all by voice.
-            </p>
-            <span class="card-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <!-- Accessible Studio Card -->
-          <a
-            href="apps/video-editor.html"
-            class="card"
-          >
-            <div class="card-header">
-              <div class="card-title-group">
-                <h3 class="card-title">Accessible Studio</h3>
-                <span class="card-platform" aria-hidden="true">Windows</span>
-              </div>
+              <span class="card-badge available">Download available</span>
             </div>
             <p class="card-description">
               A fully keyboard-navigable video editor, photo editor, and file
               converter. Screen reader friendly with natural language commands
-              and optional AI assistance.
+              and optional AI assistance. Live streaming with RTMP output.
             </p>
-            <span class="card-arrow" aria-hidden="true">→</span>
-          </a>
+            <div class="card-actions">
+              <a href="https://github.com/demon-of-fire/accessable-studio/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="https://github.com/demon-of-fire/accessable-studio" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a href="apps/video-editor.html" class="btn btn-ghost btn-sm">Details</a>
+            </div>
+          </div>
+
+          <!-- Accessible Media Player -->
+          <div class="card" role="listitem" aria-label="Accessible Media Player – accessible video and audio player">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h3 class="card-title"><a href="https://github.com/demon-of-fire/accessible-media-player" target="_blank" rel="noopener noreferrer">Accessible Media Player</a></h3>
+                <span class="card-platform">Windows · Electron</span>
+              </div>
+              <span class="card-badge available">Download available</span>
+            </div>
+            <p class="card-description">
+              A fully featured, screen-reader friendly media player for video
+              and audio. Playlists, subtitles, picture-in-picture, equalizer,
+              visualizer, snapshots, bookmarks, and sleep timer — all
+              accessible by keyboard.
+            </p>
+            <div class="card-actions">
+              <a href="https://github.com/demon-of-fire/accessible-media-player/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="https://github.com/demon-of-fire/accessible-media-player" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
+            </div>
+          </div>
+
+          <!-- Nova Voice Assistant -->
+          <div class="card" role="listitem" aria-label="Nova Voice Assistant – AI voice assistant for Windows">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h3 class="card-title"><a href="https://github.com/demon-of-fire/nova-voice-assistant" target="_blank" rel="noopener noreferrer">Nova Voice Assistant</a></h3>
+                <span class="card-platform">Windows · Python</span>
+              </div>
+              <span class="card-badge available">Download available</span>
+            </div>
+            <p class="card-description">
+              A Windows voice assistant powered by Google Gemini with 40+
+              PC control actions, neural TTS, NVDA screen reader accessibility,
+              and follow-up conversations. Control your desktop entirely by
+              voice.
+            </p>
+            <div class="card-actions">
+              <a href="https://github.com/demon-of-fire/nova-voice-assistant/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="https://github.com/demon-of-fire/nova-voice-assistant" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a href="apps/voice-assistant.html" class="btn btn-ghost btn-sm">Details</a>
+            </div>
+          </div>
+
+          <!-- Accessible Calculator -->
+          <div class="card" role="listitem" aria-label="Accessible Calculator – NVDA-accessible desktop calculator">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h3 class="card-title"><a href="https://github.com/demon-of-fire/accessable-calculator" target="_blank" rel="noopener noreferrer">Accessible Calculator</a></h3>
+                <span class="card-platform">Windows</span>
+              </div>
+              <span class="card-badge available">Download available</span>
+            </div>
+            <p class="card-description">
+              A simple, fast desktop calculator designed for NVDA screen
+              reader users. Every key, result, and operation is announced —
+              nothing hidden behind the mouse.
+            </p>
+            <div class="card-actions">
+              <a href="https://github.com/demon-of-fire/accessable-calculator/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="https://github.com/demon-of-fire/accessable-calculator" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
+            </div>
+          </div>
 
         </div>
       </section>
+
+      <div class="notice notice-info" role="note" aria-label="Open source note">
+        <span class="notice-icon" aria-hidden="true">💡</span>
+        <p>
+          All applications are open source under the MIT licence. Installers
+          are published on GitHub Releases — the link above always takes you
+          to the latest version. If an app asks for a Google Gemini API key,
+          that key is yours; nothing is sent to Demon of Fire.
+        </p>
+      </div>
 
     </div>
   </main>

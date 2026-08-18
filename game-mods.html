@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Game mods and modifications by Demon of Fire." />
+  <meta name="description" content="Accessibility game mods by Demon of Fire: Among Us, EA Sports FC 26, and Rocket League." />
   <title>Game Mods – Demon of Fire</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -45,43 +45,90 @@
         <span class="label" aria-hidden="true">Modifications</span>
         <h1 id="page-heading">Game Mods</h1>
         <p>
-          Modifications, patches, and quality-of-life improvements for popular
-          games. Projects are in development — check back soon.
+          Modifications that make popular games genuinely playable by blind
+          and visually impaired players. Every mod speaks through NVDA /
+          Tolk, plays spatial audio cues, and keeps the game fair — features
+          that preserve the experience instead of auto-playing it for you.
         </p>
       </header>
 
       <section aria-labelledby="mods-heading">
         <h2 class="section-title" id="mods-heading">Projects</h2>
 
-        <div class="notice notice-info" role="note" aria-label="Coming soon notice">
-          <p>
-            Game mod projects are currently in development. This section will be
-            updated once mods are ready for release. Check back soon!
-          </p>
-        </div>
-
         <div class="card-grid" role="list">
 
-          <!-- Placeholder mod -->
-          <div
-            class="card placeholder-card"
-            role="listitem"
-            aria-label="Game mod coming soon – placeholder"
-          >
+          <!-- Among Us Accessibility Mod -->
+          <div class="card" role="listitem" aria-label="Among Us Accessibility Mod – BepInEx plugin">
             <div class="card-header">
               <div class="card-title-group">
-                <h3 class="card-title">Coming Soon</h3>
-                <span class="card-platform" aria-hidden="true">TBD</span>
+                <h3 class="card-title"><a href="https://github.com/demon-of-fire/among-us-accessibility-mod" target="_blank" rel="noopener noreferrer">Among Us Accessibility Mod</a></h3>
+                <span class="card-platform">Among Us · BepInEx · C#</span>
               </div>
+              <span class="card-badge source-only">Source only</span>
             </div>
             <p class="card-description">
-              A game mod is in development. Details will be added here once the
-              project is ready to share.
+              Makes Among Us playable by ear. Status read-outs, sabotage map
+              navigation, spatial audio cues, spoken task state, and manual
+              confirmation — gameplay and the alibi value of visual tasks are
+              fully preserved.
             </p>
+            <div class="card-actions">
+              <a href="https://github.com/demon-of-fire/among-us-accessibility-mod" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+          </div>
+
+          <!-- FC 26 Accessibility Mod -->
+          <div class="card" role="listitem" aria-label="FC 26 Accessibility Mod – Vision AI screen reader for EA Sports FC 26">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h3 class="card-title"><a href="https://github.com/demon-of-fire/fc26-accessibility-mod" target="_blank" rel="noopener noreferrer">FC 26 Accessibility Mod</a></h3>
+                <span class="card-platform">EA Sports FC 26 · Python</span>
+              </div>
+              <span class="card-badge available">Download available</span>
+            </div>
+            <p class="card-description">
+              A Vision AI screen reader for EA Sports FC 26. Uses Florence-2 +
+              EasyOCR to describe the match state in real time — fully
+              on-device, no cloud, no latency.
+            </p>
+            <div class="card-actions">
+              <a href="https://github.com/demon-of-fire/fc26-accessibility-mod/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="https://github.com/demon-of-fire/fc26-accessibility-mod" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
+            </div>
+          </div>
+
+          <!-- Rocket League Accessibility Mod -->
+          <div class="card" role="listitem" aria-label="Rocket League Accessibility Mod – local AI screen reading and spatial audio ball tracking">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h3 class="card-title"><a href="https://github.com/demon-of-fire/rocket-league-accessibility-mod" target="_blank" rel="noopener noreferrer">Rocket League Accessibility Mod</a></h3>
+                <span class="card-platform">Rocket League · Python</span>
+              </div>
+              <span class="card-badge available">Download available</span>
+            </div>
+            <p class="card-description">
+              Accessibility mod for visually impaired Rocket League players.
+              Local AI-powered screen reading and spatial audio ball tracking
+              so you always know where the ball and your teammates are.
+            </p>
+            <div class="card-actions">
+              <a href="https://github.com/demon-of-fire/rocket-league-accessibility-mod/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="https://github.com/demon-of-fire/rocket-league-accessibility-mod" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
+            </div>
           </div>
 
         </div>
       </section>
+
+      <div class="notice notice-info" role="note" aria-label="Not affiliated notice">
+        <span class="notice-icon" aria-hidden="true">💡</span>
+        <p>
+          These mods are fan projects. They are not affiliated with, endorsed
+          by, or sponsored by Innersloth, EA Sports, or Psyonix. The mods are
+          designed to be fair — they describe the game, they do not play it
+          for you.
+        </p>
+      </div>
 
     </div>
   </main>
