@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -49,21 +49,38 @@
         <span class="label" aria-hidden="true">Independent Developer</span>
         <h1 id="hero-heading">Demon of Fire</h1>
         <p>
-          Accessible Windows apps, game mods that are playable by ear, and
-          open-source tools. Every project is built with usability and
-          screen-reader accessibility as a first-class concern — and every
-          project is free.
+          Accessible Windows apps, audio-driven game mods, and powerful open-source utilities. Every project is crafted with deep screen-reader accessibility as a first-class concern — and every project is 100% free.
         </p>
         <div class="btn-group">
-          <a href="apps.html" class="btn btn-primary">Browse Apps</a>
+          <a href="apps.html" class="btn btn-primary">Explore Apps</a>
           <a href="game-mods.html" class="btn btn-ghost">Game Mods</a>
           <a href="https://github.com/demon-of-fire" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
         </div>
       </section>
 
+      <!-- Stats counter bar -->
+      <section class="stats-bar" aria-label="Portfolio highlights">
+        <div class="stat-item">
+          <span class="stat-number">6+</span>
+          <span class="stat-label">Accessible Apps</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Audio Game Mods</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Free &amp; Open Source</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">NVDA</span>
+          <span class="stat-label">Native Accessibility</span>
+        </div>
+      </section>
+
       <!-- Navigation overview cards -->
       <section aria-labelledby="sections-heading">
-        <h2 class="section-title" id="sections-heading">Explore</h2>
+        <h2 class="section-title" id="sections-heading">Explore Ecosystem</h2>
 
         <div class="nav-cards">
 
@@ -71,8 +88,7 @@
             <span class="nav-card-icon" aria-hidden="true">🖥️</span>
             <span class="nav-card-title">Apps</span>
             <p class="nav-card-desc">
-              Four accessible Windows applications: video editor, media
-              player, voice assistant, and calculator.
+              Six accessible desktop applications: Access Overlay, Access Recorder, video editor, media player, voice assistant, and clipboard history.
             </p>
           </a>
 
@@ -80,8 +96,7 @@
             <span class="nav-card-icon" aria-hidden="true">🎮</span>
             <span class="nav-card-title">Game Mods</span>
             <p class="nav-card-desc">
-              Accessibility mods for Among Us, EA Sports FC 26, and Rocket
-              League — games you can play by ear.
+              Mods for Among Us, EA Sports FC 26, and Rocket League — games designed to be fully playable by ear with spatial audio and OCR.
             </p>
           </a>
 
@@ -89,8 +104,7 @@
             <span class="nav-card-icon" aria-hidden="true">🧰</span>
             <span class="nav-card-title">Misc Tools</span>
             <p class="nav-card-desc">
-              Websites and side projects: PC building, revision hubs, and
-              more.
+              Web utilities, PC building discovery platforms, revision hubs, and interactive projects.
             </p>
           </a>
 
@@ -103,17 +117,102 @@
 
         <div class="featured-grid">
 
+          <!-- Access Overlay -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h3 class="card-title"><a href="https://github.com/demon-of-fire/access-overlay" target="_blank" rel="noopener noreferrer">Access Overlay</a></h3>
+                <span class="card-platform">Universal Reader · Windows · WPF</span>
+              </div>
+              <span class="card-badge available">New</span>
+            </div>
+            <p class="card-description">
+              A universal screen-reader overlay and document normalizer. Captures foreground apps (Ctrl+Alt+A), provides OCR game menu scanning (Ctrl+Alt+G), and embeds an accessible WebView2 browser.
+            </p>
+            <div class="card-actions">
+              <a href="https://github.com/demon-of-fire/access-overlay" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a href="apps/access-overlay.html" class="btn btn-ghost btn-sm">Details</a>
+            </div>
+          </div>
+
+          <!-- Access Recorder -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h3 class="card-title"><a href="https://github.com/demon-of-fire/access-recorder" target="_blank" rel="noopener noreferrer">Access Recorder</a></h3>
+                <span class="card-platform">Audio &amp; AI Studio · Windows</span>
+              </div>
+              <span class="card-badge available">New</span>
+            </div>
+            <p class="card-description">
+              Audio recording studio with local Whisper AI transcription. Offers studio beat importing, live monitoring, full NVDA screen reader compatibility, and global shortcut controls.
+            </p>
+            <div class="card-actions">
+              <a href="https://github.com/demon-of-fire/access-recorder" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
+            </div>
+          </div>
+
+          <!-- Nova Voice Assistant -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h3 class="card-title"><a href="https://github.com/demon-of-fire/nova-voice-assistant" target="_blank" rel="noopener noreferrer">Nova Voice Assistant</a></h3>
+                <span class="card-platform">Voice AI · Windows · Gemini</span>
+              </div>
+              <span class="card-badge available">Updated</span>
+            </div>
+            <p class="card-description">
+              Desktop voice assistant powered by Google Gemini with 40+ system actions, speech recognition, neural TTS, floating orb UI, and screen reader integration.
+            </p>
+            <div class="card-actions">
+              <a href="https://github.com/demon-of-fire/nova-voice-assistant/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="apps/voice-assistant.html" class="btn btn-ghost btn-sm">Details</a>
+            </div>
+          </div>
+
+          <!-- FC 26 Accessibility Mod -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h3 class="card-title"><a href="https://github.com/demon-of-fire/fc26-accessibility-mod" target="_blank" rel="noopener noreferrer">FC 26 Accessibility Mod</a></h3>
+                <span class="card-platform">Vision AI · Python · EasyOCR</span>
+              </div>
+            </div>
+            <p class="card-description">
+              On-device Vision AI screen reader for EA Sports FC 26. Uses Florence-2 + EasyOCR for fast, real-time match state summaries and spoken menu navigation.
+            </p>
+            <div class="card-actions">
+              <a href="https://github.com/demon-of-fire/fc26-accessibility-mod/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="https://github.com/demon-of-fire/fc26-accessibility-mod" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
+            </div>
+          </div>
+
+          <!-- Among Us Accessibility Mod -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title-group">
+                <h3 class="card-title"><a href="https://github.com/demon-of-fire/among-us-accessibility-mod" target="_blank" rel="noopener noreferrer">Among Us Accessibility Mod</a></h3>
+                <span class="card-platform">Game Mod · BepInEx · C#</span>
+              </div>
+            </div>
+            <p class="card-description">
+              Makes Among Us genuinely playable by ear — spatial audio cues, sabotage navigation, spoken task states, and NVDA integration while keeping gameplay authentic and fair.
+            </p>
+            <div class="card-actions">
+              <a href="https://github.com/demon-of-fire/among-us-accessibility-mod" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+          </div>
+
+          <!-- Accessible Studio -->
           <div class="card">
             <div class="card-header">
               <div class="card-title-group">
                 <h3 class="card-title"><a href="https://github.com/demon-of-fire/accessable-studio" target="_blank" rel="noopener noreferrer">Accessible Studio</a></h3>
-                <span class="card-platform">Video editor · Windows</span>
+                <span class="card-platform">Creative Suite · Windows</span>
               </div>
             </div>
             <p class="card-description">
-              The all-in-one creative suite for blind and low-vision users:
-              video editing, photo editing, and file conversion, fully
-              keyboard-driven with NVDA support.
+              Creative video, photo, and media conversion suite engineered from the ground up with keyboard-driven workflows and screen-reader accessibility.
             </p>
             <div class="card-actions">
               <a href="https://github.com/demon-of-fire/accessable-studio/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
@@ -121,41 +220,48 @@
             </div>
           </div>
 
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title-group">
-                <h3 class="card-title"><a href="https://github.com/demon-of-fire/accessible-media-player" target="_blank" rel="noopener noreferrer">Accessible Media Player</a></h3>
-                <span class="card-platform">Media player · Windows</span>
-              </div>
+        </div>
+      </section>
+
+      <!-- About Me Section -->
+      <section aria-labelledby="about-heading" class="about-section">
+        <h2 class="section-title" id="about-heading">About Demon of Fire</h2>
+        <div class="about-content">
+          <p>
+            I build software with a mission: <strong>technology and gaming should be universally accessible</strong>. Whether developing custom Windows tools, audio-driven game modifications, or AI productivity utilities, my focus is delivering rich, intuitive experiences where screen-reader compatibility and keyboard ergonomics are first-class citizens.
+          </p>
+          <div class="skills-grid">
+            <span class="skill-tag">C# / .NET / WPF</span>
+            <span class="skill-tag">Python / PyTorch</span>
+            <span class="skill-tag">Rust</span>
+            <span class="skill-tag">TypeScript / Electron</span>
+            <span class="skill-tag">NVDA / Tolk / SAPI</span>
+            <span class="skill-tag">Vision AI (Florence-2 / EasyOCR)</span>
+            <span class="skill-tag">Whisper Speech AI</span>
+            <span class="skill-tag">Spatial Audio</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Credits & Acknowledgements Section -->
+      <section aria-labelledby="credits-heading" class="credits-section">
+        <h2 class="section-title" id="credits-heading">Credits &amp; Acknowledgements</h2>
+        <div class="credits-content">
+          <p>
+            Special thanks to the amazing individuals and communities who have helped test, develop, and inspire these accessibility projects:
+          </p>
+          <div class="credits-grid">
+            <div class="credit-card">
+              <h3>Madness Innsmouth</h3>
+              <p>Special thanks for testing, community feedback, and supporting accessible creations.</p>
+              <a href="https://madnessinnsmouth.com/products" target="_blank" rel="noopener noreferrer" class="credit-link">Visit Madness Innsmouth &rarr;</a>
             </div>
-            <p class="card-description">
-              A fully featured, screen-reader friendly media player with
-              playlists, subtitles, picture-in-picture, equalizer, and
-              snapshots.
-            </p>
-            <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/accessible-media-player/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="https://github.com/demon-of-fire/accessible-media-player" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
+            <div class="credit-card">
+              <h3>Lilian Coghlan</h3>
+              <p>Contributor and collaborator on accessibility mods including Among Us accessible development.</p>
+              <a href="https://github.com/liliancoghlan1-tech/among-us-access" target="_blank" rel="noopener noreferrer" class="credit-link">View Among Us Access &rarr;</a>
             </div>
           </div>
-
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title-group">
-                <h3 class="card-title"><a href="https://github.com/demon-of-fire/among-us-accessibility-mod" target="_blank" rel="noopener noreferrer">Among Us Accessibility Mod</a></h3>
-                <span class="card-platform">Game mod · Among Us</span>
-              </div>
-            </div>
-            <p class="card-description">
-              Makes Among Us genuinely playable by ear — status read-outs,
-              sabotage navigation, spatial audio cues, and spoken task state,
-              all while keeping the game fair.
-            </p>
-            <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/among-us-accessibility-mod" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View Project</a>
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -179,7 +285,7 @@
           Join Discord
         </a>
         <p class="footer-copy">
-          &copy; <span id="current-year">2024</span> Demon of Fire. All rights reserved.
+          &copy; <span id="current-year">2026</span> Demon of Fire. All rights reserved.
         </p>
       </div>
     </div>

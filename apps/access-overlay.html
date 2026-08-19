@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Access Overlay – Universal screen-reader overlay and OCR game scanner for Windows by Demon of Fire." />
+  <title>Access Overlay – Demon of Fire</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="nav-brand">
+        Demon of Fire
+      </a>
+
+      <button
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-controls="nav-links"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../apps.html" aria-current="page">Apps</a></li>
+        <li><a href="../game-mods.html">Game Mods</a></li>
+        <li><a href="../misc-tools.html">Misc Tools</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <div class="container">
+
+      <header class="project-hero" aria-labelledby="project-title">
+        <a href="../apps.html" class="back-link">Back to Apps</a>
+        <h1 id="project-title">Access Overlay</h1>
+        <p>
+          A universal screen-reader overlay, document reader, and OCR game scanner for Windows. Captures any foreground app, website, or game and renders it as clean, readable text with NVDA speech and customizable visual themes.
+        </p>
+        <div class="project-meta">
+          <span class="meta-badge">Windows 10 / 11</span>
+          <span class="meta-badge">.NET 8 · WPF · C#</span>
+          <span class="meta-badge">NVDA / SAPI Speech</span>
+          <span class="meta-badge">OCR Engine</span>
+          <span class="meta-badge">Open Source · MIT</span>
+        </div>
+      </header>
+
+      <div class="project-body">
+        <article class="project-content">
+          <h2>Overview</h2>
+          <p>
+            Many Windows applications, legacy tools, and game menus do not expose native accessibility trees or clean text hierarchies. <strong>Access Overlay</strong> bridges this gap by providing an always-available universal reader that can capture and normalize any foreground application, scan in-game menus via OCR, or load web articles into a clean reading view.
+          </p>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><strong>Foreground App Capture (<code>Ctrl+Alt+A</code>):</strong> Inspects UI Automation elements of the active window and reorganizes them into a structured, readable document.</li>
+            <li><strong>OCR Game Scanner (<code>Ctrl+Alt+G</code>):</strong> Reads on-screen menus, dialogs, and HUD text in video games across Unreal Engine, Frostbite, Source, Unity, and custom engines.</li>
+            <li><strong>Integrated Accessible Web Browser:</strong> Built-in WebView2 browser with article text extraction and automated speech after page loads.</li>
+            <li><strong>Floating Reader Window:</strong> Customizable overlay with adjustable font sizes (12px - 48px), contrast themes (Dark, Light, High Contrast), and opacity slider.</li>
+            <li><strong>Dual Speech Routing:</strong> Seamlessly speaks through NVDA via the controller client or falls back to Windows SAPI speech.</li>
+            <li><strong>Auto-Follow Mode:</strong> Dynamically updates the reading buffer as you switch between applications.</li>
+          </ul>
+
+          <h2>Keyboard Shortcuts</h2>
+          <ul>
+            <li><code>Ctrl + Alt + A</code> — Capture active foreground window and speak text</li>
+            <li><code>Ctrl + Alt + G</code> — Scan game screen with OCR</li>
+            <li><code>F9 / F10 / F11</code> — Audio and playback controls</li>
+          </ul>
+
+          <h2>Open Source & Installation</h2>
+          <p>
+            Access Overlay is 100% free and open-source under the MIT licence. You can inspect the source code, contribute, or build it yourself using the .NET SDK.
+          </p>
+          <div class="btn-group" style="justify-content: flex-start; margin-top: 1.5rem;">
+            <a href="https://github.com/demon-of-fire/access-overlay" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a href="../apps.html" class="btn btn-ghost">Browse All Apps</a>
+          </div>
+        </article>
+
+        <aside class="project-sidebar" aria-label="Project details and links">
+          <div class="sidebar-card">
+            <h3>Quick Details</h3>
+            <ul class="sidebar-list">
+              <li>Platform: Windows 10/11 (x64)</li>
+              <li>Tech: WPF, C#, UI Automation</li>
+              <li>OCR: Built-in local vision OCR</li>
+              <li>Licence: MIT</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Links</h3>
+            <ul class="sidebar-links">
+              <li><a href="https://github.com/demon-of-fire/access-overlay" target="_blank" rel="noopener noreferrer">Source Code (GitHub)</a></li>
+              <li><a href="https://discord.gg/xU2Fq3HXbh" target="_blank" rel="noopener noreferrer">Join Community Discord</a></li>
+              <li><a href="../apps.html">Explore Other Apps</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="../index.html" class="footer-brand">Demon of Fire</a>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="../accessibility.html">Accessibility Statement</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Service</a></li>
+          </ul>
+        </nav>
+        <a href="https://discord.gg/xU2Fq3HXbh" class="footer-discord" target="_blank" rel="noopener noreferrer" aria-label="Join the Demon of Fire Discord server">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+          Join Discord
+        </a>
+        <p class="footer-copy">
+          &copy; <span id="current-year">2026</span> Demon of Fire. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
