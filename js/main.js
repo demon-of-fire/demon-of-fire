@@ -401,4 +401,211 @@ themeToggle.addEventListener('click', function () {
       window.location.href = url;
     });
   });
+
+  /* ── GitHub releases: homepage "Latest Releases" + changelog page ── */
+  const REPOS = [
+    ['access-overlay', 'Access Overlay'],
+    ['access-recorder', 'Access Recorder'],
+    ['accessable-studio', 'Accessible Studio'],
+    ['accessible-media-player', 'Accessible Media Player'],
+    ['accessable-calculator', 'Accessible Calculator'],
+    ['nova-voice-assistant', 'Nova Voice Assistant'],
+    ['clipboard-history', 'Clipboard History'],
+    ['among-us-accessibility-mod', 'Among Us Accessibility Mod'],
+    ['fc26-accessibility-mod', 'FC 26 Accessibility Mod'],
+    ['rocket-league-accessibility-mod', 'Rocket League Accessibility Mod'],
+    ['past-paper-revision-hub', 'Past Paper Revision Hub']
+  ];
+
+  function cacheGet(key, ttlMs) {
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return null;
+      const o = JSON.parse(raw);
+      if (!o || !o.at || Date.now() - o.at > ttlMs) return null;
+      return o.data;
+    } catch (e) {
+      return null;
+    }
+  }
+  function cacheSet(key, data) {
+    try {
+      localStorage.setItem(key, JSON.stringify({ at: Date.now(), data: data }));
+    } catch (e) {}
+  }
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function linkify(s) {
+    return escapeHtml(s).replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" rel="noopener noreferrer">$1</a>');
+  }
+  function fetchJSON(url) {
+    return fetch(url).then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    });
+  }
+  function fmtDate(iso) {
+    try {
+      return new Date(iso).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function renderReleaseCards(items) {
+    if (!items || !items.length) return '<p>No releases found yet.</p>';
+    return items.map(function (item) {
+      const repoUrl = 'https://github.com/demon-of-fire/' + item.repo;
+      const rel = item.release;
+      const version = rel ? rel.tag_name : 'No releases yet';
+      const date = rel ? fmtDate(rel.published_at) : '';
+      return '<div class="release-card">' +
+        '<div class="release-card-head">' +
+        '<h3><a href="' + repoUrl + '" rel="noopener noreferrer">' + escapeHtml(item.name) + '</a></h3>' +
+        '<span class="release-version">' + escapeHtml(version) + '</span>' +
+        '</div>' +
+        (date ? '<p class="release-date">' + date + '</p>' : '') +
+        '<div class="release-actions">' +
+        (rel ? '<a href="' + repoUrl + '/releases/latest" class="btn btn-primary btn-sm" rel="noopener noreferrer">Download</a>' +
+        '<a href="' + rel.html_url + '" class="btn btn-ghost btn-sm" rel="noopener noreferrer">Release Notes</a>' : '') +
+        '</div></div>';
+    }).join('');
+  }
+
+  function initReleases() {
+    const list = document.getElementById('release-list');
+    if (!list) return;
+    const key = 'dof_releases_v1';
+    const render = function (items) { list.innerHTML = renderReleaseCards(items); };
+    const cached = cacheGet(key, 30 * 60 * 1000);
+    if (cached) { render(cached); return; }
+    Promise.all(REPOS.map(function (r) {
+      return fetchJSON('https://api.github.com/repos/demon-of-fire/' + r[0] + '/releases/latest').catch(function () { return null; });
+    })).then(function (results) {
+      const items = REPOS.map(function (r, i) {
+        return { name: r[1], repo: r[0], release: results[i] };
+      });
+      cacheSet(key, items);
+      render(items);
+    }).catch(function () {
+      list.innerHTML = '<p>Could not load releases right now. See the <a href="changelog.html">changelog</a> instead.</p>';
+    });
+  }
+
+  function renderChangelog(data) {
+    let html = '';
+    data.forEach(function (proj) {
+      if (!proj.releases || !proj.releases.length) return;
+      html += '<div class="changelog-project">' +
+        '<h3><a href="' + proj.html + '" rel="noopener noreferrer">' + escapeHtml(proj.name) + '</a></h3>' +
+        '<ul class="changelog-releases">';
+      proj.releases.forEach(function (rel) {
+        html += '<li>' +
+          '<span class="changelog-version">' + escapeHtml(rel.tag_name) + '</span>' +
+          (rel.published_at ? '<time class="changelog-date">' + fmtDate(rel.published_at) + '</time>' : '') +
+          (rel.body ? '<div class="changelog-body">' + linkify(rel.body).replace(/\n/g, '<br>') + '</div>' : '') +
+          '</li>';
+      });
+      html += '</ul></div>';
+    });
+    return html || '<p>No releases found yet.</p>';
+  }
+
+  function initChangelog() {
+    const list = document.getElementById('changelog-list');
+    if (!list) return;
+    const key = 'dof_changelog_v1';
+    const render = function (data) { list.innerHTML = renderChangelog(data); };
+    const cached = cacheGet(key, 60 * 60 * 1000);
+    if (cached) { render(cached); return; }
+    Promise.all(REPOS.map(function (r) {
+      return fetchJSON('https://api.github.com/repos/demon-of-fire/' + r[0] + '/releases?per_page=5').catch(function () { return []; });
+    })).then(function (results) {
+      const data = REPOS.map(function (r, i) {
+        return { name: r[1], html: 'https://github.com/demon-of-fire/' + r[0], releases: results[i] || [] };
+      });
+      cacheSet(key, data);
+      render(data);
+    }).catch(function () {
+      list.innerHTML = '<p>Could not load the changelog right now. Full release history is on <a href="https://github.com/demon-of-fire" rel="noopener noreferrer">GitHub</a>.</p>';
+    });
+  }
+
+  /* ── Project search / filter on list pages ── */
+  function initCardFilters() {
+    document.querySelectorAll('.card-filter').forEach(function (input) {
+      const grid = document.getElementById(input.getAttribute('aria-controls'));
+      if (!grid) return;
+      const empty = document.getElementById(input.id + '-empty');
+      input.addEventListener('input', function () {
+        const q = input.value.trim().toLowerCase();
+        let visible = 0;
+        grid.querySelectorAll('.card').forEach(function (card) {
+          const match = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
+          card.hidden = !match;
+          if (match) visible++;
+        });
+        if (empty) empty.hidden = visible !== 0;
+      });
+    });
+  }
+
+  /* ── Detail pages: screenshots + FAQ/Changelog sidebar links ── */
+  function subdirPrefix() {
+    const p = location.pathname;
+    return (p.indexOf('/apps/') !== -1 || p.indexOf('/mods/') !== -1 || p.indexOf('/tools/') !== -1) ? '../' : '';
+  }
+
+  function initScreenshots() {
+    const hero = document.querySelector('.project-hero');
+    if (!hero) return;
+    const page = location.pathname.split('/').pop().replace('.html', '');
+    const prefix = subdirPrefix();
+    const pretty = page.replace(/-/g, ' ');
+    const section = document.createElement('section');
+    section.setAttribute('aria-labelledby', 'screenshots-heading');
+    section.className = 'screenshots-section';
+    section.innerHTML = '<h2 class="section-title" id="screenshots-heading">Screenshots</h2>' +
+      '<div class="screenshot-grid">' +
+      '<figure class="screenshot-card"><img src="' + prefix + 'images/screenshots/' + page + '-1.png" alt="Screenshot 1 of ' + pretty + '" loading="lazy" /><figcaption>Screenshot 1</figcaption></figure>' +
+      '<figure class="screenshot-card"><img src="' + prefix + 'images/screenshots/' + page + '-2.png" alt="Screenshot 2 of ' + pretty + '" loading="lazy" /><figcaption>Screenshot 2</figcaption></figure>' +
+      '</div>';
+    hero.insertAdjacentElement('afterend', section);
+    section.querySelectorAll('img').forEach(function (img) {
+      img.addEventListener('error', function () {
+        const fig = img.closest('figure');
+        if (fig) {
+          fig.classList.add('missing');
+          fig.innerHTML = '<span class="screenshot-placeholder">Screenshot coming soon</span>';
+        }
+      });
+    });
+  }
+
+  function initSidebarLinks() {
+    const cards = document.querySelectorAll('.project-sidebar .sidebar-card');
+    if (!cards.length) return;
+    const last = cards[cards.length - 1];
+    const ul = last.querySelector('ul');
+    if (!ul) return;
+    const prefix = subdirPrefix();
+    ul.insertAdjacentHTML('beforeend',
+      '<li><a href="' + prefix + 'faq.html">FAQ</a></li>' +
+      '<li><a href="' + prefix + 'changelog.html">Changelog</a></li>'
+    );
+  }
+
+  function initExtras() {
+    initReleases();
+    initChangelog();
+    initCardFilters();
+    initScreenshots();
+    initSidebarLinks();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initExtras);
+  } else {
+    initExtras();
+  }
 })();

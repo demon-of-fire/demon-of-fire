@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://demon-of-fire.github.io/demon-of-fire/sitemap.xml

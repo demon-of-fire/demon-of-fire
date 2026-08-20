@@ -12,6 +12,7 @@
   <meta property="og:description" content="Accessibility mods for Among Us, EA Sports FC 26, and Rocket League — games you can play by ear." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/og.png" />
+  <link rel="canonical" href="https://demon-of-fire.github.io/demon-of-fire/game-mods.html" />
   <script>try{if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light')}}catch(e){}</script>
 </head>
 <body>
@@ -61,6 +62,8 @@
         <li><a href="apps.html">Apps</a></li>
         <li><a href="game-mods.html" aria-current="page">Game Mods</a></li>
         <li><a href="misc-tools.html">Misc Tools</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
       </ul>
     </div>
   </nav>
@@ -81,8 +84,12 @@
 
       <section aria-labelledby="mods-heading">
         <h2 class="section-title" id="mods-heading">Projects</h2>
-
-        <div class="card-grid" role="list">
+        <div class="card-filter-wrap">
+          <label for="mod-filter" class="card-filter-label">Filter mods</label>
+          <input type="search" id="mod-filter" class="card-filter" placeholder="Search mods…" aria-controls="mods-grid" />
+          <p class="card-filter-empty" id="mod-filter-empty" hidden>No mods match your search.</p>
+        </div>
+        <div class="card-grid" role="list" id="mods-grid">
 
           <!-- Among Us Accessibility Mod -->
           <div class="card" role="listitem" data-href="mods/among-us.html">
@@ -172,6 +179,8 @@
             <li><a href="accessibility.html">Accessibility Statement</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
           </ul>
         </nav>
         <a href="https://discord.gg/xU2Fq3HXbh" class="footer-discord" target="_blank" rel="noopener noreferrer" aria-label="Join the Demon of Fire Discord server">

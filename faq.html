@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Frequently asked questions about Demon of Fire's accessible apps and game mods — installation, NVDA support, AI features, and more." />
+  <title>FAQ – Demon of Fire</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="theme-color" content="#0d0d0f" />
+  <meta property="og:title" content="FAQ – Demon of Fire" />
+  <meta property="og:description" content="Answers to common questions about installing and using the accessible apps and game mods." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/og.png" />
+  <link rel="canonical" href="https://demon-of-fire.github.io/demon-of-fire/faq.html" />
+  <script>try{if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light')}}catch(e){}</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        Demon of Fire
+      </a>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch to light mode"
+      >
+        <svg class="icon-moon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+      </button>
+      <button
+        id="a11y-trigger"
+        class="a11y-trigger"
+        type="button"
+        aria-label="Open accessibility and display settings (Alt+A)"
+        aria-haspopup="dialog"
+        aria-expanded="false"
+      >
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01H13c-.35-.2-.75-.3-1.19-.26-.78.07-1.46.64-1.63 1.42l-.8 3.73c-.14.65.26 1.28.91 1.42.66.14 1.29-.27 1.43-.92L12 11.2V22h2v-6h2v6h2v-7.8c.84.4 1.76.6 2.7.6.15 0 .3 0 .3-.01V13zM8.5 14H7.13l-1.8 5.4c-.21.64.14 1.33.78 1.54.64.21 1.33-.14 1.54-.78L8.5 17.5v-3.5z"/></svg>
+      </button>
+
+      <button
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-controls="nav-links"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="game-mods.html">Game Mods</a></li>
+        <li><a href="misc-tools.html">Misc Tools</a></li>
+        <li><a href="faq.html" aria-current="page">FAQ</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <div class="container">
+
+      <header class="page-header" aria-labelledby="page-heading">
+        <span class="label" aria-hidden="true">Help &amp; Support</span>
+        <h1 id="page-heading">FAQ</h1>
+        <p>
+          Answers to the questions that come up most. Can't find what you
+          need? Ask on the
+          <a href="https://discord.gg/xU2Fq3HXbh" rel="noopener noreferrer">Discord server</a>.
+        </p>
+      </header>
+
+      <div class="prose" style="max-width: 76ch;">
+
+        <h2>General</h2>
+
+        <details class="faq-item">
+          <summary>Are these apps and mods really free?</summary>
+          <p>
+            Yes. Every project is 100% free and open source under the MIT
+            licence. There are no paid tiers, no premium features, and no ads.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need to create an account?</summary>
+          <p>
+            No — never. There are no accounts, logins, or user profiles
+            anywhere on this website or in these apps. See the
+            <a href="privacy.html">privacy policy</a> for details.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do the apps work with NVDA?</summary>
+          <p>
+            Yes. NVDA is the primary screen reader supported across the apps
+            and mods, with Windows SAPI as a built-in fallback for speech.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I get help or report a bug?</summary>
+          <p>
+            Join the
+            <a href="https://discord.gg/xU2Fq3HXbh" rel="noopener noreferrer">Discord server</a>
+            for community support, or open an issue on the relevant GitHub
+            repository.
+          </p>
+        </details>
+
+        <h2>Among Us Accessibility Mod</h2>
+
+        <details class="faq-item">
+          <summary>How do I install the mod?</summary>
+          <p>
+            Install <strong>BepInEx 6</strong> for Among Us, launch the game
+            once so BepInEx creates its folders, then copy
+            <code>Among.Us.Accessibility.Mod.dll</code> into the
+            <code>BepInEx/plugins</code> folder and launch the game again.
+            Full instructions are on the
+            <a href="https://github.com/demon-of-fire/among-us-accessibility-mod" rel="external noopener">GitHub repository</a>.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does the mod require NVDA to be installed?</summary>
+          <p>
+            The mod is designed around NVDA speech, but it also provides its
+            own spatial audio cues, so you can still orient yourself by ear
+            even without a screen reader.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does the mod change the game or give an unfair advantage?</summary>
+          <p>
+            No. Gameplay and the alibi value of visual tasks are fully
+            preserved — confirmation of tasks stays manual, and the mod only
+            reads out what is already on screen.
+          </p>
+        </details>
+
+        <h2>FC 26 &amp; Rocket League Mods</h2>
+
+        <details class="faq-item">
+          <summary>What do the football mods need to run?</summary>
+          <p>
+            A Windows PC with a reasonably modern GPU, because the AI
+            (Florence-2 + EasyOCR) runs fully on-device. Everything is
+            processed locally — no cloud, no internet needed while playing.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What does the FC 26 mod read out?</summary>
+          <p>
+            It describes the match state in real time — including the score
+            and clock (press <code>F6</code>), goal and half-time
+            announcements, and on-screen menus.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How does the Rocket League ball tracking work?</summary>
+          <p>
+            A local AI reads the screen and converts the ball's position into
+            spatial audio cues, so you always know where the ball and your
+            teammates are by ear.
+          </p>
+        </details>
+
+        <h2>Access Overlay</h2>
+
+        <details class="faq-item">
+          <summary>What are the main shortcuts?</summary>
+          <p>
+            <code>Ctrl + Alt + A</code> captures the active window as readable
+            text, <code>Ctrl + Alt + G</code> scans the game screen with OCR,
+            and <code>F9 / F10 / F11</code> control playback.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Which games does the OCR scanner work with?</summary>
+          <p>
+            It reads on-screen text across Unreal Engine, Frostbite, Source,
+            Unity, and custom engines — any game that renders text to the
+            screen.
+          </p>
+        </details>
+
+        <h2>AI Features &amp; Privacy</h2>
+
+        <details class="faq-item">
+          <summary>Which apps use AI, and where does it run?</summary>
+          <p>
+            <strong>Access Recorder</strong> transcribes audio locally with
+            Whisper — nothing leaves your PC. <strong>Nova Voice Assistant</strong>
+            uses Google Gemini for conversation; the content you ask about is
+            sent to Google only when you use those features.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need a Google Gemini API key?</summary>
+          <p>
+            Only for Gemini-powered features, and it's optional. You provide
+            your own key in the app's settings. Your key is stored only on
+            your device — nobody else can see it, and if billing applies it
+            happens directly between you and Google on your own Google
+            account. See the
+            <a href="privacy.html">privacy policy</a> for the full details.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is my audio or screen recorded or uploaded?</summary>
+          <p>
+            No. Microphone capture happens only while you actively use a voice
+            feature, and screen analysis in the game mods runs entirely
+            on-device. Nothing is uploaded to Demon of Fire or any other
+            server.
+          </p>
+        </details>
+
+        <h2>Still Stuck?</h2>
+        <p>
+          If your question isn't answered here, join the
+          <a href="https://discord.gg/xU2Fq3HXbh" rel="noopener noreferrer">Discord server</a>
+          — the community and I are happy to help. You can also check the
+          <a href="changelog.html">changelog</a> to see what changed in each
+          release.
+        </p>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-brand">Demon of Fire</a>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="accessibility.html">Accessibility Statement</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </nav>
+        <a href="https://discord.gg/xU2Fq3HXbh" class="footer-discord" target="_blank" rel="noopener noreferrer" aria-label="Join the Demon of Fire Discord server">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+          Join Discord
+        </a>
+        <p class="footer-copy">
+          &copy; <span id="current-year">2026</span> Demon of Fire. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
