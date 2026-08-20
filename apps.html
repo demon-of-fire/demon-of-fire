@@ -6,6 +6,13 @@
   <meta name="description" content="Accessible Windows desktop applications by Demon of Fire: Access Overlay, Access Recorder, video editor, media player, voice assistant, and calculator." />
   <title>Apps – Demon of Fire</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="theme-color" content="#0d0d0f" />
+  <meta property="og:title" content="Apps – Demon of Fire" />
+  <meta property="og:description" content="Accessible Windows applications: video editor, media player, voice assistant, and calculator." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/og.png" />
+  <script>try{if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light')}}catch(e){}</script>
 </head>
 <body>
 
@@ -16,6 +23,16 @@
       <a href="index.html" class="nav-brand">
         Demon of Fire
       </a>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch to light mode"
+      >
+        <svg class="icon-moon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+      </button>
 
       <button
         id="nav-toggle"
@@ -110,7 +127,7 @@
           </div>
 
           <!-- Accessible Studio -->
-          <div class="card" role="listitem" aria-label="Accessible Studio – video editor, photo editor, and file converter">
+          <div class="card" role="listitem">
             <div class="card-header">
               <div class="card-title-group">
                 <h3 class="card-title"><a href="https://github.com/demon-of-fire/accessable-studio" target="_blank" rel="noopener noreferrer">Accessible Studio</a></h3>
@@ -123,8 +140,8 @@
             </p>
             <div class="card-actions">
               <a href="https://github.com/demon-of-fire/accessable-studio/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="https://github.com/demon-of-fire/accessable-studio" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
               <a href="apps/video-editor.html" class="btn btn-ghost btn-sm">Details</a>
+              <a href="https://github.com/demon-of-fire/accessable-studio" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
 
@@ -142,13 +159,13 @@
             </p>
             <div class="card-actions">
               <a href="https://github.com/demon-of-fire/nova-voice-assistant/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="https://github.com/demon-of-fire/nova-voice-assistant" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
               <a href="apps/voice-assistant.html" class="btn btn-ghost btn-sm">Details</a>
+              <a href="https://github.com/demon-of-fire/nova-voice-assistant" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
 
           <!-- Accessible Media Player -->
-          <div class="card" role="listitem" aria-label="Accessible Media Player – accessible video and audio player">
+          <div class="card" role="listitem">
             <div class="card-header">
               <div class="card-title-group">
                 <h3 class="card-title"><a href="https://github.com/demon-of-fire/accessible-media-player" target="_blank" rel="noopener noreferrer">Accessible Media Player</a></h3>
@@ -161,12 +178,13 @@
             </p>
             <div class="card-actions">
               <a href="https://github.com/demon-of-fire/accessible-media-player/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="apps/media-player.html" class="btn btn-ghost btn-sm">Details</a>
               <a href="https://github.com/demon-of-fire/accessible-media-player" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
 
-          <!-- Accessible Calculator -->
-          <div class="card" role="listitem" aria-label="Accessible Calculator – NVDA-accessible desktop calculator">
+<!-- Accessible Calculator -->
+          <div class="card" role="listitem">
             <div class="card-header">
               <div class="card-title-group">
                 <h3 class="card-title"><a href="https://github.com/demon-of-fire/accessable-calculator" target="_blank" rel="noopener noreferrer">Accessible Calculator</a></h3>
@@ -179,6 +197,7 @@
             </p>
             <div class="card-actions">
               <a href="https://github.com/demon-of-fire/accessable-calculator/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="apps/calculator.html" class="btn btn-ghost btn-sm">Details</a>
               <a href="https://github.com/demon-of-fire/accessable-calculator" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>

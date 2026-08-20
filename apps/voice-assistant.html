@@ -6,6 +6,16 @@
   <meta name="description" content="Nova Voice Assistant – a Windows voice assistant powered by Google Gemini with full PC control and NVDA screen reader accessibility." />
   <title>Nova Voice Assistant – Demon of Fire</title>
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <meta name="theme-color" content="#0d0d0f" />
+  <meta property="og:title" content="Nova Voice Assistant – Demon of Fire" />
+  <meta property="og:description" content="A Windows voice assistant powered by Google Gemini with full PC control and NVDA screen reader accessibility." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../images/og.png" />
+  <script>try{if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light')}}catch(e){}</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Nova Voice Assistant","operatingSystem":"Windows","applicationCategory":"UtilitiesApplication","license":"https://opensource.org/licenses/MIT","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"codeRepository":"https://github.com/demon-of-fire/nova-voice-assistant"}
+  </script>
 </head>
 <body>
 
@@ -16,6 +26,16 @@
       <a href="../index.html" class="nav-brand">
         Demon of Fire
       </a>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch to light mode"
+      >
+        <svg class="icon-moon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+      </button>
 
       <button
         id="nav-toggle"
@@ -48,9 +68,9 @@
       <header class="project-hero" aria-labelledby="project-heading">
         <div>
           <h1 id="project-heading">Nova Voice Assistant</h1>
-          <span class="card-platform" style="font-size:0.85rem;">Windows</span>
+          <span class="card-platform">Windows</span>
         </div>
-        <p style="font-size:1.05rem; color:var(--color-text-muted); max-width:65ch; margin-top:0.75rem;">
+        <p>
           A Windows voice assistant powered by Google Gemini with full PC
           control and NVDA screen reader accessibility.
         </p>
@@ -66,7 +86,7 @@
       <div class="project-body">
 
         <!-- Left: project content -->
-        <article class="project-content" aria-labelledby="project-heading">
+        <article class="project-content">
 
           <h2>Features</h2>
           <ul>
@@ -85,23 +105,23 @@
           </ul>
 
           <h2>Keyboard Shortcuts</h2>
-          <div style="overflow-x:auto;">
-            <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+          <div class="table-wrap">
+            <table class="kbd-table">
               <thead>
-                <tr style="border-bottom:2px solid var(--color-border);">
-                  <th style="text-align:left; padding:0.5rem 1rem 0.5rem 0;">Shortcut</th>
-                  <th style="text-align:left; padding:0.5rem 0;">Action</th>
+                <tr>
+                  <th scope="col">Shortcut</th>
+                  <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+Shift+T</kbd></td><td style="padding:0.4rem 0;">Start/stop talking</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+Shift+M</kbd></td><td style="padding:0.4rem 0;">Mute/unmute</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+Shift+Y</kbd></td><td style="padding:0.4rem 0;">Type a message</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+Shift+Q</kbd></td><td style="padding:0.4rem 0;">Quit Nova</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>F2</kbd></td><td style="padding:0.4rem 0;">Talk (in Nova window)</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>F3</kbd></td><td style="padding:0.4rem 0;">Mute (in Nova window)</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>F4</kbd></td><td style="padding:0.4rem 0;">Settings (in Nova window)</td></tr>
-                <tr><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Escape</kbd></td><td style="padding:0.4rem 0;">Minimize to tray</td></tr>
+                <tr><td><kbd>Ctrl+Shift+T</kbd></td><td>Start/stop talking</td></tr>
+                <tr><td><kbd>Ctrl+Shift+M</kbd></td><td>Mute/unmute</td></tr>
+                <tr><td><kbd>Ctrl+Shift+Y</kbd></td><td>Type a message</td></tr>
+                <tr><td><kbd>Ctrl+Shift+Q</kbd></td><td>Quit Nova</td></tr>
+                <tr><td><kbd>F2</kbd></td><td>Talk (in Nova window)</td></tr>
+                <tr><td><kbd>F3</kbd></td><td>Mute (in Nova window)</td></tr>
+                <tr><td><kbd>F4</kbd></td><td>Settings (in Nova window)</td></tr>
+                <tr><td><kbd>Escape</kbd></td><td>Minimize to tray</td></tr>
               </tbody>
             </table>
           </div>
@@ -141,10 +161,13 @@
 
           <div class="sidebar-card">
             <h3>Download</h3>
+            <ul class="sidebar-badges" role="list">
+              <li><span class="sidebar-badge">Latest: v1.1.0</span></li>
+            </ul>
             <ul class="sidebar-links" role="list">
               <li>
                 <a href="https://github.com/demon-of-fire/nova-voice-assistant/releases" rel="external noopener" aria-label="Download Nova Voice Assistant from GitHub Releases">
-                  Download (.zip for Windows)
+                  Download Nova.exe for Windows
                 </a>
               </li>
               <li>

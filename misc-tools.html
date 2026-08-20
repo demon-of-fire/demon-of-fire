@@ -6,6 +6,13 @@
   <meta name="description" content="Miscellaneous tools, websites, and utilities by Demon of Fire." />
   <title>Misc Tools – Demon of Fire</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="theme-color" content="#0d0d0f" />
+  <meta property="og:title" content="Misc Tools – Demon of Fire" />
+  <meta property="og:description" content="Websites and side projects: PC building, revision hubs, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/og.png" />
+  <script>try{if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light')}}catch(e){}</script>
 </head>
 <body>
 
@@ -16,6 +23,16 @@
       <a href="index.html" class="nav-brand">
         Demon of Fire
       </a>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch to light mode"
+      >
+        <svg class="icon-moon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+      </button>
 
       <button
         id="nav-toggle"
@@ -56,7 +73,7 @@
         <div class="card-grid" role="list">
 
           <!-- PCForge -->
-          <div class="card" role="listitem" aria-label="PCForge – PC building and hardware discovery platform">
+          <div class="card" role="listitem">
             <div class="card-header">
               <div class="card-title-group">
                 <h3 class="card-title"><a href="https://demon-of-fire.github.io/pc-forge/" target="_blank" rel="noopener noreferrer">PCForge</a></h3>
@@ -70,13 +87,14 @@
               suggestions for your budget.
             </p>
             <div class="card-actions">
-              <a href="https://demon-of-fire.github.io/pc-forge/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Launch App</a>
+              <a href="https://demon-of-fire.github.io/pc-forge/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a href="tools/pcforge.html" class="btn btn-ghost btn-sm">Details</a>
               <a href="https://github.com/demon-of-fire/pc-forge" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
 
           <!-- Past Paper Revision Hub -->
-          <div class="card" role="listitem" aria-label="Past Paper Revision Hub – past paper revision tool">
+          <div class="card" role="listitem">
             <div class="card-header">
               <div class="card-title-group">
                 <h3 class="card-title"><a href="https://github.com/demon-of-fire/past-paper-revision-hub" target="_blank" rel="noopener noreferrer">Past Paper Revision Hub</a></h3>
@@ -90,12 +108,13 @@
             </p>
             <div class="card-actions">
               <a href="https://github.com/demon-of-fire/past-paper-revision-hub/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="tools/revision-hub.html" class="btn btn-ghost btn-sm">Details</a>
               <a href="https://github.com/demon-of-fire/past-paper-revision-hub" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
 
           <!-- Agony Report -->
-          <div class="card" role="listitem" aria-label="The Agony Report – satirical tabloid for Arsenal fans">
+          <div class="card" role="listitem">
             <div class="card-header">
               <div class="card-title-group">
                 <h3 class="card-title"><a href="https://demon-of-fire.github.io/agony-report/" target="_blank" rel="noopener noreferrer">The Agony Report</a></h3>
@@ -109,13 +128,14 @@
               tracking, just vibes.
             </p>
             <div class="card-actions">
-              <a href="https://demon-of-fire.github.io/agony-report/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Visit Site</a>
+              <a href="https://demon-of-fire.github.io/agony-report/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a href="tools/agony-report.html" class="btn btn-ghost btn-sm">Details</a>
               <a href="https://github.com/demon-of-fire/agony-report" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
 
           <!-- Minecraft Website -->
-          <div class="card" role="listitem" aria-label="Minecraft Website – Minecraft fan website">
+          <div class="card" role="listitem">
             <div class="card-header">
               <div class="card-title-group">
                 <h3 class="card-title"><a href="https://demon-of-fire.github.io/minecraft-website/" target="_blank" rel="noopener noreferrer">Minecraft Website</a></h3>
@@ -128,7 +148,8 @@
               game guides and community pages.
             </p>
             <div class="card-actions">
-              <a href="https://demon-of-fire.github.io/minecraft-website/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Visit Site</a>
+              <a href="https://demon-of-fire.github.io/minecraft-website/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a href="tools/minecraft-website.html" class="btn btn-ghost btn-sm">Details</a>
               <a href="https://github.com/demon-of-fire/minecraft-website" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>

@@ -140,7 +140,7 @@
     const root = document.documentElement;
     if (prefs.theme === 'high-contrast') {
       root.setAttribute('data-theme', 'high-contrast');
-    } else {
+    } else if (root.getAttribute('data-theme') !== 'light') {
       root.removeAttribute('data-theme');
     }
 
@@ -357,9 +357,38 @@
     });
   }
 
-  if (document.readyState === 'loading') {
+if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', createA11yUI);
   } else {
     createA11yUI();
+  }
+
+  /* ── Light / Dark theme toggle ── */
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    function getStoredTheme() {
+      try { return localStorage.getItem('theme'); } catch (e) { return null; }
+    }
+    function storeTheme(theme) {
+      try { localStorage.setItem('theme', theme); } catch (e) { /* private mode */ }
+    }
+    function applyTheme(theme, persist) {
+      document.documentElement.setAttribute('data-theme', theme);
+      if (persist) {
+        storeTheme(theme);
+      }
+      themeToggle.setAttribute(
+        'aria-label',
+        theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'
+      );
+    }
+    const stored = getStoredTheme();
+    const systemLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    applyTheme(stored || (systemLight ? 'light' : 'dark'), false);
+
+    themeToggle.addEventListener('click', function () {
+      const current = document.documentElement.getAttribute('data-theme');
+      applyTheme(current === 'light' ? 'dark' : 'light', true);
+});
   }
 })();

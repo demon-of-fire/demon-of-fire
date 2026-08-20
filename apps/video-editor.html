@@ -6,6 +6,16 @@
   <meta name="description" content="Accessible Studio – an NVDA-accessible video editor, photo editor, and file converter for Windows by Demon of Fire." />
   <title>Accessible Studio – Demon of Fire</title>
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <meta name="theme-color" content="#0d0d0f" />
+  <meta property="og:title" content="Accessible Studio – Demon of Fire" />
+  <meta property="og:description" content="An NVDA-accessible video editor, photo editor, and file converter for Windows. Fully keyboard-navigable with natural language commands." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../images/og.png" />
+  <script>try{if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light')}}catch(e){}</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Accessible Studio","operatingSystem":"Windows","applicationCategory":"MultimediaApplication","license":"https://opensource.org/licenses/MIT","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"codeRepository":"https://github.com/demon-of-fire/accessable-studio"}
+  </script>
 </head>
 <body>
 
@@ -16,6 +26,16 @@
       <a href="../index.html" class="nav-brand">
         Demon of Fire
       </a>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch to light mode"
+      >
+        <svg class="icon-moon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
+      </button>
 
       <button
         id="nav-toggle"
@@ -48,9 +68,9 @@
       <header class="project-hero" aria-labelledby="project-heading">
         <div>
           <h1 id="project-heading">Accessible Studio</h1>
-          <span class="card-platform" style="font-size:0.85rem;">Windows</span>
+          <span class="card-platform">Windows</span>
         </div>
-        <p style="font-size:1.05rem; color:var(--color-text-muted); max-width:65ch; margin-top:0.75rem;">
+        <p>
           An NVDA-accessible video editor, photo editor, and file converter.
           Fully keyboard-navigable, screen reader friendly, and controlled
           via natural language commands. Optionally powered by Google Gemini
@@ -68,7 +88,7 @@
       <div class="project-body">
 
         <!-- Left: project content -->
-        <article class="project-content" aria-labelledby="project-heading">
+        <article class="project-content">
 
           <h2>About</h2>
           <p>
@@ -178,27 +198,27 @@
           </ul>
 
           <h2>Keyboard Shortcuts</h2>
-          <div style="overflow-x:auto;">
-            <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+          <div class="table-wrap">
+            <table class="kbd-table">
               <thead>
-                <tr style="border-bottom:2px solid var(--color-border);">
-                  <th style="text-align:left; padding:0.5rem 1rem 0.5rem 0;">Shortcut</th>
-                  <th style="text-align:left; padding:0.5rem 0;">Action</th>
+                <tr>
+                  <th scope="col">Shortcut</th>
+                  <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Space</kbd></td><td style="padding:0.4rem 0;">Play / Pause</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>←</kbd> / <kbd>→</kbd></td><td style="padding:0.4rem 0;">Skip 5 seconds back / forward</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>S</kbd></td><td style="padding:0.4rem 0;">Split clip at playhead</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Delete</kbd></td><td style="padding:0.4rem 0;">Delete selected clip</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>M</kbd></td><td style="padding:0.4rem 0;">Mute / Unmute</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>W</kbd></td><td style="padding:0.4rem 0;">"Where Am I?"</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+Z</kbd> / <kbd>Ctrl+Y</kbd></td><td style="padding:0.4rem 0;">Undo / Redo</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+I</kbd></td><td style="padding:0.4rem 0;">Import media</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+E</kbd></td><td style="padding:0.4rem 0;">Export video</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+S</kbd></td><td style="padding:0.4rem 0;">Save project</td></tr>
-                <tr style="border-bottom:1px solid var(--color-border);"><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>Ctrl+B</kbd></td><td style="padding:0.4rem 0;">Focus assistant input</td></tr>
-                <tr><td style="padding:0.4rem 1rem 0.4rem 0;"><kbd>F1</kbd></td><td style="padding:0.4rem 0;">Show all keyboard shortcuts</td></tr>
+                <tr><td><kbd>Space</kbd></td><td>Play / Pause</td></tr>
+                <tr><td><kbd>←</kbd> / <kbd>→</kbd></td><td>Skip 5 seconds back / forward</td></tr>
+                <tr><td><kbd>S</kbd></td><td>Split clip at playhead</td></tr>
+                <tr><td><kbd>Delete</kbd></td><td>Delete selected clip</td></tr>
+                <tr><td><kbd>M</kbd></td><td>Mute / Unmute</td></tr>
+                <tr><td><kbd>W</kbd></td><td>"Where Am I?"</td></tr>
+                <tr><td><kbd>Ctrl+Z</kbd> / <kbd>Ctrl+Y</kbd></td><td>Undo / Redo</td></tr>
+                <tr><td><kbd>Ctrl+I</kbd></td><td>Import media</td></tr>
+                <tr><td><kbd>Ctrl+E</kbd></td><td>Export video</td></tr>
+                <tr><td><kbd>Ctrl+S</kbd></td><td>Save project</td></tr>
+                <tr><td><kbd>Ctrl+B</kbd></td><td>Focus assistant input</td></tr>
+                <tr><td><kbd>F1</kbd></td><td>Show all keyboard shortcuts</td></tr>
               </tbody>
             </table>
           </div>
@@ -210,6 +230,9 @@
 
           <div class="sidebar-card">
             <h3>Download</h3>
+            <ul class="sidebar-badges" role="list">
+              <li><span class="sidebar-badge">Latest: v1.1.0</span></li>
+            </ul>
             <ul class="sidebar-links" role="list">
               <li>
                 <a href="https://github.com/demon-of-fire/accessable-studio/releases" rel="external noopener" aria-label="Download Accessible Studio from GitHub Releases">
