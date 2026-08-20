@@ -40,7 +40,6 @@
   --gap:         2rem;
 }
 
-<<<<<<< HEAD
 /* ── High Contrast Theme (WCAG AAA) ── */
 [data-theme="high-contrast"] {
   --color-bg:           #000000;
@@ -82,14 +81,6 @@
 [data-theme="high-contrast"] .card-badge.available::before {
   background: #00ff66;
   box-shadow: 0 0 0 2px #000;
-}
-
-/* ── Font Size Modes ── */
-[data-font-size="large"] {
-  font-size: 18px;
-}
-[data-font-size="xlarge"] {
-  font-size: 20px;
 }
 
 /* ── Dyslexia Friendly Font ── */
@@ -520,6 +511,10 @@ main {
   gap: 0.85rem;
 }
 
+.card[data-href] {
+  cursor: pointer;
+}
+
 .card:hover, .nav-card:hover {
   border-color: var(--color-border-hover);
 }
@@ -640,23 +635,6 @@ main {
   font-size: 1.05rem;
   margin-bottom: 1.5rem;
   max-width: none;
-}
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-}
-
-.skill-tag {
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  padding: 0.4rem 0.9rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
 }
 
 /* ── Credits Grid ── */
@@ -833,7 +811,6 @@ main {
 }
 
 /* ── Sidebar ── */
->>>>>>> e8d3c00 (Site polish: theme toggle, new detail pages, badges, keyboard shortcut tables, 404 and meta)
 .project-sidebar {
   position: sticky;
   top: calc(var(--nav-height) + 1.5rem);
@@ -1005,7 +982,6 @@ main {
 .nav-card:focus-visible .nav-card-arrow {
   color: var(--color-link);
   transform: translateX(3px);
->>>>>>> e8d3c00 (Site polish: theme toggle, new detail pages, badges, keyboard shortcut tables, 404 and meta)
 }
 
 /* ── Footer ── */
@@ -1083,35 +1059,27 @@ main {
   background: rgba(224, 92, 42, 0.05);
 }
 
-/* ── Floating Accessibility Toolbar ── */
+/* ── Accessibility Trigger (nav, next to theme toggle) ── */
 .a11y-trigger {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  z-index: 1000;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: var(--color-surface);
-  color: var(--color-text);
-  border: 1.5px solid var(--color-border);
-  padding: 0.65rem 1.1rem;
-  border-radius: 999px;
-  font-size: 0.88rem;
-  font-weight: 700;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  padding: 0.45rem;
+  border-radius: var(--radius-sm);
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), var(--shadow-glow);
-  transition: all var(--transition);
+  transition: color var(--transition), background var(--transition);
 }
 .a11y-trigger:hover, .a11y-trigger:focus-visible {
-  border-color: var(--color-accent);
+  color: var(--color-text);
   background: var(--color-surface-2);
-  transform: translateY(-2px);
 }
 .a11y-trigger svg {
   width: 18px;
   height: 18px;
-  fill: var(--color-accent);
+  fill: currentColor;
 }
 
 /* ── Accessibility Modal / Panel ── */
@@ -1231,6 +1199,28 @@ main {
   background: var(--color-accent);
   color: #fff;
   border-color: var(--color-accent);
+}
+
+/* ── Text Size Slider ── */
+.a11y-range-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  min-width: 170px;
+}
+.a11y-range {
+  width: 170px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+.a11y-range-value {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+[data-theme="high-contrast"] .a11y-range {
+  accent-color: #ffff00;
 }
 
 [data-theme="high-contrast"] .a11y-toggle-btn[aria-pressed="true"] {

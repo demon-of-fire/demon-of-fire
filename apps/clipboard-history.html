@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Accessible Calculator – an NVDA-accessible desktop calculator with natural language input by Demon of Fire." />
-  <title>Accessible Calculator – Demon of Fire</title>
+  <meta name="description" content="Clipboard History – high-performance, secure clipboard history manager for Windows and Linux by Demon of Fire." />
+  <title>Clipboard History – Demon of Fire</title>
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <meta name="theme-color" content="#0d0d0f" />
-  <meta property="og:title" content="Accessible Calculator – Demon of Fire" />
-  <meta property="og:description" content="A simple, fast desktop calculator designed for NVDA screen reader users. Every key, result, and operation is announced." />
+  <meta property="og:title" content="Clipboard History – Demon of Fire" />
+  <meta property="og:description" content="Blazing fast, secure clipboard history manager written in Rust. Global hotkeys, encrypted persistence, and full keyboard navigation." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../images/og.png" />
   <script>try{if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light')}}catch(e){}</script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Accessible Calculator","operatingSystem":"Windows","applicationCategory":"UtilitiesApplication","license":"https://opensource.org/licenses/MIT","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"codeRepository":"https://github.com/demon-of-fire/accessable-calculator","softwareVersion":"1.0.0"}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Clipboard History","operatingSystem":"Windows, Linux","applicationCategory":"UtilityApplication","license":"https://opensource.org/licenses/MIT","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"codeRepository":"https://github.com/demon-of-fire/clipboard-history"}
   </script>
 </head>
 <body>
@@ -23,9 +23,16 @@
 
   <nav id="site-nav" class="site-nav" aria-label="Main navigation">
     <div class="container">
-      <a href="../index.html" class="nav-brand">Demon of Fire</a>
+      <a href="../index.html" class="nav-brand">
+        Demon of Fire
+      </a>
 
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode">
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch to light mode"
+      >
         <svg class="icon-moon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="icon-sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
       </button>
@@ -40,7 +47,13 @@
         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01H13c-.35-.2-.75-.3-1.19-.26-.78.07-1.46.64-1.63 1.42l-.8 3.73c-.14.65.26 1.28.91 1.42.66.14 1.29-.27 1.43-.92L12 11.2V22h2v-6h2v6h2v-7.8c.84.4 1.76.6 2.7.6.15 0 .3 0 .3-.01V13zM8.5 14H7.13l-1.8 5.4c-.21.64.14 1.33.78 1.54.64.21 1.33-.14 1.54-.78L8.5 17.5v-3.5z"/></svg>
       </button>
 
-      <button id="nav-toggle" class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation menu">
+      <button
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-controls="nav-links"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -58,74 +71,73 @@
   <main id="main-content">
     <div class="container">
 
-      <a href="../apps.html" class="back-link">Back to Apps</a>
-
-      <header class="project-hero">
-        <div>
-          <h1 id="project-heading">Accessible Calculator</h1>
-          <span class="card-platform">Windows</span>
-        </div>
+      <header class="project-hero" aria-labelledby="project-title">
+        <a href="../apps.html" class="back-link">Back to Apps</a>
+        <h1 id="project-title">Clipboard History</h1>
         <p>
-          A simple, fast desktop calculator designed for NVDA screen reader
-          users. Every key, result, and operation is announced — nothing
-          hidden behind the mouse.
+          A blazing fast, secure clipboard history manager written in Rust. Copy anything, find it instantly with regex search, and reuse it with a single keystroke — encrypted at rest and fully keyboard-navigable.
         </p>
-        <div class="project-meta" aria-label="Project metadata">
-          <span class="meta-badge">Windows</span>
-          <span class="meta-badge">NVDA Compatible</span>
-          <span class="meta-badge">Keyboard First</span>
+        <div class="project-meta">
+          <span class="meta-badge">Windows / Linux</span>
+          <span class="meta-badge">Rust</span>
+          <span class="meta-badge">AES-GCM Encryption</span>
+          <span class="meta-badge">Regex Search</span>
+          <span class="meta-badge">Open Source · MIT</span>
         </div>
       </header>
 
       <div class="project-body">
-
         <article class="project-content">
-
-          <h2>About</h2>
+          <h2>Overview</h2>
           <p>
-            Accessible Calculator is a desktop calculator that treats the
-            screen reader as a first-class citizen. Every key press, every
-            result, and every operation is spoken — and you can also type
-            calculations in natural language instead of hunting for buttons.
+            <strong>Clipboard History</strong> remembers everything you copy so you never lose a snippet again. Built in Rust for speed and safety, it keeps your clipboard history encrypted on disk and lets you navigate it entirely from the keyboard.
           </p>
+
+          <h2>Key Features</h2>
+          <ul>
+            <li><strong>Global Hotkeys:</strong> Open history, paste last item, and search from any application.</li>
+            <li><strong>AES-GCM Encrypted Persistence:</strong> Your clipboard history is stored securely at rest.</li>
+            <li><strong>QR Code Extraction:</strong> Detects and extracts QR codes from copied images.</li>
+            <li><strong>Regex Searching:</strong> Find any item with powerful pattern matching.</li>
+            <li><strong>Keyboard Navigation:</strong> Full arrow-key workflow — no mouse required.</li>
+            <li><strong>Cross-Platform:</strong> Runs on Windows and Linux.</li>
+          </ul>
+
+          <h2>Keyboard Shortcuts</h2>
+          <ul>
+            <li><code>Ctrl + Alt + V</code> — Open clipboard history</li>
+            <li><code>Ctrl + Alt + Shift + V</code> — Paste the most recent item</li>
+            <li><code>/</code> — Focus search box</li>
+            <li><code>Enter</code> — Copy and paste the selected item</li>
+          </ul>
 
           <h2>Download</h2>
           <p>
-            Download the installer
-            <a href="https://github.com/demon-of-fire/accessable-calculator/releases/latest" rel="external noopener">from GitHub Releases</a>,
-            run it, and follow the setup wizard prompts.
+            Download the latest <strong>clipboard-history.exe</strong> directly:
           </p>
+          <div class="btn-group" style="justify-content: flex-start; margin-top: 1.5rem;">
+            <a href="https://github.com/demon-of-fire/clipboard-history/releases/latest/download/clipboard-history.exe" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download</a>
+            <a href="https://github.com/demon-of-fire/clipboard-history" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a href="../apps.html" class="btn btn-ghost">Browse All Apps</a>
+          </div>
 
-          <h2>Features</h2>
-          <ul>
-            <li>Every key, result, and operation announced by your screen reader</li>
-            <li>Natural language input — type "what is 15 percent of 200" and get an answer</li>
-            <li>Fast and lightweight, no installation dependencies</li>
-            <li>Designed and tested with NVDA</li>
-          </ul>
-
-          <h2>Getting the Source</h2>
+          <h2>Open Source &amp; Development</h2>
           <p>
-            The source package is attached to the same release as the
-            installer — look for
-            <strong>AccessableCalculator-source.zip</strong> on the
-            <a href="https://github.com/demon-of-fire/accessable-calculator/releases" rel="external noopener">release page</a>.
+            Clipboard History is 100% free and open-source under the MIT licence. Inspect the source, report issues, or contribute on GitHub.
           </p>
-
         </article>
 
-        <aside class="project-sidebar" aria-label="Project information">
-
+        <aside class="project-sidebar" aria-label="Project details and links">
           <div class="sidebar-card">
             <h3>Download</h3>
             <ul class="sidebar-links" role="list">
               <li>
-                <a href="https://github.com/demon-of-fire/accessable-calculator/releases/latest/download/Accessable.Calculator.Setup.exe" rel="external noopener" aria-label="Download Accessible Calculator installer (.exe for Windows)">
-                  Download (.exe installer for Windows)
+                <a href="https://github.com/demon-of-fire/clipboard-history/releases/latest/download/clipboard-history.exe" rel="external noopener" aria-label="Download Clipboard History (.exe)">
+                  Download (.exe for Windows)
                 </a>
               </li>
               <li>
-                <a href="https://github.com/demon-of-fire/accessable-calculator" rel="external noopener" aria-label="View Accessible Calculator source code on GitHub">
+                <a href="https://github.com/demon-of-fire/clipboard-history" rel="external noopener" aria-label="View Clipboard History source code on GitHub">
                   Source Code on GitHub
                 </a>
               </li>
@@ -133,21 +145,23 @@
           </div>
 
           <div class="sidebar-card">
-            <h3>Details</h3>
-            <ul class="sidebar-list" role="list">
-              <li>Platform: Windows 10/11</li>
-              <li>License: MIT</li>
-              <li>Status: Available</li>
-              <li>Version: 1.0.0</li>
+            <h3>Quick Details</h3>
+            <ul class="sidebar-list">
+              <li>Platform: Windows / Linux</li>
+              <li>Tech: Rust</li>
+              <li>Storage: AES-GCM encrypted</li>
+              <li>Licence: MIT</li>
             </ul>
-            <div class="sidebar-badges" style="margin-top: 1rem;">
-              <img src="https://img.shields.io/github/v/release/demon-of-fire/accessable-calculator?style=flat-square&amp;label=version&amp;color=b8441a" alt="Latest release version" />
-              <img src="https://img.shields.io/github/stars/demon-of-fire/accessable-calculator?style=flat-square&amp;label=stars&amp;color=b8441a" alt="GitHub stars" />
-              <img src="https://img.shields.io/github/downloads/demon-of-fire/accessable-calculator/total?style=flat-square&amp;label=downloads&amp;color=b8441a" alt="Total downloads" />
-              <img src="https://img.shields.io/github/license/demon-of-fire/accessable-calculator?style=flat-square&amp;label=license&amp;color=b8441a" alt="License" />
-            </div>
           </div>
 
+          <div class="sidebar-card">
+            <h3>Links</h3>
+            <ul class="sidebar-links">
+              <li><a href="https://github.com/demon-of-fire/clipboard-history" target="_blank" rel="noopener noreferrer">Source Code (GitHub)</a></li>
+              <li><a href="https://discord.gg/xU2Fq3HXbh" target="_blank" rel="noopener noreferrer">Join Community Discord</a></li>
+              <li><a href="../apps.html">Explore Other Apps</a></li>
+            </ul>
+          </div>
         </aside>
       </div>
 
@@ -170,7 +184,7 @@
           Join Discord
         </a>
         <p class="footer-copy">
-          &copy; <span id="current-year">2024</span> Demon of Fire. All rights reserved.
+          &copy; <span id="current-year">2026</span> Demon of Fire. All rights reserved.
         </p>
       </div>
     </div>

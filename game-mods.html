@@ -33,6 +33,16 @@
         <svg class="icon-moon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="icon-sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
       </button>
+      <button
+        id="a11y-trigger"
+        class="a11y-trigger"
+        type="button"
+        aria-label="Open accessibility and display settings (Alt+A)"
+        aria-haspopup="dialog"
+        aria-expanded="false"
+      >
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01H13c-.35-.2-.75-.3-1.19-.26-.78.07-1.46.64-1.63 1.42l-.8 3.73c-.14.65.26 1.28.91 1.42.66.14 1.29-.27 1.43-.92L12 11.2V22h2v-6h2v6h2v-7.8c.84.4 1.76.6 2.7.6.15 0 .3 0 .3-.01V13zM8.5 14H7.13l-1.8 5.4c-.21.64.14 1.33.78 1.54.64.21 1.33-.14 1.54-.78L8.5 17.5v-3.5z"/></svg>
+      </button>
 
       <button
         id="nav-toggle"
@@ -75,10 +85,10 @@
         <div class="card-grid" role="list">
 
           <!-- Among Us Accessibility Mod -->
-          <div class="card" role="listitem">
+          <div class="card" role="listitem" data-href="mods/among-us.html">
             <div class="card-header">
               <div class="card-title-group">
-                <h3 class="card-title"><a href="https://github.com/demon-of-fire/among-us-accessibility-mod" target="_blank" rel="noopener noreferrer">Among Us Accessibility Mod</a></h3>
+                <h3 class="card-title"><a href="mods/among-us.html">Among Us Accessibility Mod</a></h3>
                 <span class="card-platform">Among Us · BepInEx · C#</span>
               </div>
               <span class="card-badge available">Download available</span>
@@ -90,17 +100,16 @@
               fully preserved.
             </p>
             <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="mods/among-us.html" class="btn btn-ghost btn-sm">Details</a>
+              <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest/download/Among.Us.Accessibility.Mod.dll" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
               <a href="https://github.com/demon-of-fire/among-us-accessibility-mod" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
 
           <!-- FC 26 Accessibility Mod -->
-          <div class="card" role="listitem">
+          <div class="card" role="listitem" data-href="mods/fc26.html">
             <div class="card-header">
               <div class="card-title-group">
-                <h3 class="card-title"><a href="https://github.com/demon-of-fire/fc26-accessibility-mod" target="_blank" rel="noopener noreferrer">FC 26 Accessibility Mod</a></h3>
+                <h3 class="card-title"><a href="mods/fc26.html">FC 26 Accessibility Mod</a></h3>
                 <span class="card-platform">EA Sports FC 26 · Python</span>
               </div>
               <span class="card-badge available">Download available</span>
@@ -113,17 +122,16 @@
               (F6), goal and half-time announcements.
             </p>
             <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/fc26-accessibility-mod/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="mods/fc26.html" class="btn btn-ghost btn-sm">Details</a>
+              <a href="https://github.com/demon-of-fire/fc26-accessibility-mod/releases/latest/download/FC26_Accessibility_Mod.exe" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
               <a href="https://github.com/demon-of-fire/fc26-accessibility-mod" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
 
           <!-- Rocket League Accessibility Mod -->
-          <div class="card" role="listitem">
+          <div class="card" role="listitem" data-href="mods/rocket-league.html">
             <div class="card-header">
               <div class="card-title-group">
-                <h3 class="card-title"><a href="https://github.com/demon-of-fire/rocket-league-accessibility-mod" target="_blank" rel="noopener noreferrer">Rocket League Accessibility Mod</a></h3>
+                <h3 class="card-title"><a href="mods/rocket-league.html">Rocket League Accessibility Mod</a></h3>
                 <span class="card-platform">Rocket League · Python</span>
               </div>
               <span class="card-badge available">Download available</span>
@@ -134,8 +142,7 @@
               so you always know where the ball and your teammates are.
             </p>
             <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/rocket-league-accessibility-mod/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="mods/rocket-league.html" class="btn btn-ghost btn-sm">Details</a>
+              <a href="https://github.com/demon-of-fire/rocket-league-accessibility-mod/releases/latest/download/RLAccessibilityMod.exe" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
               <a href="https://github.com/demon-of-fire/rocket-league-accessibility-mod" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>

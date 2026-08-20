@@ -38,6 +38,16 @@
         <svg class="icon-moon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="icon-sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg>
       </button>
+      <button
+        id="a11y-trigger"
+        class="a11y-trigger"
+        type="button"
+        aria-label="Open accessibility and display settings (Alt+A)"
+        aria-haspopup="dialog"
+        aria-expanded="false"
+      >
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01H13c-.35-.2-.75-.3-1.19-.26-.78.07-1.46.64-1.63 1.42l-.8 3.73c-.14.65.26 1.28.91 1.42.66.14 1.29-.27 1.43-.92L12 11.2V22h2v-6h2v6h2v-7.8c.84.4 1.76.6 2.7.6.15 0 .3 0 .3-.01V13zM8.5 14H7.13l-1.8 5.4c-.21.64.14 1.33.78 1.54.64.21 1.33-.14 1.54-.78L8.5 17.5v-3.5z"/></svg>
+      </button>
 
       <button
         id="nav-toggle"
@@ -126,7 +136,7 @@
             <span class="nav-card-icon" aria-hidden="true">🧰</span>
             <span class="nav-card-title">Misc Tools</span>
             <p class="nav-card-desc">
-              Web utilities, PC building discovery platforms, revision hubs, and interactive projects.
+              Web utilities, revision hubs, and interactive projects.
             </p>
             <span class="nav-card-arrow" aria-hidden="true">→</span>
           </a>
@@ -141,10 +151,10 @@
         <div class="featured-grid">
 
           <!-- Access Overlay -->
-          <div class="card">
+          <div class="card" data-href="apps/access-overlay.html">
             <div class="card-header">
               <div class="card-title-group">
-                <h3 class="card-title"><a href="https://github.com/demon-of-fire/access-overlay" target="_blank" rel="noopener noreferrer">Access Overlay</a></h3>
+                <h3 class="card-title"><a href="apps/access-overlay.html">Access Overlay</a></h3>
                 <span class="card-platform">Universal Reader · Windows · WPF</span>
               </div>
               <span class="card-badge available">New</span>
@@ -153,17 +163,16 @@
               A universal screen-reader overlay and document normalizer. Captures foreground apps (Ctrl+Alt+A), provides OCR game menu scanning (Ctrl+Alt+G), and embeds an accessible WebView2 browser.
             </p>
             <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/access-overlay/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="https://github.com/demon-of-fire/access-overlay/releases/latest/download/AccessOverlaySetup.exe" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
               <a href="https://github.com/demon-of-fire/access-overlay" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
-              <a href="apps/access-overlay.html" class="btn btn-ghost btn-sm">Details</a>
             </div>
           </div>
 
           <!-- Access Recorder -->
-          <div class="card">
+          <div class="card" data-href="apps/access-recorder.html">
             <div class="card-header">
               <div class="card-title-group">
-                <h3 class="card-title"><a href="https://github.com/demon-of-fire/access-recorder" target="_blank" rel="noopener noreferrer">Access Recorder</a></h3>
+                <h3 class="card-title"><a href="apps/access-recorder.html">Access Recorder</a></h3>
                 <span class="card-platform">Audio &amp; AI Studio · Windows</span>
               </div>
               <span class="card-badge available">New</span>
@@ -172,16 +181,16 @@
               Audio recording studio with local Whisper AI transcription. Offers studio beat importing, live monitoring, full NVDA screen reader compatibility, and global shortcut controls.
             </p>
             <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/access-recorder/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="https://github.com/demon-of-fire/access-recorder/releases/latest/download/Access.Recorder.Setup.exe" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
               <a href="https://github.com/demon-of-fire/access-recorder" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
 
           <!-- Nova Voice Assistant -->
-          <div class="card">
+          <div class="card" data-href="apps/voice-assistant.html">
             <div class="card-header">
               <div class="card-title-group">
-                <h3 class="card-title"><a href="https://github.com/demon-of-fire/nova-voice-assistant" target="_blank" rel="noopener noreferrer">Nova Voice Assistant</a></h3>
+                <h3 class="card-title"><a href="apps/voice-assistant.html">Nova Voice Assistant</a></h3>
                 <span class="card-platform">Voice AI · Windows · Gemini</span>
               </div>
               <span class="card-badge available">Updated</span>
@@ -190,16 +199,16 @@
               Desktop voice assistant powered by Google Gemini with 40+ system actions, speech recognition, neural TTS, floating orb UI, and screen reader integration.
             </p>
             <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/nova-voice-assistant/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="apps/voice-assistant.html" class="btn btn-ghost btn-sm">Details</a>
+              <a href="https://github.com/demon-of-fire/nova-voice-assistant/releases/latest/download/Nova.exe" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
+              <a href="https://github.com/demon-of-fire/nova-voice-assistant" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
 
           <!-- FC 26 Accessibility Mod -->
-          <div class="card">
+          <div class="card" data-href="mods/fc26.html">
             <div class="card-header">
               <div class="card-title-group">
-                <h3 class="card-title"><a href="https://github.com/demon-of-fire/fc26-accessibility-mod" target="_blank" rel="noopener noreferrer">FC 26 Accessibility Mod</a></h3>
+                <h3 class="card-title"><a href="mods/fc26.html">FC 26 Accessibility Mod</a></h3>
                 <span class="card-platform">Vision AI · Python · EasyOCR</span>
               </div>
             </div>
@@ -207,17 +216,16 @@
               On-device Vision AI screen reader for EA Sports FC 26. Uses Florence-2 + EasyOCR for fast, real-time match state summaries and spoken menu navigation.
             </p>
             <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/fc26-accessibility-mod/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="mods/fc26.html" class="btn btn-ghost btn-sm">Details</a>
+              <a href="https://github.com/demon-of-fire/fc26-accessibility-mod/releases/latest/download/FC26_Accessibility_Mod.exe" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
               <a href="https://github.com/demon-of-fire/fc26-accessibility-mod" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
 
           <!-- Among Us Accessibility Mod -->
-          <div class="card">
+          <div class="card" data-href="mods/among-us.html">
             <div class="card-header">
               <div class="card-title-group">
-                <h3 class="card-title"><a href="https://github.com/demon-of-fire/among-us-accessibility-mod" target="_blank" rel="noopener noreferrer">Among Us Accessibility Mod</a></h3>
+                <h3 class="card-title"><a href="mods/among-us.html">Among Us Accessibility Mod</a></h3>
                 <span class="card-platform">Game Mod · BepInEx · C#</span>
               </div>
             </div>
@@ -225,17 +233,16 @@
               Makes Among Us genuinely playable by ear — spatial audio cues, sabotage navigation, spoken task states, and NVDA integration while keeping gameplay authentic and fair.
             </p>
             <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="mods/among-us.html" class="btn btn-ghost btn-sm">Details</a>
+              <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest/download/Among.Us.Accessibility.Mod.dll" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
               <a href="https://github.com/demon-of-fire/among-us-accessibility-mod" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
 
           <!-- Accessible Studio -->
-          <div class="card">
+          <div class="card" data-href="apps/video-editor.html">
             <div class="card-header">
               <div class="card-title-group">
-                <h3 class="card-title"><a href="https://github.com/demon-of-fire/accessable-studio" target="_blank" rel="noopener noreferrer">Accessible Studio</a></h3>
+                <h3 class="card-title"><a href="apps/video-editor.html">Accessible Studio</a></h3>
                 <span class="card-platform">Creative Suite · Windows</span>
               </div>
             </div>
@@ -244,7 +251,6 @@
             </p>
             <div class="card-actions">
               <a href="https://github.com/demon-of-fire/accessable-studio/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="apps/video-editor.html" class="btn btn-ghost btn-sm">Details</a>
               <a href="https://github.com/demon-of-fire/accessable-studio" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
           </div>
@@ -259,16 +265,6 @@
           <p>
             I build software with a mission: <strong>technology and gaming should be universally accessible</strong>. Whether developing custom Windows tools, audio-driven game modifications, or AI productivity utilities, my focus is delivering rich, intuitive experiences where screen-reader compatibility and keyboard ergonomics are first-class citizens.
           </p>
-          <div class="skills-grid">
-            <span class="skill-tag">C# / .NET / WPF</span>
-            <span class="skill-tag">Python / PyTorch</span>
-            <span class="skill-tag">Rust</span>
-            <span class="skill-tag">TypeScript / Electron</span>
-            <span class="skill-tag">NVDA / Tolk / SAPI</span>
-            <span class="skill-tag">Vision AI (Florence-2 / EasyOCR)</span>
-            <span class="skill-tag">Whisper Speech AI</span>
-            <span class="skill-tag">Spatial Audio</span>
-          </div>
         </div>
       </section>
 
@@ -283,7 +279,7 @@
             <div class="credit-card">
               <h3>Madness Innsmouth</h3>
               <p>Special thanks for testing, community feedback, and supporting accessible creations.</p>
-              <a href="https://madnessinnsmouth.com/products" target="_blank" rel="noopener noreferrer" class="credit-link">Visit Madness Innsmouth &rarr;</a>
+              <a href="https://madnessinnsmouth.com" target="_blank" rel="noopener noreferrer" class="credit-link">Visit Madness Innsmouth &rarr;</a>
             </div>
 <div class="credit-card">
               <h3>Lilian Coghlan</h3>
