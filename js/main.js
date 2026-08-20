@@ -99,4 +99,267 @@
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  /* ── Live Screen Reader Announcer ── */
+  let announcer = document.getElementById('a11y-announcer');
+  if (!announcer) {
+    announcer = document.createElement('div');
+    announcer.id = 'a11y-announcer';
+    announcer.className = 'sr-announcer';
+    announcer.setAttribute('aria-live', 'polite');
+    announcer.setAttribute('aria-atomic', 'true');
+    document.body.appendChild(announcer);
+  }
+
+  function announce(msg) {
+    if (announcer) {
+      announcer.textContent = '';
+      setTimeout(() => { announcer.textContent = msg; }, 50);
+    }
+  }
+
+  /* ── Accessibility State & Storage ── */
+  const A11Y_STORAGE_KEY = 'dof_a11y_prefs';
+  const prefs = {
+    theme: 'default',
+    fontSize: 'default',
+    font: 'default',
+    motion: 'default'
+  };
+
+  try {
+    const saved = localStorage.getItem(A11Y_STORAGE_KEY);
+    if (saved) {
+      Object.assign(prefs, JSON.parse(saved));
+    }
+  } catch (e) {
+    /* localStorage disabled / private browsing */
+  }
+
+  function applyA11yPrefs() {
+    const root = document.documentElement;
+    if (prefs.theme === 'high-contrast') {
+      root.setAttribute('data-theme', 'high-contrast');
+    } else {
+      root.removeAttribute('data-theme');
+    }
+
+    if (prefs.fontSize === 'large') {
+      root.setAttribute('data-font-size', 'large');
+    } else if (prefs.fontSize === 'xlarge') {
+      root.setAttribute('data-font-size', 'xlarge');
+    } else {
+      root.removeAttribute('data-font-size');
+    }
+
+    if (prefs.font === 'dyslexic') {
+      root.setAttribute('data-font', 'dyslexic');
+    } else {
+      root.removeAttribute('data-font');
+    }
+
+    if (prefs.motion === 'reduced') {
+      root.setAttribute('data-motion', 'reduced');
+    } else {
+      root.removeAttribute('data-motion');
+    }
+
+    try {
+      localStorage.setItem(A11Y_STORAGE_KEY, JSON.stringify(prefs));
+    } catch (e) {}
+  }
+
+  applyA11yPrefs();
+
+  /* ── Inject Accessibility Toolbar & Modal ── */
+  function createA11yUI() {
+    // Trigger Button
+    const trigger = document.createElement('button');
+    trigger.className = 'a11y-trigger';
+    trigger.setAttribute('aria-label', 'Open Accessibility & Display Settings (Alt+A)');
+    trigger.setAttribute('aria-haspopup', 'dialog');
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.innerHTML = `
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="4" r="2"></circle>
+        <path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01H13c-.35-.2-.75-.3-1.19-.26-.78.07-1.46.64-1.63 1.42l-.8 3.73c-.14.65.26 1.28.91 1.42.66.14 1.29-.27 1.43-.92L12 11.2V22h2v-6h2v6h2v-7.8c.84.4 1.76.6 2.7.6.15 0 .3 0 .3-.01V13zM8.5 14H7.13l-1.8 5.4c-.21.64.14 1.33.78 1.54.64.21 1.33-.14 1.54-.78L8.5 17.5v-3.5z"></path>
+      </svg>
+      <span>Accessibility</span>
+    `;
+
+    // Modal Backdrop & Dialog
+    const backdrop = document.createElement('div');
+    backdrop.className = 'a11y-panel-backdrop';
+    backdrop.setAttribute('role', 'dialog');
+    backdrop.setAttribute('aria-modal', 'true');
+    backdrop.setAttribute('aria-labelledby', 'a11y-title');
+
+    backdrop.innerHTML = `
+      <div class="a11y-panel">
+        <div class="a11y-panel-header">
+          <h2 id="a11y-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--color-accent)" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01H13c-.35-.2-.75-.3-1.19-.26-.78.07-1.46.64-1.63 1.42l-.8 3.73c-.14.65.26 1.28.91 1.42.66.14 1.29-.27 1.43-.92L12 11.2V22h2v-6h2v6h2v-7.8c.84.4 1.76.6 2.7.6.15 0 .3 0 .3-.01V13zM8.5 14H7.13l-1.8 5.4c-.21.64.14 1.33.78 1.54.64.21 1.33-.14 1.54-.78L8.5 17.5v-3.5z"/></svg>
+            Accessibility &amp; Display
+          </h2>
+          <button type="button" class="a11y-close-btn" aria-label="Close accessibility settings">&times;</button>
+        </div>
+
+        <div class="a11y-options">
+          <div class="a11y-row">
+            <div>
+              <div class="a11y-label">High Contrast</div>
+              <div class="a11y-desc">WCAG AAA maximum contrast mode</div>
+            </div>
+            <div class="a11y-btn-group" role="group" aria-label="High Contrast Mode">
+              <button type="button" class="a11y-toggle-btn" id="btn-theme-default" aria-pressed="${prefs.theme === 'default'}">Normal</button>
+              <button type="button" class="a11y-toggle-btn" id="btn-theme-hc" aria-pressed="${prefs.theme === 'high-contrast'}">High Contrast</button>
+            </div>
+          </div>
+
+          <div class="a11y-row">
+            <div>
+              <div class="a11y-label">Text Size</div>
+              <div class="a11y-desc">Scale page text size</div>
+            </div>
+            <div class="a11y-btn-group" role="group" aria-label="Text Size Presets">
+              <button type="button" class="a11y-toggle-btn" id="btn-font-def" aria-pressed="${prefs.fontSize === 'default'}">100%</button>
+              <button type="button" class="a11y-toggle-btn" id="btn-font-lg" aria-pressed="${prefs.fontSize === 'large'}">125%</button>
+              <button type="button" class="a11y-toggle-btn" id="btn-font-xl" aria-pressed="${prefs.fontSize === 'xlarge'}">150%</button>
+            </div>
+          </div>
+
+          <div class="a11y-row">
+            <div>
+              <div class="a11y-label">Readable Font</div>
+              <div class="a11y-desc">Dyslexia-friendly letterforms</div>
+            </div>
+            <div class="a11y-btn-group" role="group" aria-label="Dyslexia Friendly Font">
+              <button type="button" class="a11y-toggle-btn" id="btn-font-standard" aria-pressed="${prefs.font === 'default'}">Standard</button>
+              <button type="button" class="a11y-toggle-btn" id="btn-font-dyslexic" aria-pressed="${prefs.font === 'dyslexic'}">Dyslexic</button>
+            </div>
+          </div>
+
+          <div class="a11y-row">
+            <div>
+              <div class="a11y-label">Reduced Motion</div>
+              <div class="a11y-desc">Disable transitions and animations</div>
+            </div>
+            <div class="a11y-btn-group" role="group" aria-label="Reduced Motion">
+              <button type="button" class="a11y-toggle-btn" id="btn-motion-def" aria-pressed="${prefs.motion === 'default'}">Normal</button>
+              <button type="button" class="a11y-toggle-btn" id="btn-motion-red" aria-pressed="${prefs.motion === 'reduced'}">Reduced</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(trigger);
+    document.body.appendChild(backdrop);
+
+    function openDialog() {
+      backdrop.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+      const closeBtn = backdrop.querySelector('.a11y-close-btn');
+      if (closeBtn) closeBtn.focus();
+      announce('Accessibility settings opened');
+    }
+
+    function closeDialog() {
+      backdrop.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+      trigger.focus();
+      announce('Accessibility settings closed');
+    }
+
+    trigger.addEventListener('click', openDialog);
+    backdrop.querySelector('.a11y-close-btn').addEventListener('click', closeDialog);
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) closeDialog();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && backdrop.classList.contains('is-open')) {
+        closeDialog();
+      }
+      // Shortcut Alt+A
+      if (e.altKey && (e.key === 'a' || e.key === 'A')) {
+        e.preventDefault();
+        if (backdrop.classList.contains('is-open')) {
+          closeDialog();
+        } else {
+          openDialog();
+        }
+      }
+    });
+
+    // Theme Handlers
+    document.getElementById('btn-theme-default').addEventListener('click', function() {
+      prefs.theme = 'default';
+      applyA11yPrefs();
+      this.setAttribute('aria-pressed', 'true');
+      document.getElementById('btn-theme-hc').setAttribute('aria-pressed', 'false');
+      announce('High contrast mode disabled');
+    });
+    document.getElementById('btn-theme-hc').addEventListener('click', function() {
+      prefs.theme = 'high-contrast';
+      applyA11yPrefs();
+      this.setAttribute('aria-pressed', 'true');
+      document.getElementById('btn-theme-default').setAttribute('aria-pressed', 'false');
+      announce('High contrast mode enabled');
+    });
+
+    // Font Size Handlers
+    const fontBtns = {
+      default: document.getElementById('btn-font-def'),
+      large: document.getElementById('btn-font-lg'),
+      xlarge: document.getElementById('btn-font-xl')
+    };
+    function setFontSize(size, label) {
+      prefs.fontSize = size;
+      applyA11yPrefs();
+      Object.keys(fontBtns).forEach(k => fontBtns[k].setAttribute('aria-pressed', k === size ? 'true' : 'false'));
+      announce(`Text size set to ${label}`);
+    }
+    fontBtns.default.addEventListener('click', () => setFontSize('default', '100% standard'));
+    fontBtns.large.addEventListener('click', () => setFontSize('large', '125% large'));
+    fontBtns.xlarge.addEventListener('click', () => setFontSize('xlarge', '150% extra large'));
+
+    // Dyslexic Font
+    document.getElementById('btn-font-standard').addEventListener('click', function() {
+      prefs.font = 'default';
+      applyA11yPrefs();
+      this.setAttribute('aria-pressed', 'true');
+      document.getElementById('btn-font-dyslexic').setAttribute('aria-pressed', 'false');
+      announce('Standard font enabled');
+    });
+    document.getElementById('btn-font-dyslexic').addEventListener('click', function() {
+      prefs.font = 'dyslexic';
+      applyA11yPrefs();
+      this.setAttribute('aria-pressed', 'true');
+      document.getElementById('btn-font-standard').setAttribute('aria-pressed', 'false');
+      announce('Dyslexia friendly font enabled');
+    });
+
+    // Motion Handlers
+    document.getElementById('btn-motion-def').addEventListener('click', function() {
+      prefs.motion = 'default';
+      applyA11yPrefs();
+      this.setAttribute('aria-pressed', 'true');
+      document.getElementById('btn-motion-red').setAttribute('aria-pressed', 'false');
+      announce('Standard motion enabled');
+    });
+    document.getElementById('btn-motion-red').addEventListener('click', function() {
+      prefs.motion = 'reduced';
+      applyA11yPrefs();
+      this.setAttribute('aria-pressed', 'true');
+      document.getElementById('btn-motion-def').setAttribute('aria-pressed', 'false');
+      announce('Reduced motion enabled');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createA11yUI);
+  } else {
+    createA11yUI();
+  }
 })();
