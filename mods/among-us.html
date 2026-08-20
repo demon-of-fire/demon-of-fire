@@ -15,7 +15,7 @@
   <link rel="canonical" href="https://demon-of-fire.github.io/demon-of-fire/mods/among-us.html" />
   <script>try{if(localStorage.getItem('theme')==='light'){document.documentElement.setAttribute('data-theme','light')}}catch(e){}</script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Among Us Accessibility Mod","operatingSystem":"Windows","applicationCategory":"GameApplication","license":"https://opensource.org/licenses/MIT","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"codeRepository":"https://github.com/demon-of-fire/among-us-accessibility-mod","softwareVersion":"1.0.0"}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Among Us Accessibility Mod","operatingSystem":"Windows","applicationCategory":"GameApplication","license":"https://opensource.org/licenses/MIT","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"codeRepository":"https://github.com/demon-of-fire/among-us-accessibility-mod","softwareVersion":"1.1.0"}
   </script>
 </head>
 <body>
@@ -114,23 +114,42 @@
           <h2>Requirements</h2>
           <ul>
             <li>Among Us (Steam / Epic / Itch), latest version</li>
-            <li>BepInEx 6 (x64)</li>
+            <li>
+              BepInEx 6 (x64) is included in the package — nothing else to
+              install
+            </li>
           </ul>
 
           <h2>Installation</h2>
           <ol>
             <li>
-              Install
-              <a href="https://docs.bepinex.dev/" rel="external noopener">BepInEx 6</a>
-              into your Among Us folder — extract into the game directory,
-              run the game once, then close it.
+              Download the
+              <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest/download/AmongUsAccessibilityMod-v1.1.0.zip" rel="external noopener">folder package</a>
+              from the
+              <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest" rel="external noopener">releases page</a>.
             </li>
             <li>
-              Copy <strong>AmongUsAccessibilityMod.dll</strong> into
-              <code>BepInEx/plugins/</code>.
+              Find your Among Us game folder (Steam: right-click Among Us,
+              Manage, Browse local files).
             </li>
-            <li>Launch the game. The mod announces itself and reads out its controls.</li>
+            <li>
+              Copy <strong>everything inside</strong> the
+              <code>AmongUsAccessibilityMod</code> folder into your Among Us
+              game folder, so <code>winhttp.dll</code> lands next to
+              <code>Among Us.exe</code>. Merge folders if asked.
+            </li>
+            <li>
+              Launch the game once, reach the main menu, close it, then launch
+              again. The mod announces itself and reads out its controls.
+            </li>
           </ol>
+          <p>
+            Full instructions are also inside the zip
+            (<code>README.txt</code>). If you already have BepInEx 6
+            installed, copy
+            <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest/download/Among.Us.Accessibility.Mod.dll" rel="external noopener">Among.Us.Accessibility.Mod.dll</a>
+            into <code>BepInEx/plugins/</code> instead.
+          </p>
 
           <h2>Controls</h2>
           <div class="table-wrap">
@@ -160,8 +179,13 @@
             <h3>Download</h3>
             <ul class="sidebar-links" role="list">
               <li>
-                <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest/download/Among.Us.Accessibility.Mod.dll" rel="external noopener" aria-label="Download Among Us Accessibility Mod DLL">
-                  Download (.zip for Windows)
+                <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest/download/AmongUsAccessibilityMod-v1.1.0.zip" rel="external noopener" aria-label="Download the Among Us Accessibility Mod folder package">
+                  Download folder package (.zip)
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest/download/Among.Us.Accessibility.Mod.dll" rel="external noopener" aria-label="Download the standalone Among Us Accessibility Mod plugin DLL">
+                  Download standalone DLL (BepInEx 6 already installed)
                 </a>
               </li>
               <li>
@@ -180,7 +204,7 @@
               <li>Language: C# / .NET</li>
               <li>License: MIT</li>
               <li>Status: Available</li>
-              <li>Version: 1.0.0</li>
+              <li>Version: 1.1.0</li>
             </ul>
             <div class="sidebar-badges" style="margin-top: 1rem;">
               <img src="https://img.shields.io/github/v/release/demon-of-fire/among-us-accessibility-mod?style=flat-square&amp;label=version&amp;color=b8441a" alt="Latest release version" />
