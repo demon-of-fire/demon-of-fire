@@ -109,6 +109,34 @@
             <li>Spatial audio cues with panning and pitch to locate players, vents, and objects</li>
             <li>Spoken task state and task navigation</li>
             <li>NVDA / screen reader announcements built in</li>
+            <li>
+              <strong>Lobby readout</strong> — who is in the lobby, the host's
+              settings (map, impostors, tasks), and the start countdown
+            </li>
+            <li>
+              <strong>Meeting phase</strong> — roster at meeting start, vote
+              lock-in, voting countdown, vote progress, and vote results
+            </li>
+            <li>
+              <strong>Vent accessibility (V)</strong> — locate the nearest
+              vent by ear and navigate vent destinations with the keyboard
+            </li>
+            <li>
+              <strong>Ghost spectate (V while dead)</strong> — cycle through
+              living players to follow and hear their room changes
+            </li>
+            <li>
+              <strong>Quick chat announcements</strong> — every quick-chat menu
+              and selection is spoken
+            </li>
+            <li>
+              <strong>Keybind help (F1)</strong>, <strong>mute (F2)</strong>,
+              and an announcement history (<kbd>Ctrl+,</kbd> / <kbd>Ctrl+.</kbd>)
+            </li>
+            <li>
+              Every announcement type is configurable — 19 toggles in
+              <code>BepInEx/config/greenbean.amongusaccessibilitymod.cfg</code>
+            </li>
           </ul>
 
           <h2>Requirements</h2>
@@ -162,7 +190,17 @@
               </thead>
               <tbody>
                 <tr><td><kbd>H</kbd></td><td>Status read-out</td></tr>
-                <tr><td><kbd>B</kbd></td><td>Open / close the sabotage map</td></tr>
+                <tr><td><kbd>B</kbd></td><td>Open / close the sabotage map (or task list as crewmate)</td></tr>
+                <tr><td><kbd>V</kbd></td><td>Locate the nearest vent; inside a vent, navigate destinations; while dead, cycle spectate targets</td></tr>
+                <tr><td><kbd>M</kbd></td><td>Pause menu (Resume / Leave game)</td></tr>
+                <tr><td><kbd>F1</kbd></td><td>Speak the full keybind list</td></tr>
+                <tr><td><kbd>F2</kbd></td><td>Mute / unmute announcements (30 seconds)</td></tr>
+                <tr><td><kbd>Ctrl+,</kbd> / <kbd>Ctrl+.</kbd></td><td>Repeat the previous / next announcement</td></tr>
+                <tr><td><kbd>Arrows</kbd></td><td>Navigate / move</td></tr>
+                <tr><td><kbd>Enter</kbd></td><td>Activate</td></tr>
+                <tr><td><kbd>Tab</kbd></td><td>Scan surroundings / task progress</td></tr>
+                <tr><td><kbd>T</kbd> / <kbd>U</kbd> / <kbd>P</kbd> / <kbd>Y</kbd></td><td>Nearest task / nearest body / players in room / locate task or sabotage</td></tr>
+                <tr><td><kbd>C</kbd></td><td>Chat</td></tr>
               </tbody>
             </table>
           </div>
