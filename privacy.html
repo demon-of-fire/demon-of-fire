@@ -84,21 +84,56 @@
           This privacy policy explains what information is collected when you
           visit this website or use any software published by Demon of Fire,
           and how that information is handled. The short version: this website
-          collects nothing, and the software is designed to process your data
-          on your own device.
+          collects nothing about you, and the software is designed to process
+          your data on your own device. Where something does leave your machine
+          (for example, an optional AI feature you turn on), it is described
+          clearly below.
         </p>
 
-        <h2>This Website</h2>
+        <h2>Summary of Data Handling</h2>
+        <ul>
+          <li><strong>This website:</strong> no analytics, no advertising, no tracking, and no cookies set by us.</li>
+          <li><strong>The apps and mods:</strong> run on your device; there is no telemetry, no accounts, and no analytics.</li>
+          <li><strong>What we never see:</strong> your files, clipboard, microphone audio, screen content, API keys, or usage.</li>
+          <li><strong>What may leave your device:</strong> only the text you choose to send to Google Gemini when you enable an optional AI feature and supply your own API key.</li>
+        </ul>
+
+        <h2>Information We Do Not Collect</h2>
         <p>
-          This website does not use any third-party analytics, advertising,
-          or tracking services. No cookies are set. No personal data is
-          collected through this website.
+          Demon of Fire does not collect, store, or process any of the
+          following through this website or its software:
         </p>
+        <ul>
+          <li>Names, email addresses, or other contact details.</li>
+          <li>Account credentials (there are no accounts to begin with).</li>
+          <li>Payment information (any paid AI usage is billed directly by Google to you).</li>
+          <li>Files, documents, images, audio, or clipboard contents.</li>
+          <li>Screen captures, game footage, or gameplay data from the mods.</li>
+          <li>Device identifiers, advertising IDs, or location data.</li>
+          <li>Behavioural analytics, usage statistics, or crash reports sent to us.</li>
+        </ul>
+
+        <h2>Cookies and Local Storage</h2>
         <p>
-          The web server may retain standard access logs (IP address,
-          timestamp, page requested) for a limited period for security and
-          operational purposes. These logs are not shared with third parties
-          and are not used for profiling.
+          This website sets no first-party or third-party cookies. The only
+          data stored in your browser is a small amount of
+          <strong>local storage</strong> used purely to remember your
+          preferences on this device — specifically your chosen colour theme
+          (light/dark) and any accessibility display settings (such as reduced
+          motion or font size). This information never leaves your browser and
+          is not used to identify you. You can clear it at any time from your
+          browser's "Clear browsing data" settings; doing so only resets your
+          theme and display preferences.
+        </p>
+
+        <h2>This Website and Hosting</h2>
+        <p>
+          This site is a static website hosted on GitHub Pages. The hosting
+          provider may record standard, aggregated web server logs (such as
+          your IP address, the page requested, and a timestamp) for a limited
+          period to operate and secure the service. Demon of Fire does not
+          access, analyse, or profile these logs, and they are not used to
+          identify individual visitors.
         </p>
 
         <h2>Downloads and GitHub</h2>
@@ -126,26 +161,46 @@
           account.
         </p>
         <p>
-          Some apps offer optional AI features powered by Google Gemini. These
-          features only work if you provide your own Google Gemini API key in
-          the app's settings. When enabled, the content you ask the AI about
-          is sent to Google's servers under your key, and Google's
-          <a href="https://ai.google.dev/gemini-api/terms" rel="external noopener">API terms</a>
-          and privacy policy apply.
-        </p>
-        <p>
-          Your API key is stored only in the app's settings on your own
-          device. It is never transmitted to Demon of Fire, never uploaded
-          anywhere, and never visible to Demon of Fire or anyone else. If you
-          use paid AI features, all billing happens directly between you and
-          Google through your own Google account — Demon of Fire has no
-          access to your key, your usage, or your bills.
-        </p>
-        <p>
           Apps that use a microphone (for example, the voice assistant)
           capture audio only while you are actively using the voice feature,
           and process it locally. Local settings, playlists, and snapshots
           are stored only on your device in the app's data folder.
+        </p>
+
+        <h2>What Each App Stores on Your Device</h2>
+        <p>
+          The following is a per-app summary of the data each project keeps
+          locally. None of it is transmitted to Demon of Fire.
+        </p>
+        <ul>
+          <li><strong>Access Overlay:</strong> window captures, OCR results, and document-reader text in a local cache you can clear at any time.</li>
+          <li><strong>Access Recorder:</strong> your recordings and local Whisper transcripts in the app's data folder.</li>
+          <li><strong>Accessible Studio:</strong> project files, exports, and your Gemini key (if entered) in local settings.</li>
+          <li><strong>Accessible Media Player:</strong> playlists, bookmarks, and equalizer settings locally.</li>
+          <li><strong>Accessible Calculator:</strong> no persistent data beyond your preferences.</li>
+          <li><strong>Clipboard History:</strong> your clipboard history, encrypted on disk with AES-GCM; nothing leaves your PC.</li>
+          <li><strong>Nova Voice Assistant:</strong> your Gemini API key and PC-control permission toggles locally; voice audio is processed on-device for command detection.</li>
+          <li><strong>FC 26 &amp; Rocket League Mods:</strong> cached AI models and runtime state locally; no screen or gameplay data is uploaded.</li>
+          <li><strong>Among Us Mod:</strong> configuration and toggle settings locally.</li>
+          <li><strong>Agony Report, Revision Hub, Minecraft Website:</strong> browser-side only; no data is stored or transmitted by Demon of Fire.</li>
+        </ul>
+
+        <h2>AI Features and Third-Party Processing</h2>
+        <p>
+          Some apps offer optional AI features. How data flows depends on the
+          feature:
+        </p>
+        <ul>
+          <li><strong>Google Gemini (Nova, Accessible Studio):</strong> only active if you provide your own Google Gemini API key in settings. When you use these features, the text or content you submit is sent to Google's servers under your key, and Google's <a href="https://ai.google.dev/gemini-api/terms" rel="external noopener">API terms</a> and privacy policy apply. Your key is stored only on your device and is never transmitted to Demon of Fire.</li>
+          <li><strong>On-device transcription (Access Recorder):</strong> Whisper transcription runs entirely on your PC; nothing is uploaded.</li>
+          <li><strong>On-device vision (FC 26, Rocket League mods):</strong> Florence-2 and EasyOCR run fully locally; no images or gameplay leave your machine.</li>
+        </ul>
+        <p>
+          If you use paid Gemini features, all billing happens directly between
+          you and Google through your own Google account. Demon of Fire has no
+          access to your key, your usage, or your bills. To stop all
+          third-party processing, simply remove your API key from the app's
+          settings.
         </p>
 
         <h2>Game Mods</h2>
@@ -153,7 +208,16 @@
           Game mods published on this site run entirely on your device. The
           AI features in the FC 26 and Rocket League mods are fully on-device
           (Florence-2 and EasyOCR); no game footage or screen captures are
-          uploaded anywhere.
+          uploaded anywhere. The mods are not affiliated with or endorsed by
+          the games' publishers.
+        </p>
+
+        <h2>Misc Tools (Websites)</h2>
+        <p>
+          The web-based tools (Past Paper Revision Hub, Agony Report, and the
+          Minecraft website) run entirely in your browser. They do not collect
+          or transmit personal data to Demon of Fire. Any inputs you type stay
+          in your browser session.
         </p>
 
         <h2>Third-Party Services</h2>
@@ -163,17 +227,76 @@
           govern data collected when you visit them.
         </p>
 
+        <h2>Data Retention</h2>
+        <p>
+          Because Demon of Fire collects no personal data through this website
+          or its software, there is nothing for us to retain about you. Any
+          data stored by an app lives on your own device and is removed when
+          you uninstall the app or delete its data folder. Hosting logs
+          retained by the provider are kept only as long as necessary to
+          operate the site.
+        </p>
+
+        <h2>Security</h2>
+        <p>
+          The strongest privacy guarantee is that most data never leaves your
+          device. Where a third-party service is involved (Google Gemini), it
+          is optional, clearly labelled, and relies on a key you control. API
+          keys are stored only in local application storage and are never
+          shared. If you believe a project has a security or privacy weakness,
+          please report it responsibly via the project's GitHub repository.
+        </p>
+
+        <h2>Your Rights and Choices</h2>
+        <p>
+          Because we hold no personal data about you, there is normally nothing
+          to request, correct, or delete from our side. Your meaningful
+          controls are on your own device:
+        </p>
+        <ul>
+          <li><strong>Stop all local data:</strong> uninstall an app or delete its data folder.</li>
+          <li><strong>Stop third-party AI processing:</strong> remove your Gemini API key from the app's settings.</li>
+          <li><strong>Reset website preferences:</strong> clear this site's local storage in your browser.</li>
+          <li><strong>Accessibility of data:</strong> local files (recordings, transcripts, clipboard history) are stored in open, inspectable formats so you can review or export them at any time.</li>
+        </ul>
+        <p>
+          If you are in a region with data-protection rights (such as the GDPR
+          or CCPA), and you believe we hold something about you, contact us and
+          we will respond within a reasonable time. In practice, we do not.
+        </p>
+
         <h2>Children's Privacy</h2>
         <p>
-          This website is not directed at children under 13. No personal
-          information is knowingly collected from children.
+          This website and software are intended for general audiences and are
+          not directed at children under 13. No personal information is
+          knowingly collected from children. If you are a parent or guardian
+          and believe a child has provided personal information to a third-party
+          service through one of the apps, please contact that service directly.
+        </p>
+
+        <h2>International Users and Data Transfers</h2>
+        <p>
+          This website is hosted and the software is distributed globally. If
+          you access it from outside the United Kingdom, be aware that hosting
+          and any optional third-party processing (for example, Google Gemini)
+          may involve servers in other countries. No personal data is
+          transferred by Demon of Fire itself.
+        </p>
+
+        <h2>Accessibility of This Document</h2>
+        <p>
+          This policy is written in plain language and is structured with
+          headings so it can be navigated by screen readers and keyboard. If
+          any part is unclear or you need it in another format, contact us and
+          we will help.
         </p>
 
         <h2>Changes to This Policy</h2>
         <p>
           This privacy policy may be updated from time to time. The "last
           updated" date at the top of this page reflects the most recent
-          revision.
+          revision. Where a change is significant, we will note it in the
+          <a href="changelog.html">changelog</a>.
         </p>
 
         <h2>Contact</h2>

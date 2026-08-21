@@ -763,6 +763,288 @@
           </p>
         </details>
 
+        <h2>Accessibility &amp; Design</h2>
+
+        <details class="faq-item">
+          <summary>Why is accessibility the focus of these projects?</summary>
+          <p>
+            A lot of mainstream software is frustrating or impossible to use
+            without a mouse or sight. These projects exist to close that gap —
+            screen-reader-friendly apps, audio cues for games, and tools anyone
+            can operate by keyboard or voice.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are the apps usable entirely without a mouse?</summary>
+          <p>
+            Yes. Every app is built keyboard-first: menus, dialogs, editors,
+            and players are all reachable and operable with the keyboard, and
+            actions are announced as you go.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I adjust font size and contrast in the apps?</summary>
+          <p>
+            Yes. Most apps honour your Windows theme and offer larger text and
+            high-contrast display options. On this website, use the
+            accessibility dialog (Alt+A) to set font scaling and reduced motion.
+          </p>
+        </details>
+
+        <h2>Screen Readers &amp; NVDA</h2>
+
+        <details class="faq-item">
+          <summary>Which screen readers are supported?</summary>
+          <p>
+            NVDA is the primary target and is what the apps are tested with.
+            They also fall back to Windows SAPI speech when NVDA isn't running,
+            so you still get audio feedback with Narrator or no screen reader
+            at all.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do the apps work with JAWS or Narrator?</summary>
+          <p>
+            NVDA is the main supported reader. Many controls use standard
+            Windows accessibility APIs, so Narrator often works too; JAWS is not
+            specifically tested. If something doesn't announce, let us know via
+            Discord or a GitHub issue.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What if NVDA isn't installed?</summary>
+          <p>
+            The apps speak through NVDA when it's present and otherwise use
+            Windows SAPI. You'll still hear prompts and results — NVDA just
+            gives the richest, most reliable experience.
+          </p>
+        </details>
+
+        <h2>Website Accessibility</h2>
+
+        <details class="faq-item">
+          <summary>Is this website accessible?</summary>
+          <p>
+            Yes — it ships with skip-to-content links, semantic landmarks, ARIA
+            labels, visible focus states, keyboard navigation, a light/dark
+            theme, and a reduced-motion mode. Headings are used logically so
+            screen readers can jump between sections.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What does the accessibility dialog (Alt+A) do?</summary>
+          <p>
+            Press <code>Alt + A</code> anywhere on the site to open display
+            settings: switch the theme, scale text up or down, and turn on
+            reduced motion. Your choices are saved in your browser's local
+            storage.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I switch between light and dark mode?</summary>
+          <p>
+            Use the sun/moon button in the top navigation, or open the
+            accessibility dialog with <code>Alt + A</code>. The choice is
+            remembered on your device.
+          </p>
+        </details>
+
+        <h2>Master Shortcut Reference</h2>
+
+        <details class="faq-item">
+          <summary>What are the main global shortcuts?</summary>
+          <p>
+            <code>Alt + A</code> — accessibility/dialog settings;
+            <code>Ctrl + Alt + V</code> — Clipboard History;
+            <code>Ctrl + Shift + R</code> — Access Recorder record;
+            <code>Ctrl + Alt + G</code> — Access Overlay game scanner.
+            Each app's help or README lists its full set.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Where can I find every shortcut for an app?</summary>
+          <p>
+            Open the app and check its Settings or Help section, or read the
+            project's README on GitHub — shortcuts are listed there for each
+            tool.
+          </p>
+        </details>
+
+        <h2>Voice Assistant Deep Dive</h2>
+
+        <details class="faq-item">
+          <summary>Can Nova work fully offline?</summary>
+          <p>
+            The on-device command detection and PC-control actions work without
+            the internet. The Gemini-powered natural-language understanding
+            needs an internet connection and your API key; without it, Nova
+            falls back to built-in command matching.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does Nova record my microphone continuously?</summary>
+          <p>
+            No. Nova listens only when you activate it (for example, with its
+            wake command or a shortcut). Audio is processed for the current
+            request and is not streamed to Demon of Fire.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Which permissions can I toggle in Nova?</summary>
+          <p>
+            You can enable or disable individual capability groups — opening
+            apps, controlling media, managing files, web search, system
+            actions, and more — so Nova only does what you're comfortable with.
+          </p>
+        </details>
+
+        <h2>Download Safety &amp; Verification</h2>
+
+        <details class="faq-item">
+          <summary>How do I know a download is safe and untampered?</summary>
+          <p>
+            Every release is published on the project's official GitHub
+            repository, and the source code is public so you can review or
+            build it yourself. Prefer the "Releases" links on this site, which
+            point to github.com/demon-of-fire.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why aren't the installers code-signed?</summary>
+          <p>
+            Code-signing certificates cost money that a small open-source
+            project doesn't have. That's why Windows may show a SmartScreen
+            warning on first run — it does not mean the file is unsafe. The
+            open-source code lets you verify exactly what you're running.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I build an app from source instead of downloading?</summary>
+          <p>
+            Yes. Each repository includes the source and build instructions.
+            Building yourself is the most verifiable option if you want to be
+            certain of what's running.
+          </p>
+        </details>
+
+        <h2>Data &amp; Accounts</h2>
+
+        <details class="faq-item">
+          <summary>Do you store my data in the cloud?</summary>
+          <p>
+            No. The apps process and store everything on your own device. There
+            is no cloud account and nothing is uploaded to Demon of Fire. The
+            only data that may leave your device is text you send to Google
+            Gemini when you opt into those features.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I sync settings across devices?</summary>
+          <p>
+            Not automatically — settings live on the device where the app is
+            installed. You can copy an app's data folder to another machine if
+            you want to carry settings over.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I delete all my data?</summary>
+          <p>
+            Uninstall the app or delete its data folder; that removes
+            everything stored locally. For the website, clear this site's local
+            storage in your browser to reset theme and display preferences.
+          </p>
+        </details>
+
+        <h2>Misc Tools</h2>
+
+        <details class="faq-item">
+          <summary>What is the Past Paper Revision Hub?</summary>
+          <p>
+            A browser-based study tool that organises past exam papers and
+            mark schemes so you can revise more efficiently. It runs entirely in
+            your browser and stores nothing on our servers.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is Agony Report?</summary>
+          <p>
+            A satirical "newspaper" that generates over-the-top Arsenal-themed
+            stories for a laugh. It's a fun writing/templating project and is
+            not affiliated with any club or publication.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is the Minecraft website project?</summary>
+          <p>
+            A small web project related to Minecraft — a demo/tool built to
+            show what's possible with accessible, lightweight web design. It
+            collects no personal data.
+          </p>
+        </details>
+
+        <h2>Roadmap &amp; Future</h2>
+
+        <details class="faq-item">
+          <summary>What's planned next?</summary>
+          <p>
+            Ideas on the table include more game mods, deeper NVDA integration,
+            and new everyday accessibility apps. There's no fixed roadmap — the
+            <a href="changelog.html">changelog</a> and Discord are the best
+            places to see what's coming.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Will there be macOS or mobile versions?</summary>
+          <p>
+            Most apps rely on Windows accessibility APIs, so a macOS port isn't
+            straightforward. It's not off the table for the future, but Windows
+            and Linux (where supported) are the focus for now.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I request a feature or vote on ideas?</summary>
+          <p>
+            Open a GitHub issue with your idea, or post in the
+            <a href="https://discord.gg/xU2Fq3HXbh" rel="noopener noreferrer">Discord server</a>. Popular, well-scoped requests are the
+            most likely to get built.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I build a project from source?</summary>
+          <p>
+            Each repository's README explains how to clone and build it (for
+            example, <code>pip install -r requirements.txt</code> for the
+            Python mods, or the .NET/installer steps for the desktop apps).
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is there a code of conduct for contributors?</summary>
+          <p>
+            Yes — be respectful and constructive. Contributions are welcome via
+            pull requests; by contributing you agree your work is licensed
+            under the project's open-source licence (MIT by default).
+          </p>
+        </details>
+
         <h2>Still Stuck?</h2>
         <p>
           If your question isn't answered here, join the
