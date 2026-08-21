@@ -1,155 +1,155 @@
-﻿{
-    "generatedAt":  "2026-08-20T23:55:40Z",
-    "repos":  [
-                  {
-                      "name":  "Access Overlay",
-                      "repo":  "access-overlay",
-                      "releases":  [
-                                       {
-                                           "tag_name":  "v1.0.0",
-                                           "published_at":  "2026-08-20T16:18:19Z",
-                                           "html_url":  "https://github.com/demon-of-fire/access-overlay/releases/tag/v1.0.0",
-                                           "body":  "Access Overlay - Universal accessible screen reader overlay, document reader, and OCR game scanner for Windows."
-                                       }
-                                   ]
-                  },
-                  {
-                      "name":  "Access Recorder",
-                      "repo":  "access-recorder",
-                      "releases":  [
-                                       {
-                                           "tag_name":  "v1.0.0",
-                                           "published_at":  "2026-08-20T16:17:59Z",
-                                           "html_url":  "https://github.com/demon-of-fire/access-recorder/releases/tag/v1.0.0",
-                                           "body":  "Access Recorder - Accessible AI audio recorder and transcription studio with local Whisper AI and music mode for Windows."
-                                       }
-                                   ]
-                  },
-                  {
-                      "name":  "Accessible Studio",
-                      "repo":  "accessable-studio",
-                      "releases":  [
-                                       {
-                                           "tag_name":  "v3.4.0",
-                                           "published_at":  "2026-08-18T00:15:03Z",
-                                           "html_url":  "https://github.com/demon-of-fire/accessable-studio/releases/tag/v3.4.0",
-                                           "body":  "Fixes:\n- Buttons were unresponsive in the installed app - preload now loads correctly under Electron\u0027s sandbox\n- RTMP live streaming: streams no longer fail on clips without audio, bitrate changes now actually apply, and the connection test uses a proper RTMP handshake\n\nDownloads:\n- Accessible-Studio-Setup-3.4.0.exe (installer)\n- Accessible-Studio-Portable-3.4.0.exe (portable, no install required)\n\n**Full Changelog**: https://github.com/demon-of-fire/accessable-studio/commits/v3.4.0"
-                                       }
-                                   ]
-                  },
-                  {
-                      "name":  "Accessible Media Player",
-                      "repo":  "accessible-media-player",
-                      "releases":  [
-                                       {
-                                           "tag_name":  "v2.1.0",
-                                           "published_at":  "2026-08-18T00:16:41Z",
-                                           "html_url":  "https://github.com/demon-of-fire/accessible-media-player/releases/tag/v2.1.0",
-                                           "body":  "Fixes:\n- App could crash on startup when local data was corrupted - playlist and history are now filtered defensively\n- Fixed a crash in the extended features menu (top-bar element was missing)\n- Snapshot gallery data is stored under the new app name with automatic migration\n\nDownload:\n- Accessible.Media.Player.Setup.exe (installer)"
-                                       }
-                                   ]
-                  },
-                  {
-                      "name":  "Accessible Calculator",
-                      "repo":  "accessable-calculator",
-                      "releases":  [
-                                       {
-                                           "tag_name":  "v1.0.0",
-                                           "published_at":  "2026-05-23T14:45:27Z",
-                                           "html_url":  "https://github.com/demon-of-fire/accessable-calculator/releases/tag/v1.0.0",
-                                           "body":  "´╗┐## Download\n\n[Download Accessable Calculator Setup.exe](https://github.com/demon-of-fire/accessable-calculator/releases/download/v1.0.0/Accessable.Calculator.Setup.exe)\n\nThis installer is the Windows app package. Download it, run it, and follow the setup wizard prompts.\n\nGitHub may also show automatic \"Source code\" downloads below. Those are not the packaged source zip. Use `AccessableCalculator-source.zip` if you want the source package.\n\n## Source\n\n[Download AccessableCalculator-source.zip](https://github.com/demon-of-fire/accessable-calculator/releases/download/v1.0.0/AccessableCalculator-source.zip)\r\n"
-                                       }
-                                   ]
-                  },
-                  {
-                      "name":  "Nova Voice Assistant",
-                      "repo":  "nova-voice-assistant",
-                      "releases":  [
-                                       {
-                                           "tag_name":  "v1.1.0",
-                                           "published_at":  "2026-08-18T19:07:30Z",
-                                           "html_url":  "https://github.com/demon-of-fire/nova-voice-assistant/releases/tag/v1.1.0",
-                                           "body":  "## v1.1.0 - Reliability \u0026 safety update\n\n### Safety\n- Fixed a command-injection vulnerability in app launching (no more shell interpretation, dangerous characters rejected)\n- Closing apps now requires confirmation and protects system and Nova processes - a short or vague app name is refused\n- Killing processes refuses Nova, Python, and system processes\n- No more double confirmation dialogs - Nova asks once, then acts\n\n### Fixes\n- Web searches and YouTube searches produce correct links (proper URL encoding)\n- Running Python code now works in the built Nova.exe\n- No longer crashes at startup on machines without an audio device\n- API key setup can no longer hang forever (5 minute timeout)\n- Fixed a race condition where pressing the hotkey and the button together could start two listening sessions at once\n- Window centering now uses your real screen size\n- Process details no longer crash on missing data\n- Snap window validates left/right before moving anything\n\n### Install\nDownload Nova.exe, run it, and sign in with your Gemini API key (Settings or on first launch)."
-                                       },
-                                       {
-                                           "tag_name":  "v1.0.0",
-                                           "published_at":  "2026-03-28T15:23:16Z",
-                                           "html_url":  "https://github.com/demon-of-fire/nova-voice-assistant/releases/tag/v1.0.0",
-                                           "body":  "Initial release. See CHANGELOG.md for full details."
-                                       }
-                                   ]
-                  },
-                  {
-                      "name":  "Clipboard History",
-                      "repo":  "clipboard-history",
-                      "releases":  [
-                                       {
-                                           "tag_name":  "v0.1.0",
-                                           "published_at":  "2026-08-20T16:18:25Z",
-                                           "html_url":  "https://github.com/demon-of-fire/clipboard-history/releases/tag/v0.1.0",
-                                           "body":  "High-performance, secure cross-platform clipboard manager written in Rust with hotkeys and QR extraction."
-                                       }
-                                   ]
-                  },
-                  {
-                      "name":  "Among Us Accessibility Mod",
-                      "repo":  "among-us-accessibility-mod",
-                      "releases":  [
-                                       {
-                                           "tag_name":  "v1.1.0",
-                                           "published_at":  "2026-08-20T20:30:27Z",
-                                           "html_url":  "https://github.com/demon-of-fire/among-us-accessibility-mod/releases/tag/v1.1.0",
-                                           "body":  "**v1.1.0 ÔÇö one-click install + a lot of new accessibility.** The release package now bundles BepInEx 6 (IL2CPP x64), so installing is just: copy the contents of the zip into your Among Us folder and launch. No manual BepInEx setup.\n\n## Install\n- Download `AmongUsAccessibilityMod-v1.1.0.zip` (recommended ÔÇö BepInEx included)\n- Copy **everything inside** the `AmongUsAccessibilityMod` folder into your Among Us game folder (Steam: right-click Among Us ÔåÆ Manage ÔåÆ Browse local files), merge folders when asked\n- Launch the game once, reach the main menu, close it, then launch again\n- Already have BepInEx 6? Just copy `Among.Us.Accessibility.Mod.dll` into `BepInEx/plugins/`\n\n## What\u0027s new in this release\n\n**New keys**\n- `V` ÔÇö locate the nearest vent (direction + distance); inside a vent, Left/Right/Up choose destinations, Escape climbs out; while dead, cycles spectate targets\n- `F1` ÔÇö speak the full keybind list\n- `F2` ÔÇö mute/unmute all announcements (30 s)\n- `Ctrl+,` / `Ctrl+.` ÔÇö repeat the previous/next announcement\n\n**New accessibility**\n- Lobby readout: players, host settings (map, impostors, tasks), start countdown\n- Meeting phase: roster (who\u0027s alive/dead), vote lock-in, vote countdown (10/5/3/1), vote progress, vote results\n- Ghost spectate: cycle living players to follow while dead\n- Vent navigation for Impostors/Engineers\n- Quick-chat menu announcements\n- Vitals monitor and Shapeshifter picker minigame support\n- Task bar milestones (50/75/100%), kill cooldown callouts, sabotage countdowns, own-death announcement\n- Every announcement type is now configurable (19 toggles in `BepInEx/config/greenbean.amongusaccessibilitymod.cfg`)\n\n**Fairer tasks**\n- Swipe Card, Clean O2 Filter, Clean Vents no longer fail on early release ÔÇö they finish on their own\n- Calibrate Distributor: press Space to arm a dial, it locks on its next pass\n\nFull details in `CHANGELOG.txt`. Website: https://demon-of-fire.github.io/demon-of-fire/mods/among-us.html"
-                                       },
-                                       {
-                                           "tag_name":  "v1.0.0",
-                                           "published_at":  "2026-08-20T16:18:30Z",
-                                           "html_url":  "https://github.com/demon-of-fire/among-us-accessibility-mod/releases/tag/v1.0.0",
-                                           "body":  "Accessibility mod for Among Us that makes the game playable by ear for blind and visually impaired players - BepInEx plugin with NVDA/Tolk speech, spatial audio cues, and full keyboard navigation."
-                                       }
-                                   ]
-                  },
-                  {
-                      "name":  "FC 26 Accessibility Mod",
-                      "repo":  "fc26-accessibility-mod",
-                      "releases":  [
-                                       {
-                                           "tag_name":  "v1.1.0",
-                                           "published_at":  "2026-08-18T19:00:46Z",
-                                           "html_url":  "https://github.com/demon-of-fire/fc26-accessibility-mod/releases/tag/v1.1.0",
-                                           "body":  "## v1.1.0 - Performance \u0026 accuracy overhaul\n\nRebuilt from the ground up to fix lag and misreads.\n\n### Performance\n- Screen-change detection: AI vision only runs when the screen actually changes (was running constantly)\n- Full-frame reads are now 2.4x faster (downscaled smartly before OCR)\n- Single shared screen-capture session - no more stutter from repeated grabs\n\n### Accuracy\n- New selection detection: reliably finds the highlighted menu item\n- Scoreboard/overlay filter keeps the score, clock and events (GOAL, HALF TIME) while dropping ad and UI noise\n- Better state detection: knows menus from matches, even night stadiums\n- Menu reading: \u0027Selected: X. Options: 1 Y, 2 Z\u0027\n\n### New\n- F6: read match state (score, clock) at any time\n- Auto-reader announces score changes and match events (kick off, goal, half time, match end)\n- F5 full screen read now works reliably\n\n### Shortcuts\n| Key | Action |\n|-----|--------|\n| F1 | Read menus (with selected item detection) |\n| F2 | AI summary of current screen |\n| F3 | Read detail panel (emails/transfers/settings) |\n| F4 | Toggle auto-reader |\n| F5 | Full screen read |\n| F6 | Read match state |\n\n### Installation\n1. Download FC26_Accessibility_Mod.exe and nvdaControllerClient64.dll\n2. Place both in the same folder\n3. Run the exe as administrator\n4. Start FC 26 in Borderless Windowed mode"
-                                       },
-                                       {
-                                           "tag_name":  "v1.0.0",
-                                           "published_at":  "2026-03-31T10:09:12Z",
-                                           "html_url":  "https://github.com/demon-of-fire/fc26-accessibility-mod/releases/tag/v1.0.0",
-                                           "body":  "## FC 26 Accessibility Mod (Vision AI)\n\nScreen reader for EA Sports FC 26 using on-device AI. No cloud, no API key.\n\n### Features\n- **Florence-2** vision AI for screen understanding\n- **EasyOCR** neural network OCR for accurate text reading\n- **NVDA** speech output (with Windows SAPI fallback)\n- Auto-reader detects highlighted menu items\n- Automatically sets game to Borderless Windowed mode\n\n### Shortcuts\n| Key | Action |\n|-----|--------|\n| F1 | Read menus (with selected item detection) |\n| F2 | AI summary of current screen |\n| F3 | Read detail panel (emails/transfers/settings) |\n| F4 | Toggle auto-reader |\n| F5 | Full screen read |\n\n### Requirements\n- Windows 10/11\n- NVDA screen reader (recommended)\n- Internet connection on first run (downloads ~460MB AI model, cached after)\n\n### Installation\n1. Download `FC26_Accessibility_Mod.exe` and `nvdaControllerClient64.dll`\n2. Place both files in the same folder\n3. Run the exe as administrator\n4. Start FC 26 in Borderless Windowed mode"
-                                       }
-                                   ]
-                  },
-                  {
-                      "name":  "Rocket League Accessibility Mod",
-                      "repo":  "rocket-league-accessibility-mod",
-                      "releases":  [
-                                       {
-                                           "tag_name":  "v1.0.0",
-                                           "published_at":  "2026-03-30T10:34:25Z",
-                                           "html_url":  "https://github.com/demon-of-fire/rocket-league-accessibility-mod/releases/tag/v1.0.0",
-                                           "body":  "First release of the Rocket League Accessibility Mod."
-                                       }
-                                   ]
-                  },
-                  {
-                      "name":  "Past Paper Revision Hub",
-                      "repo":  "past-paper-revision-hub",
-                      "releases":  [
-                                       {
-                                           "tag_name":  "v1",
-                                           "published_at":  "2026-05-16T19:14:25Z",
-                                           "html_url":  "https://github.com/demon-of-fire/past-paper-revision-hub/releases/tag/v1",
-                                           "body":  "## Download\n\n[Download PastPaperRevisionHub-v1.zip](https://github.com/demon-of-fire/past-paper-revision-hub/releases/download/v1/PastPaperRevisionHub-v1.zip)\n\nThis zip contains the Windows installer and README.\n\nDeveloper source code is available in source code.zip in the main repository."
-                                       }
-                                   ]
-                  }
-              ]
+{
+  "generatedAt": "2026-08-21T00:10:15Z",
+  "repos": [
+    {
+      "name": "Access Overlay",
+      "repo": "access-overlay",
+      "releases": [
+        {
+          "tag_name": "v1.0.0",
+          "published_at": "2026-08-20T16:18:19Z",
+          "html_url": "https://github.com/demon-of-fire/access-overlay/releases/tag/v1.0.0",
+          "body": "Access Overlay - Universal accessible screen reader overlay, document reader, and OCR game scanner for Windows."
+        }
+      ]
+    },
+    {
+      "name": "Access Recorder",
+      "repo": "access-recorder",
+      "releases": [
+        {
+          "tag_name": "v1.0.0",
+          "published_at": "2026-08-20T16:17:59Z",
+          "html_url": "https://github.com/demon-of-fire/access-recorder/releases/tag/v1.0.0",
+          "body": "Access Recorder - Accessible AI audio recorder and transcription studio with local Whisper AI and music mode for Windows."
+        }
+      ]
+    },
+    {
+      "name": "Accessible Studio",
+      "repo": "accessable-studio",
+      "releases": [
+        {
+          "tag_name": "v3.4.0",
+          "published_at": "2026-08-18T00:15:03Z",
+          "html_url": "https://github.com/demon-of-fire/accessable-studio/releases/tag/v3.4.0",
+          "body": "Fixes:\n- Buttons were unresponsive in the installed app - preload now loads correctly under Electron's sandbox\n- RTMP live streaming: streams no longer fail on clips without audio, bitrate changes now actually apply, and the connection test uses a proper RTMP handshake\n\nDownloads:\n- Accessible-Studio-Setup-3.4.0.exe (installer)\n- Accessible-Studio-Portable-3.4.0.exe (portable, no install required)\n\n**Full Changelog**: https://github.com/demon-of-fire/accessable-studio/commits/v3.4.0"
+        }
+      ]
+    },
+    {
+      "name": "Accessible Media Player",
+      "repo": "accessible-media-player",
+      "releases": [
+        {
+          "tag_name": "v2.1.0",
+          "published_at": "2026-08-18T00:16:41Z",
+          "html_url": "https://github.com/demon-of-fire/accessible-media-player/releases/tag/v2.1.0",
+          "body": "Fixes:\n- App could crash on startup when local data was corrupted - playlist and history are now filtered defensively\n- Fixed a crash in the extended features menu (top-bar element was missing)\n- Snapshot gallery data is stored under the new app name with automatic migration\n\nDownload:\n- Accessible.Media.Player.Setup.exe (installer)"
+        }
+      ]
+    },
+    {
+      "name": "Accessible Calculator",
+      "repo": "accessable-calculator",
+      "releases": [
+        {
+          "tag_name": "v1.0.0",
+          "published_at": "2026-05-23T14:45:27Z",
+          "html_url": "https://github.com/demon-of-fire/accessable-calculator/releases/tag/v1.0.0",
+          "body": "﻿## Download\n\n[Download Accessable Calculator Setup.exe](https://github.com/demon-of-fire/accessable-calculator/releases/download/v1.0.0/Accessable.Calculator.Setup.exe)\n\nThis installer is the Windows app package. Download it, run it, and follow the setup wizard prompts.\n\nGitHub may also show automatic \"Source code\" downloads below. Those are not the packaged source zip. Use `AccessableCalculator-source.zip` if you want the source package.\n\n## Source\n\n[Download AccessableCalculator-source.zip](https://github.com/demon-of-fire/accessable-calculator/releases/download/v1.0.0/AccessableCalculator-source.zip)\r\n"
+        }
+      ]
+    },
+    {
+      "name": "Nova Voice Assistant",
+      "repo": "nova-voice-assistant",
+      "releases": [
+        {
+          "tag_name": "v1.1.0",
+          "published_at": "2026-08-18T19:07:30Z",
+          "html_url": "https://github.com/demon-of-fire/nova-voice-assistant/releases/tag/v1.1.0",
+          "body": "## v1.1.0 - Reliability & safety update\n\n### Safety\n- Fixed a command-injection vulnerability in app launching (no more shell interpretation, dangerous characters rejected)\n- Closing apps now requires confirmation and protects system and Nova processes - a short or vague app name is refused\n- Killing processes refuses Nova, Python, and system processes\n- No more double confirmation dialogs - Nova asks once, then acts\n\n### Fixes\n- Web searches and YouTube searches produce correct links (proper URL encoding)\n- Running Python code now works in the built Nova.exe\n- No longer crashes at startup on machines without an audio device\n- API key setup can no longer hang forever (5 minute timeout)\n- Fixed a race condition where pressing the hotkey and the button together could start two listening sessions at once\n- Window centering now uses your real screen size\n- Process details no longer crash on missing data\n- Snap window validates left/right before moving anything\n\n### Install\nDownload Nova.exe, run it, and sign in with your Gemini API key (Settings or on first launch)."
+        },
+        {
+          "tag_name": "v1.0.0",
+          "published_at": "2026-03-28T15:23:16Z",
+          "html_url": "https://github.com/demon-of-fire/nova-voice-assistant/releases/tag/v1.0.0",
+          "body": "Initial release. See CHANGELOG.md for full details."
+        }
+      ]
+    },
+    {
+      "name": "Clipboard History",
+      "repo": "clipboard-history",
+      "releases": [
+        {
+          "tag_name": "v0.1.0",
+          "published_at": "2026-08-20T16:18:25Z",
+          "html_url": "https://github.com/demon-of-fire/clipboard-history/releases/tag/v0.1.0",
+          "body": "High-performance, secure cross-platform clipboard manager written in Rust with hotkeys and QR extraction."
+        }
+      ]
+    },
+    {
+      "name": "Among Us Accessibility Mod",
+      "repo": "among-us-accessibility-mod",
+      "releases": [
+        {
+          "tag_name": "v1.1.0",
+          "published_at": "2026-08-20T20:30:27Z",
+          "html_url": "https://github.com/demon-of-fire/among-us-accessibility-mod/releases/tag/v1.1.0",
+          "body": "**v1.1.0 — one-click install + a lot of new accessibility.** The release package now bundles BepInEx 6 (IL2CPP x64), so installing is just: copy the contents of the zip into your Among Us folder and launch. No manual BepInEx setup.\n\n## Install\n- Download `AmongUsAccessibilityMod-v1.1.0.zip` (recommended — BepInEx included)\n- Copy **everything inside** the `AmongUsAccessibilityMod` folder into your Among Us game folder (Steam: right-click Among Us → Manage → Browse local files), merge folders when asked\n- Launch the game once, reach the main menu, close it, then launch again\n- Already have BepInEx 6? Just copy `Among.Us.Accessibility.Mod.dll` into `BepInEx/plugins/`\n\n## What's new in this release\n\n**New keys**\n- `V` — locate the nearest vent (direction + distance); inside a vent, Left/Right/Up choose destinations, Escape climbs out; while dead, cycles spectate targets\n- `F1` — speak the full keybind list\n- `F2` — mute/unmute all announcements (30 s)\n- `Ctrl+,` / `Ctrl+.` — repeat the previous/next announcement\n\n**New accessibility**\n- Lobby readout: players, host settings (map, impostors, tasks), start countdown\n- Meeting phase: roster (who's alive/dead), vote lock-in, vote countdown (10/5/3/1), vote progress, vote results\n- Ghost spectate: cycle living players to follow while dead\n- Vent navigation for Impostors/Engineers\n- Quick-chat menu announcements\n- Vitals monitor and Shapeshifter picker minigame support\n- Task bar milestones (50/75/100%), kill cooldown callouts, sabotage countdowns, own-death announcement\n- Every announcement type is now configurable (19 toggles in `BepInEx/config/greenbean.amongusaccessibilitymod.cfg`)\n\n**Fairer tasks**\n- Swipe Card, Clean O2 Filter, Clean Vents no longer fail on early release — they finish on their own\n- Calibrate Distributor: press Space to arm a dial, it locks on its next pass\n\nFull details in `CHANGELOG.txt`. Website: https://demon-of-fire.github.io/demon-of-fire/mods/among-us.html"
+        },
+        {
+          "tag_name": "v1.0.0",
+          "published_at": "2026-08-20T16:18:30Z",
+          "html_url": "https://github.com/demon-of-fire/among-us-accessibility-mod/releases/tag/v1.0.0",
+          "body": "Accessibility mod for Among Us that makes the game playable by ear for blind and visually impaired players - BepInEx plugin with NVDA/Tolk speech, spatial audio cues, and full keyboard navigation."
+        }
+      ]
+    },
+    {
+      "name": "FC 26 Accessibility Mod",
+      "repo": "fc26-accessibility-mod",
+      "releases": [
+        {
+          "tag_name": "v1.1.0",
+          "published_at": "2026-08-18T19:00:46Z",
+          "html_url": "https://github.com/demon-of-fire/fc26-accessibility-mod/releases/tag/v1.1.0",
+          "body": "## v1.1.0 - Performance & accuracy overhaul\n\nRebuilt from the ground up to fix lag and misreads.\n\n### Performance\n- Screen-change detection: AI vision only runs when the screen actually changes (was running constantly)\n- Full-frame reads are now 2.4x faster (downscaled smartly before OCR)\n- Single shared screen-capture session - no more stutter from repeated grabs\n\n### Accuracy\n- New selection detection: reliably finds the highlighted menu item\n- Scoreboard/overlay filter keeps the score, clock and events (GOAL, HALF TIME) while dropping ad and UI noise\n- Better state detection: knows menus from matches, even night stadiums\n- Menu reading: 'Selected: X. Options: 1 Y, 2 Z'\n\n### New\n- F6: read match state (score, clock) at any time\n- Auto-reader announces score changes and match events (kick off, goal, half time, match end)\n- F5 full screen read now works reliably\n\n### Shortcuts\n| Key | Action |\n|-----|--------|\n| F1 | Read menus (with selected item detection) |\n| F2 | AI summary of current screen |\n| F3 | Read detail panel (emails/transfers/settings) |\n| F4 | Toggle auto-reader |\n| F5 | Full screen read |\n| F6 | Read match state |\n\n### Installation\n1. Download FC26_Accessibility_Mod.exe and nvdaControllerClient64.dll\n2. Place both in the same folder\n3. Run the exe as administrator\n4. Start FC 26 in Borderless Windowed mode"
+        },
+        {
+          "tag_name": "v1.0.0",
+          "published_at": "2026-03-31T10:09:12Z",
+          "html_url": "https://github.com/demon-of-fire/fc26-accessibility-mod/releases/tag/v1.0.0",
+          "body": "## FC 26 Accessibility Mod (Vision AI)\n\nScreen reader for EA Sports FC 26 using on-device AI. No cloud, no API key.\n\n### Features\n- **Florence-2** vision AI for screen understanding\n- **EasyOCR** neural network OCR for accurate text reading\n- **NVDA** speech output (with Windows SAPI fallback)\n- Auto-reader detects highlighted menu items\n- Automatically sets game to Borderless Windowed mode\n\n### Shortcuts\n| Key | Action |\n|-----|--------|\n| F1 | Read menus (with selected item detection) |\n| F2 | AI summary of current screen |\n| F3 | Read detail panel (emails/transfers/settings) |\n| F4 | Toggle auto-reader |\n| F5 | Full screen read |\n\n### Requirements\n- Windows 10/11\n- NVDA screen reader (recommended)\n- Internet connection on first run (downloads ~460MB AI model, cached after)\n\n### Installation\n1. Download `FC26_Accessibility_Mod.exe` and `nvdaControllerClient64.dll`\n2. Place both files in the same folder\n3. Run the exe as administrator\n4. Start FC 26 in Borderless Windowed mode"
+        }
+      ]
+    },
+    {
+      "name": "Rocket League Accessibility Mod",
+      "repo": "rocket-league-accessibility-mod",
+      "releases": [
+        {
+          "tag_name": "v1.0.0",
+          "published_at": "2026-03-30T10:34:25Z",
+          "html_url": "https://github.com/demon-of-fire/rocket-league-accessibility-mod/releases/tag/v1.0.0",
+          "body": "First release of the Rocket League Accessibility Mod."
+        }
+      ]
+    },
+    {
+      "name": "Past Paper Revision Hub",
+      "repo": "past-paper-revision-hub",
+      "releases": [
+        {
+          "tag_name": "v1",
+          "published_at": "2026-05-16T19:14:25Z",
+          "html_url": "https://github.com/demon-of-fire/past-paper-revision-hub/releases/tag/v1",
+          "body": "## Download\n\n[Download PastPaperRevisionHub-v1.zip](https://github.com/demon-of-fire/past-paper-revision-hub/releases/download/v1/PastPaperRevisionHub-v1.zip)\n\nThis zip contains the Windows installer and README.\n\nDeveloper source code is available in source code.zip in the main repository."
+        }
+      ]
+    }
+  ]
 }
