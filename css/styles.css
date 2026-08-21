@@ -1043,6 +1043,37 @@ main {
 .footer-discord:hover {
   background: #4752c4;
 }
+.footer-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  background: #24292f;
+  color: #fff;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.footer-github:hover {
+  background: #1b1f24;
+}
+.footer-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  background: var(--color-surface, #1a1a1f);
+  color: var(--color-text, #eee);
+  border: 1px solid var(--color-border, #333);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.footer-contact:hover {
+  background: var(--color-surface-2, #232329);
+}
 
 /* Notice */
 .notice {
@@ -1582,4 +1613,16 @@ main {
   color: var(--color-text-muted);
   line-height: 1.65;
   padding-bottom: 0.9rem;
+}
+
+/* ── Respect the OS "reduce motion" setting automatically ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

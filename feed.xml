@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Demon of Fire - Releases</title>
+  <link href="https://demon-of-fire.github.io/demon-of-fire/feed.xml" rel="self" />
+  <link href="https://demon-of-fire.github.io/demon-of-fire/changelog.html" />
+  <id>https://demon-of-fire.github.io/demon-of-fire/</id>
+  <updated>2026-08-20T23:55:40Z</updated>
+  <subtitle>Latest releases across all Demon of Fire projects</subtitle>
+  <entry>
+    <title>Access Overlay v1.0.0</title>
+    <link href="https://github.com/demon-of-fire/access-overlay/releases/latest" />
+    <id>tag:demon-of-fire.github.io,2026:access-overlay-v1.0.0</id>
+    <updated>2026-08-20T16:18:19Z</updated>
+    <summary>Access Overlay - Universal accessible screen reader overlay, document reader, and OCR game scanner for Windows.</summary>
+  </entry>
+  <entry>
+    <title>Access Recorder v1.0.0</title>
+    <link href="https://github.com/demon-of-fire/access-recorder/releases/latest" />
+    <id>tag:demon-of-fire.github.io,2026:access-recorder-v1.0.0</id>
+    <updated>2026-08-20T16:17:59Z</updated>
+    <summary>Access Recorder - Accessible AI audio recorder and transcription studio with local Whisper AI and music mode for Windows.</summary>
+  </entry>
+  <entry>
+    <title>Accessible Studio v3.4.0</title>
+    <link href="https://github.com/demon-of-fire/accessable-studio/releases/latest" />
+    <id>tag:demon-of-fire.github.io,2026:accessable-studio-v3.4.0</id>
+    <updated>2026-08-18T00:15:03Z</updated>
+    <summary>Fixes: - Buttons were unresponsive in the installed app - preload now loads correctly under Electron&apos;s sandbox - RTMP live streaming: streams no longer fail on clips without audio, bitrate changes now actually apply, and the connection test uses a proper RTMP handshake Downloads:</summary>
+  </entry>
+  <entry>
+    <title>Accessible Media Player v2.1.0</title>
+    <link href="https://github.com/demon-of-fire/accessible-media-player/releases/latest" />
+    <id>tag:demon-of-fire.github.io,2026:accessible-media-player-v2.1.0</id>
+    <updated>2026-08-18T00:16:41Z</updated>
+    <summary>Fixes: - App could crash on startup when local data was corrupted - playlist and history are now filtered defensively - Fixed a crash in the extended features menu (top-bar element was missing) - Snapshot gallery data is stored under the new app name with automatic migration Down</summary>
+  </entry>
+  <entry>
+    <title>Accessible Calculator v1.0.0</title>
+    <link href="https://github.com/demon-of-fire/accessable-calculator/releases/latest" />
+    <id>tag:demon-of-fire.github.io,2026:accessable-calculator-v1.0.0</id>
+    <updated>2026-05-23T14:45:27Z</updated>
+    <summary>´╗┐## Download [Download Accessable Calculator Setup.exe](https://github.com/demon-of-fire/accessable-calculator/releases/download/v1.0.0/Accessable.Calculator.Setup.exe) This installer is the Windows app package. Download it, run it, and follow the setup wizard prompts. GitHub m</summary>
+  </entry>
+  <entry>
+    <title>Nova Voice Assistant v1.1.0</title>
+    <link href="https://github.com/demon-of-fire/nova-voice-assistant/releases/latest" />
+    <id>tag:demon-of-fire.github.io,2026:nova-voice-assistant-v1.1.0</id>
+    <updated>2026-08-18T19:07:30Z</updated>
+    <summary>## v1.1.0 - Reliability &amp; safety update ### Safety - Fixed a command-injection vulnerability in app launching (no more shell interpretation, dangerous characters rejected) - Closing apps now requires confirmation and protects system and Nova processes - a short or vague app name</summary>
+  </entry>
+  <entry>
+    <title>Clipboard History v0.1.0</title>
+    <link href="https://github.com/demon-of-fire/clipboard-history/releases/latest" />
+    <id>tag:demon-of-fire.github.io,2026:clipboard-history-v0.1.0</id>
+    <updated>2026-08-20T16:18:25Z</updated>
+    <summary>High-performance, secure cross-platform clipboard manager written in Rust with hotkeys and QR extraction.</summary>
+  </entry>
+  <entry>
+    <title>Among Us Accessibility Mod v1.1.0</title>
+    <link href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest" />
+    <id>tag:demon-of-fire.github.io,2026:among-us-accessibility-mod-v1.1.0</id>
+    <updated>2026-08-20T20:30:27Z</updated>
+    <summary>**v1.1.0 ÔÇö one-click install + a lot of new accessibility.** The release package now bundles BepInEx 6 (IL2CPP x64), so installing is just: copy the contents of the zip into your Among Us folder and launch. No manual BepInEx setup. ## Install - Download `AmongUsAccessibilityMod</summary>
+  </entry>
+  <entry>
+    <title>FC 26 Accessibility Mod v1.1.0</title>
+    <link href="https://github.com/demon-of-fire/fc26-accessibility-mod/releases/latest" />
+    <id>tag:demon-of-fire.github.io,2026:fc26-accessibility-mod-v1.1.0</id>
+    <updated>2026-08-18T19:00:46Z</updated>
+    <summary>## v1.1.0 - Performance &amp; accuracy overhaul Rebuilt from the ground up to fix lag and misreads. ### Performance - Screen-change detection: AI vision only runs when the screen actually changes (was running constantly) - Full-frame reads are now 2.4x faster (downscaled smartly befo</summary>
+  </entry>
+  <entry>
+    <title>Rocket League Accessibility Mod v1.0.0</title>
+    <link href="https://github.com/demon-of-fire/rocket-league-accessibility-mod/releases/latest" />
+    <id>tag:demon-of-fire.github.io,2026:rocket-league-accessibility-mod-v1.0.0</id>
+    <updated>2026-03-30T10:34:25Z</updated>
+    <summary>First release of the Rocket League Accessibility Mod.</summary>
+  </entry>
+  <entry>
+    <title>Past Paper Revision Hub v1</title>
+    <link href="https://github.com/demon-of-fire/past-paper-revision-hub/releases/latest" />
+    <id>tag:demon-of-fire.github.io,2026:past-paper-revision-hub-v1</id>
+    <updated>2026-05-16T19:14:25Z</updated>
+    <summary>## Download [Download PastPaperRevisionHub-v1.zip](https://github.com/demon-of-fire/past-paper-revision-hub/releases/download/v1/PastPaperRevisionHub-v1.zip) This zip contains the Windows installer and README. Developer source code is available in source code.zip in the main repo</summary>
+  </entry>
+</feed>
+

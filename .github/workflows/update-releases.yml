@@ -1,0 +1,129 @@
+name: Update releases data
+
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/releases.json'
+      - '.github/workflows/update-releases.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate releases.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, subprocess, datetime
+
+          REPOS = [
+              ("access-overlay", "Access Overlay"),
+              ("access-recorder", "Access Recorder"),
+              ("accessable-studio", "Accessible Studio"),
+              ("accessible-media-player", "Accessible Media Player"),
+              ("accessable-calculator", "Accessible Calculator"),
+              ("nova-voice-assistant", "Nova Voice Assistant"),
+              ("clipboard-history", "Clipboard History"),
+              ("among-us-accessibility-mod", "Among Us Accessibility Mod"),
+              ("fc26-accessibility-mod", "FC 26 Accessibility Mod"),
+              ("rocket-league-accessibility-mod", "Rocket League Accessibility Mod"),
+              ("past-paper-revision-hub", "Past Paper Revision Hub"),
+          ]
+
+          out = []
+          for slug, name in REPOS:
+              try:
+                  raw = subprocess.check_output(
+                      ["gh", "api", f"repos/demon-of-fire/{slug}/releases?per_page=5"]
+                  ).decode("utf-8")
+                  rels = json.loads(raw)
+              except Exception:
+                  rels = []
+              slim = [
+                  {
+                      "tag_name": r.get("tag_name"),
+                      "published_at": r.get("published_at"),
+                      "html_url": r.get("html_url"),
+                      "body": r.get("body"),
+                  }
+                  for r in rels
+              ]
+              out.append({"name": name, "repo": slug, "releases": slim})
+
+          final = {
+              "generatedAt": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "repos": out,
+          }
+          with open("data/releases.json", "w", encoding="utf-8") as f:
+              json.dump(final, f, ensure_ascii=False, indent=2)
+
+          # Build an Atom feed of the latest release of each project.
+          from xml.sax.saxutils import escape
+          import re
+
+          def text(s):
+              s = s or ""
+              s = re.sub(r"<[^>]+>", "", s)
+              s = re.sub(r"\s+", " ", s).strip()
+              return s[:280]
+
+          entries = []
+          for p in out:
+              rels = p.get("releases") or []
+              if not rels:
+                  continue
+              r = rels[0]
+              tag = r.get("tag_name") or "latest"
+              updated = (r.get("published_at") or "").replace("Z", "+00:00")
+              link = "https://github.com/demon-of-fire/%s/releases/latest" % p["repo"]
+              entries.append(
+                  '  <entry>\n'
+                  '    <title>%s %s</title>\n'
+                  '    <link href="%s" />\n'
+                  '    <id>tag:demon-of-fire.github.io,2026:%s-%s</id>\n'
+                  '    <updated>%s</updated>\n'
+                  '    <summary>%s</summary>\n'
+                  '  </entry>' % (
+                      escape(p["name"]), escape(tag), escape(link),
+                      escape(p["repo"]), escape(tag),
+                      escape(updated), escape(text(r.get("body"))),
+                  )
+              )
+
+          feed = (
+              '<?xml version="1.0" encoding="utf-8"?>\n'
+              '<feed xmlns="http://www.w3.org/2005/Atom">\n'
+              '  <title>Demon of Fire — Releases</title>\n'
+              '  <link href="https://demon-of-fire.github.io/demon-of-fire/feed.xml" rel="self" />\n'
+              '  <link href="https://demon-of-fire.github.io/demon-of-fire/changelog.html" />\n'
+              '  <id>https://demon-of-fire.github.io/demon-of-fire/</id>\n'
+              '  <updated>%s</updated>\n'
+              '  <subtitle>Latest releases across all Demon of Fire projects</subtitle>\n'
+              '%s\n'
+              '</feed>\n'
+          ) % (escape(final["generatedAt"]), "\n".join(entries))
+          with open("feed.xml", "w", encoding="utf-8") as f:
+              f.write(feed)
+          PY
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/releases.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "[data] refresh releases.json"
+            git push
+          fi

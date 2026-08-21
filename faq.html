@@ -126,7 +126,7 @@
           <summary>How do I install the mod?</summary>
           <p>
             Download the
-            <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest/download/AmongUsAccessibilityMod-v1.1.0.zip" rel="external noopener">folder package</a>
+            <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest" rel="external noopener">folder package</a>
             (it includes BepInEx 6, so nothing else to install), open the zip,
             and copy <strong>everything inside</strong> the
             <code>AmongUsAccessibilityMod</code> folder into your Among Us
@@ -302,6 +302,464 @@
             feature, and screen analysis in the game mods runs entirely
             on-device. Nothing is uploaded to Demon of Fire or any other
             server.
+          </p>
+        </details>
+
+        <h2>Supported Platforms &amp; Requirements</h2>
+
+        <details class="faq-item">
+          <summary>Which Windows versions are supported?</summary>
+          <p>
+            The desktop apps target Windows 10 and Windows 11 (64-bit). Clipboard
+            History additionally runs on Linux. The game mods run on Windows
+            because they hook into the local game process and screen.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are the apps available for macOS or Linux?</summary>
+          <p>
+            Most apps are Windows-only because they integrate with Windows UI
+            Automation and screen readers like NVDA. Clipboard History is the
+            exception and runs on both Windows and Linux. The Misc Tools
+            projects (revision hub, Agony Report, Minecraft site) are websites
+            that work in any modern browser.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need to install runtimes like .NET or Python?</summary>
+          <p>
+            Installers bundle what they need. Access Overlay ships a .NET 8
+            installer, and the media/AI apps are packaged as standalone
+            executables. The Rocket League mod is run from Python source, so it
+            needs Python 3.10+ and a <code>pip install -r requirements.txt</code>.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Will Windows SmartScreen block the download?</summary>
+          <p>
+            Possibly, on first launch — these are small open-source projects
+            without a paid code-signing certificate. Click "More info" then "Run
+            anyway". This is normal for independent software and does not mean
+            the file is unsafe. Every release is open source so you can verify
+            or build it yourself.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can the apps run on a low-spec PC?</summary>
+          <p>
+            The apps are lightweight. The only heavy requirements come from the
+            AI-powered tools: the FC 26 and Rocket League mods run local vision
+            models, so they benefit from a modern multi-core CPU (and a GPU helps
+            the football mod), while the other apps run comfortably on modest
+            hardware.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need a screen reader to use the apps?</summary>
+          <p>
+            No. The apps are fully usable with the mouse and keyboard and have
+            high-contrast themes and large text. Screen readers like NVDA simply
+            make them faster and friendlier for blind and low-vision users — the
+            apps are designed so everyone can use them.
+          </p>
+        </details>
+
+        <h2>Installation &amp; Updates</h2>
+
+        <details class="faq-item">
+          <summary>How do I install an app?</summary>
+          <p>
+            Download the installer (or <code>.zip</code>) from the project's
+            GitHub Releases page, run it, and follow the prompts. Most installers
+            need only a standard user account — no admin rights required.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I update an app?</summary>
+          <p>
+            Download the latest release and install it over the top — your
+            settings are preserved. The homepage "Latest Releases" section and the
+            <a href="changelog.html">changelog</a> always show the newest
+            version of every project.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I uninstall an app?</summary>
+          <p>
+            Use Windows Settings → Apps → Installed apps (or the classic Programs
+            and Features), select the app, and choose Uninstall. Portable
+            <code>.zip</code> builds (like Accessible Studio) can simply be
+            deleted from their folder.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How often are the projects updated?</summary>
+          <p>
+            There is no fixed schedule — updates land whenever a bug is fixed or
+            a feature is ready. Major apps get regular attention; you can watch
+            the <a href="changelog.html">changelog</a> or the Discord for
+            release announcements.
+          </p>
+        </details>
+
+        <h2>Access Overlay</h2>
+
+        <details class="faq-item">
+          <summary>What is Access Overlay for?</summary>
+          <p>
+            It is a universal reader for anything on screen. Capture the active
+            window and hear it as clean, structured text, scan game menus with
+            OCR, or load web articles into a distraction-free reading view — all
+            spoken through NVDA.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How does the OCR game scanner work?</summary>
+          <p>
+            Press <code>Ctrl + Alt + G</code> and Access Overlay takes a
+            screenshot of the game, runs a local OCR engine over the text, and
+            reads it back. It works across Unreal Engine, Frostbite, Source,
+            Unity, and custom engines — anywhere text is drawn to the screen.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can it read web pages too?</summary>
+          <p>
+            Yes. The built-in WebView2 browser extracts article text and speaks
+            it automatically after a page loads, so long articles are readable
+            without fighting a busy layout.
+          </p>
+        </details>
+
+        <h2>Access Recorder</h2>
+
+        <details class="faq-item">
+          <summary>What does Access Recorder do?</summary>
+          <p>
+            It is an audio recording studio with on-device Whisper
+            transcription. Record, import beats, monitor live input, and turn
+            recordings into searchable text — all fully keyboard- and
+            screen-reader accessible.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is the transcription really local?</summary>
+          <p>
+            Yes. Whisper runs entirely on your PC — nothing is uploaded. Your
+            recordings and their transcripts never leave your machine.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What are the main shortcuts?</summary>
+          <p>
+            <code>Ctrl + Shift + R</code> start/stop recording,
+            <code>Ctrl + Shift + P</code> pause/resume,
+            <code>Ctrl + T</code> transcribe, and
+            <code>Ctrl + O</code> open a recording.
+          </p>
+        </details>
+
+        <h2>Accessible Studio</h2>
+
+        <details class="faq-item">
+          <summary>What is Accessible Studio?</summary>
+          <p>
+            An all-in-one creative suite: a timeline video editor, a photo
+            editor, and a file converter, built keyboard-first with screen-reader
+            announcements for every action.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need an API key for the AI features?</summary>
+          <p>
+            No. Built-in keyword matching understands commands like "trim the
+            first 5 seconds" without any key. Connecting a free Google Gemini
+            key in Settings unlocks the full natural-language assistant, photo
+            vision, and complex multi-step editing.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What file formats can it convert?</summary>
+          <p>
+            Video (MP4, AVI, MKV, MOV, WebM), audio (MP3, WAV, FLAC, OGG, AAC),
+            images (PNG, JPG, WebP, BMP, GIF, TIFF), and documents (DOCX↔TXT,
+            DOCX→HTML, TXT→HTML).
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is there a portable version?</summary>
+          <p>
+            Yes — download the <code>.zip</code> from the releases page, extract
+            it, and run <strong>Accessible Studio.exe</strong>. No installation
+            required.
+          </p>
+        </details>
+
+        <h2>Accessible Media Player</h2>
+
+        <details class="faq-item">
+          <summary>What can the media player do?</summary>
+          <p>
+            Play video and audio with playlists, subtitles, picture-in-picture,
+            an equalizer, a visualizer, snapshots, bookmarks, and a sleep timer —
+            every control reachable by keyboard and announced by your screen
+            reader.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does it support subtitles?</summary>
+          <p>
+            Yes. Subtitles can be loaded and their size and colour adjusted for
+            comfortable reading.
+          </p>
+        </details>
+
+        <h2>Accessible Calculator</h2>
+
+        <details class="faq-item">
+          <summary>What makes the calculator accessible?</summary>
+          <p>
+            Every key, result, and operation is announced by your screen reader,
+            and you can also type calculations in natural language — for example
+            "what is 15 percent of 200" — instead of hunting for buttons.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is the source available?</summary>
+          <p>
+            Yes. The installer and a
+            <strong>AccessableCalculator-source.zip</strong> package are attached
+            to the same GitHub release under the MIT licence.
+          </p>
+        </details>
+
+        <h2>Clipboard History</h2>
+
+        <details class="faq-item">
+          <summary>Is my clipboard data secure?</summary>
+          <p>
+            Your history is stored encrypted on disk with AES-GCM and never
+            leaves your computer. Nothing is uploaded or shared.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does it work on Linux?</summary>
+          <p>
+            Yes, Clipboard History runs on both Windows and Linux.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What are the main shortcuts?</summary>
+          <p>
+            <code>Ctrl + Alt + V</code> opens history,
+            <code>Ctrl + Alt + Shift + V</code> pastes the most recent item,
+            <code>/</code> focuses search, and <code>Enter</code> copies and pastes
+            the selected item.
+          </p>
+        </details>
+
+        <h2>Nova Voice Assistant</h2>
+
+        <details class="faq-item">
+          <summary>What can Nova do?</summary>
+          <p>
+            Nova is a desktop voice assistant powered by Google Gemini with 40+
+            PC control actions — open apps, control media, manage files, search
+            the web, and more — plus neural TTS and a floating orb UI.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need a Gemini API key, and is it safe?</summary>
+          <p>
+            The key is optional and only needed for Gemini features. You enter it
+            yourself in Settings; it is stored only on your device and is never
+            shared. Any billing is directly between you and Google.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can Nova control my PC by voice?</summary>
+          <p>
+            Yes. Say things like "close chrome", "play next song", or "what's the
+            score" — and toggle individual permissions so it only does what you
+            allow.
+          </p>
+        </details>
+
+        <h2>Among Us Accessibility Mod</h2>
+
+        <details class="faq-item">
+          <summary>Which versions of Among Us are supported?</summary>
+          <p>
+            The mod is built for the current PC version of Among Us via BepInEx
+            6. Because it hooks the game directly, it needs to be updated when
+            the game updates — grab the latest release after any game patch.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can sighted players use the mod too?</summary>
+          <p>
+            Absolutely. The mod only adds spoken and spatial-audio cues; it does
+            not change visuals or give sighted players an advantage. Mixed
+            sighted/blind lobbies work fine.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does the mod support custom maps or modded rooms?</summary>
+          <p>
+            It reads the standard game state. Custom maps that change room names
+            may read out whichever label the game provides; core tasks, sabotages,
+            and vents are supported as the base game presents them.
+          </p>
+        </details>
+
+        <h2>FC 26 &amp; Rocket League Mods</h2>
+
+        <details class="faq-item">
+          <summary>Will using a mod get me banned?</summary>
+          <p>
+            These are fan projects designed to be fair: they describe the game by
+            ear and never auto-play it for you. They are not affiliated with EA or
+            Psyonix. As with any third-party tool, use them at your own discretion
+            — they are built to assist, not to cheat.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does the FC 26 mod need a good GPU?</summary>
+          <p>
+            It helps. Florence-2 + EasyOCR run fully on-device and benefit from a
+            reasonably modern CPU/GPU, but they process locally with no cloud and
+            no latency.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does the Rocket League mod require Python?</summary>
+          <p>
+            Yes — it is run from source with Python 3.10+ and a
+            <code>pip install -r requirements.txt</code>. The first run downloads
+            the local AI models (~500 MB), which are cached afterwards.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do the mods work without NVDA?</summary>
+          <p>
+            They speak through NVDA when it is running and fall back to Windows
+            SAPI speech otherwise, so you still get audio cues either way.
+          </p>
+        </details>
+
+        <h2>AI Features &amp; Privacy</h2>
+
+        <details class="faq-item">
+          <summary>Does Nova send my conversations to Google?</summary>
+          <p>
+            Only the text you ask about is sent to Google Gemini when you use
+            those features, using your own API key. Nothing is sent by the other
+            apps, and no audio or screen data is uploaded by the game mods — all
+            of that runs on your device.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do the game mods upload my screen or gameplay?</summary>
+          <p>
+            No. Screen analysis runs entirely on your PC. The mods never capture
+            or transmit your screen, audio, or gameplay to any server.
+          </p>
+        </details>
+
+        <h2>Contributing &amp; Licensing</h2>
+
+        <details class="faq-item">
+          <summary>Are all the projects open source?</summary>
+          <p>
+            Yes — every project is released under the MIT licence. Source code,
+            build instructions, and release assets are on the relevant GitHub
+            repository.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I contribute code or report bugs?</summary>
+          <p>
+            Please do. Open an issue or pull request on the relevant GitHub repo,
+            or post in the <a href="https://discord.gg/xU2Fq3HXbh" rel="noopener noreferrer">Discord server</a>. Bug reports and accessibility feedback are
+            especially welcome.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I fork or reuse the code in my own project?</summary>
+          <p>
+            Yes. The MIT licence permits reuse, modification, and redistribution
+            as long as the copyright notice is retained. Credit is always
+            appreciated.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you accept donations?</summary>
+          <p>
+            The software is and will stay free. If you'd like to support the work,
+            the best help is testing, feedback, and spreading the word — join the
+            <a href="https://discord.gg/xU2Fq3HXbh" rel="noopener noreferrer">Discord</a> and tell others who'd benefit.
+          </p>
+        </details>
+
+        <h2>Troubleshooting</h2>
+
+        <details class="faq-item">
+          <summary>An app won't start or crashes on launch.</summary>
+          <p>
+            Make sure you're on a supported Windows version, install the latest
+            release, and try running as a standard user. If it still fails, open
+            an issue with your Windows version and what happened — a crash log or
+            screenshot helps.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>NVDA isn't announcing anything.</summary>
+          <p>
+            Confirm NVDA is running before you launch the app, check the app's
+            settings for speech output, and verify your default voice is
+            configured in NVDA. Most apps fall back to Windows SAPI if NVDA is not
+            present.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>The game mod isn't detecting the game.</summary>
+          <p>
+            Run the game and the mod as the same user, ensure the game is the
+            supported version, and for the Rocket League mod confirm Python and
+            the requirements are installed. Re-download the latest release after
+            any game update.
           </p>
         </details>
 
