@@ -457,6 +457,30 @@ themeToggle.addEventListener('click', function () {
     });
   });
 
+  /* ── Brand links: scroll to top when already on the target page ── */
+  document.querySelectorAll('a.nav-brand, a.footer-brand').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      let samePage = false;
+      try {
+        const linkPath = new URL(link.href).pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '');
+        const herePath = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '');
+        samePage = linkPath === herePath;
+      } catch (err) { return; }
+      if (!samePage) return;
+      e.preventDefault();
+      const reduceMotion = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) ||
+        document.documentElement.getAttribute('data-motion') === 'reduced';
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      /* Move screen reader context back to the top of the page */
+      const mainEl = document.getElementById('main-content');
+      if (mainEl) {
+        if (!mainEl.hasAttribute('tabindex')) mainEl.setAttribute('tabindex', '-1');
+        mainEl.focus({ preventScroll: true });
+      }
+      announce('Back to top');
+    });
+  });
+
   /* ── GitHub releases: homepage "Latest Releases" + changelog page ── */
   const REPOS = [
     ['access-overlay', 'Access Overlay'],
