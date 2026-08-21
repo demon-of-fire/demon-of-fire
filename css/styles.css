@@ -174,6 +174,15 @@ body {
   outline: 3px solid var(--color-focus);
 }
 
+/* Visually hidden but available to screen readers */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0);
+  white-space: nowrap; border: 0;
+}
+
 /* ── Focus Visible ── */
 :focus-visible {
   outline: 2px solid var(--color-focus);
@@ -1613,6 +1622,57 @@ main {
   color: var(--color-text-muted);
   line-height: 1.65;
   padding-bottom: 0.9rem;
+}
+
+/* FAQ search + category index */
+.faq-tools {
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.faq-search {
+  width: 100%;
+  max-width: 32rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.faq-search:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+.faq-result-count {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+.faq-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.faq-index-link {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-link);
+  text-decoration: none;
+  background: var(--color-surface);
+}
+.faq-index-link:hover,
+.faq-index-link:focus-visible {
+  border-color: var(--color-link);
+  color: var(--color-link);
+}
+.faq-no-results {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-text);
 }
 
 /* ── Respect the OS "reduce motion" setting automatically ── */

@@ -654,12 +654,67 @@ themeToggle.addEventListener('click', function () {
     );
   }
 
+  /* ── FAQ: live search + category index ── */
+  function initFaq() {
+    const root = document.querySelector('.prose');
+    const input = document.getElementById('faq-search');
+    if (!root || !input) return;
+
+    const details = Array.prototype.slice.call(root.querySelectorAll('details.faq-item'));
+    const headings = Array.prototype.slice.call(root.querySelectorAll('h2'));
+    const count = document.getElementById('faq-result-count');
+    const noResults = document.getElementById('faq-no-results');
+    const indexNav = document.getElementById('faq-index');
+
+    /* Build a clickable category index from the section headings */
+    if (indexNav) {
+      headings.forEach(function (h, i) {
+        if (!h.id) h.id = 'faq-cat-' + i;
+        const a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.className = 'faq-index-link';
+        a.textContent = h.textContent;
+        indexNav.appendChild(a);
+      });
+    }
+
+    function applyFilter() {
+      const q = input.value.trim().toLowerCase();
+      let visible = 0;
+      details.forEach(function (d) {
+        const match = !q || d.textContent.toLowerCase().indexOf(q) !== -1;
+        d.hidden = !match;
+        if (match) visible++;
+      });
+      headings.forEach(function (h) {
+        if (!q) { h.hidden = false; return; }
+        let el = h.nextElementSibling;
+        let any = false;
+        while (el && el.tagName !== 'H2') {
+          if (el.tagName === 'DETAILS' && !el.hidden) { any = true; break; }
+          el = el.nextElementSibling;
+        }
+        h.hidden = !any;
+      });
+      if (count) {
+        count.textContent = q
+          ? visible + ' of ' + details.length + ' questions'
+          : details.length + ' questions';
+      }
+      if (noResults) noResults.hidden = visible !== 0;
+    }
+
+    input.addEventListener('input', applyFilter);
+    applyFilter();
+  }
+
   function initExtras() {
     initReleases();
     initChangelog();
     initCardFilters();
     initScreenshots();
     initSidebarLinks();
+    initFaq();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initExtras);
