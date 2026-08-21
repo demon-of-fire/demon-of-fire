@@ -218,6 +218,8 @@
     backdrop.setAttribute('aria-modal', 'true');
     backdrop.setAttribute('aria-hidden', 'true');
     backdrop.setAttribute('aria-labelledby', 'a11y-title');
+    /* Panel starts closed: keep it out of the tab order and AT tree */
+    backdrop.setAttribute('inert', '');
 
     backdrop.innerHTML = `
       <div class="a11y-panel">
@@ -282,6 +284,7 @@
 
     function openDialog() {
       backdrop.classList.add('is-open');
+      backdrop.removeAttribute('inert');
       backdrop.setAttribute('aria-hidden', 'false');
       trigger.setAttribute('aria-expanded', 'true');
       const closeBtn = backdrop.querySelector('.a11y-close-btn');
@@ -290,7 +293,12 @@
     }
 
     function closeDialog() {
+      /* Move focus out of the panel before hiding it */
+      if (backdrop.contains(document.activeElement)) {
+        trigger.focus();
+      }
       backdrop.classList.remove('is-open');
+      backdrop.setAttribute('inert', '');
       backdrop.setAttribute('aria-hidden', 'true');
       trigger.setAttribute('aria-expanded', 'false');
       trigger.focus();
@@ -316,6 +324,8 @@
     const focusableSel = 'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])';
     backdrop.addEventListener('keydown', function (e) {
       if (e.key !== 'Tab') return;
+      /* Never trap focus in a closed panel */
+      if (!backdrop.classList.contains('is-open') || backdrop.hasAttribute('inert')) return;
       const f = Array.prototype.slice.call(backdrop.querySelectorAll(focusableSel));
       if (!f.length) return;
       const first = f[0];

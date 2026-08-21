@@ -1135,11 +1135,15 @@ main {
   justify-content: center;
   padding: 1rem;
   opacity: 0;
+  /* visibility:hidden removes all controls inside from the tab order
+     and the accessibility tree while the panel is closed */
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity var(--transition);
+  transition: opacity var(--transition), visibility var(--transition);
 }
 .a11y-panel-backdrop.is-open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
