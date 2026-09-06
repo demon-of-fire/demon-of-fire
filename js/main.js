@@ -575,13 +575,15 @@ themeToggle.addEventListener('click', function () {
     const key = 'dof_releases_v1';
     const render = function (items) { list.innerHTML = renderReleaseCards(items); };
     const cached = cacheGet(key, 30 * 60 * 1000);
-    if (cached) { render(cached); return; }
+    if (cached) { render(cached.slice(0, 4)); return; }
     loadReleaseData().then(function (repos) {
       const items = repos.map(function (p) {
         return { name: p.name, repo: p.repo, release: (p.releases && p.releases[0]) ? p.releases[0] : null };
       });
+      /* The homepage is an introduction, not a catalogue. The complete
+         release history remains available on the dedicated changelog page. */
       cacheSet(key, items);
-      render(items);
+      render(items.slice(0, 4));
     }).catch(function () {
       list.innerHTML = '<p>Could not load releases right now. See the <a href="changelog.html">changelog</a> instead.</p>';
     });

@@ -79,15 +79,27 @@
 
       <!-- Hero -->
       <section class="hero" aria-labelledby="hero-heading">
-        <span class="label" aria-hidden="true">Independent Developer</span>
-        <h1 id="hero-heading">Demon of Fire</h1>
-        <p>
-          Accessible Windows apps, audio-driven game mods, and powerful open-source utilities. Every project is crafted with deep screen-reader accessibility as a first-class concern — and every project is 100% free.
-        </p>
-        <div class="btn-group">
-          <a href="apps.html" class="btn btn-primary">Explore Apps</a>
-          <a href="game-mods.html" class="btn btn-ghost">Game Mods</a>
-          <a href="https://github.com/demon-of-fire" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+        <div class="hero-copy">
+          <span class="label">Independent developer</span>
+          <h1 id="hero-heading">Accessible software, built for real independence.</h1>
+          <p>
+            Free Windows apps and game mods designed for people who use their computer by keyboard, sound, and screen reader. Every project is open source and built with accessibility from the first line of code.
+          </p>
+          <div class="btn-group">
+            <a href="apps.html" class="btn btn-primary">Explore Apps</a>
+            <a href="game-mods.html" class="btn btn-ghost">Explore Game Mods</a>
+            <a href="https://github.com/demon-of-fire" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">View on GitHub <span class="visually-hidden">(opens in a new tab)</span></a>
+          </div>
+          <p class="hero-proof"><span aria-hidden="true">✓</span> Free to use &nbsp; <span aria-hidden="true">✓</span> Open source &nbsp; <span aria-hidden="true">✓</span> NVDA-first</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-orb"></div>
+          <div class="hero-window">
+            <div class="hero-window-bar"><span></span><span></span><span></span></div>
+            <div class="hero-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p>ACCESSIBLE BY DESIGN</p>
+            <div class="hero-lines"><span></span><span></span><span></span></div>
+          </div>
         </div>
       </section>
 
@@ -151,10 +163,12 @@
       <section aria-labelledby="featured-heading">
         <h2 class="section-title" id="featured-heading">Featured Projects</h2>
 
+        <p class="section-subtitle">A small selection of the projects people can download and use today.</p>
         <div class="featured-grid">
 
           <!-- Access Overlay -->
           <div class="card" data-href="apps/access-overlay.html">
+            <div class="project-preview preview-overlay" aria-hidden="true"><span>AA</span><div></div><div></div><div></div></div>
             <div class="card-header">
               <div class="card-title-group">
                 <h3 class="card-title"><a href="apps/access-overlay.html">Access Overlay</a></h3>
@@ -169,10 +183,12 @@
               <a href="https://github.com/demon-of-fire/access-overlay/releases/latest/download/AccessOverlaySetup.exe" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
               <a href="https://github.com/demon-of-fire/access-overlay" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
+            <p class="download-note"><span aria-hidden="true">⌄</span> Direct download from the project's GitHub release</p>
           </div>
 
           <!-- Access Recorder -->
           <div class="card" data-href="apps/access-recorder.html">
+            <div class="project-preview preview-recorder" aria-hidden="true"><span>REC</span><div class="preview-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
             <div class="card-header">
               <div class="card-title-group">
                 <h3 class="card-title"><a href="apps/access-recorder.html">Access Recorder</a></h3>
@@ -187,10 +203,12 @@
               <a href="https://github.com/demon-of-fire/access-recorder/releases/latest/download/Access.Recorder.Setup.exe" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
               <a href="https://github.com/demon-of-fire/access-recorder" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
+            <p class="download-note"><span aria-hidden="true">⌄</span> Direct download from the project's GitHub release</p>
           </div>
 
           <!-- Nova Voice Assistant -->
           <div class="card" data-href="apps/voice-assistant.html">
+            <div class="project-preview preview-nova" aria-hidden="true"><span></span><i></i><b>NOVA</b></div>
             <div class="card-header">
               <div class="card-title-group">
                 <h3 class="card-title"><a href="apps/voice-assistant.html">Nova Voice Assistant</a></h3>
@@ -205,60 +223,11 @@
               <a href="https://github.com/demon-of-fire/nova-voice-assistant/releases/latest/download/Nova.exe" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
               <a href="https://github.com/demon-of-fire/nova-voice-assistant" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
-          </div>
-
-          <!-- FC 26 Accessibility Mod -->
-          <div class="card" data-href="mods/fc26.html">
-            <div class="card-header">
-              <div class="card-title-group">
-                <h3 class="card-title"><a href="mods/fc26.html">FC 26 Accessibility Mod</a></h3>
-                <span class="card-platform">Vision AI · Python · EasyOCR</span>
-              </div>
-            </div>
-            <p class="card-description">
-              On-device Vision AI screen reader for EA Sports FC 26. Uses Florence-2 + EasyOCR for fast, real-time match state summaries and spoken menu navigation.
-            </p>
-            <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/fc26-accessibility-mod/releases/latest/download/FC26_Accessibility_Mod.exe" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="https://github.com/demon-of-fire/fc26-accessibility-mod" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
-            </div>
-          </div>
-
-          <!-- Among Us Accessibility Mod -->
-          <div class="card" data-href="mods/among-us.html">
-            <div class="card-header">
-              <div class="card-title-group">
-                <h3 class="card-title"><a href="mods/among-us.html">Among Us Accessibility Mod</a></h3>
-                <span class="card-platform">Game Mod · BepInEx · C#</span>
-              </div>
-            </div>
-            <p class="card-description">
-              Makes Among Us genuinely playable by ear — spatial audio cues, sabotage navigation, spoken task states, and NVDA integration while keeping gameplay authentic and fair.
-            </p>
-            <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/among-us-accessibility-mod/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="https://github.com/demon-of-fire/among-us-accessibility-mod" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
-            </div>
-          </div>
-
-          <!-- Accessible Studio -->
-          <div class="card" data-href="apps/video-editor.html">
-            <div class="card-header">
-              <div class="card-title-group">
-                <h3 class="card-title"><a href="apps/video-editor.html">Accessible Studio</a></h3>
-                <span class="card-platform">Creative Suite · Windows</span>
-              </div>
-            </div>
-            <p class="card-description">
-              Creative video, photo, and media conversion suite engineered from the ground up with keyboard-driven workflows and screen-reader accessibility.
-            </p>
-            <div class="card-actions">
-              <a href="https://github.com/demon-of-fire/accessable-studio/releases/latest" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Download</a>
-              <a href="https://github.com/demon-of-fire/accessable-studio" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Source Code</a>
-            </div>
+            <p class="download-note"><span aria-hidden="true">⌄</span> Direct download from the project's GitHub release</p>
           </div>
 
         </div>
+        <p class="section-action"><a href="apps.html">Browse all accessible apps <span aria-hidden="true">→</span></a> <span aria-hidden="true">·</span> <a href="game-mods.html">Browse all game mods <span aria-hidden="true">→</span></a></p>
       </section>
 
       <!-- About Me Section -->
@@ -268,6 +237,15 @@
           <p>
             I build software with a mission: <strong>technology and gaming should be universally accessible</strong>. Whether developing custom Windows tools, audio-driven game modifications, or AI productivity utilities, my focus is delivering rich, intuitive experiences where screen-reader compatibility and keyboard ergonomics are first-class citizens.
           </p>
+        </div>
+      </section>
+
+      <section class="trust-section" aria-labelledby="trust-heading">
+        <h2 class="section-title" id="trust-heading">Built openly, with the community</h2>
+        <div class="trust-grid">
+          <div><strong>Open source</strong><p>Project code, release notes, and issue tracking are available on GitHub.</p></div>
+          <div><strong>Accessibility-led</strong><p>Screen-reader support and keyboard use are part of every project’s design process.</p></div>
+          <div><strong>Community tested</strong><p>Feedback from accessibility communities helps guide improvements and new features.</p></div>
         </div>
       </section>
 
@@ -328,11 +306,12 @@
       <section aria-labelledby="releases-heading">
         <h2 class="section-title" id="releases-heading">Latest Releases</h2>
         <p class="section-subtitle">
-          The newest version of every project, fetched live from GitHub.
+          The four most recent project releases, fetched from GitHub.
         </p>
         <div id="release-list" class="release-grid">
           <p class="changelog-loading">Loading latest releases…</p>
         </div>
+        <p class="section-action"><a href="changelog.html">View every release and changelog <span aria-hidden="true">→</span></a></p>
       </section>
 
     </div>
