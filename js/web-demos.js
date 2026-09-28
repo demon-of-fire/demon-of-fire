@@ -40,8 +40,8 @@
   $('speed-1x').onclick = () => {
     const speeds = [0.5, 1, 1.5, 2];
     const idx = speeds.findIndex(s => s === 1) || 0;
-    $('media-player'.playbackRate = speeds[(idx + 1) % speeds.length];
-    $('speed-1x').textContent = $('media-player'.playbackRate === 0.5 ? '0.5x' : $('media-player'.playbackRate === 1.5 ? '1.5x' : '2x');
+    $('media-player').playbackRate = speeds[(idx + 1) % speeds.length];
+    $('speed-1x').textContent = $('media-player').playbackRate === 0.5 ? '0.5x' : $('media-player').playbackRate === 1.5 ? '1.5x' : '2x';
   };
 
   // Recorder
