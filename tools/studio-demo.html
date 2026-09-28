@@ -1,20 +1,66 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Accessible Studio Demo – Demon of Fire"><title>Studio Demo – Demon of Fire</title><link rel="stylesheet" href="../../css/styles.css"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"><meta property="og:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="author" content="Demon of Fire" /><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><meta property="og:site_name" content="Demon of Fire" /><meta property="og:locale" content="en_GB" /><meta property="og:url" content="https://demon-of-fire.github.io/demon-of-fire/tools/studio-demo.html" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Studio Demo – Demon of Fire" /><meta name="twitter:description" content="Preview images and adjust brightness/contrast in the browser" /><meta name="twitter:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="twitter:image:alt" content="Demon of Fire — accessible Windows apps and game mods" /></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Accessible Studio – Demon of Fire"><title>Studio</title><link rel="stylesheet" href="../css/styles.css"><link rel="icon" type="image/svg+xml" href="../favicon.svg"><meta property="og:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="author" content="Demon of Fire" /><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><meta property="og:site_name" content="Demon of Fire" /><meta property="og:locale" content="en_GB" /><meta property="og:url" content="https://demon-of-fire.github.io/demon-of-fire/tools/studio-demo.html" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Studio" /><meta name="twitter:description" content="Preview images and adjust brightness/contrast in the browser" /><meta name="twitter:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="twitter:image:alt" content="Demon of Fire — accessible Windows apps and game mods" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
 <body><a class="skip-link" href="#main-content">Skip to main content</a>
-<nav class="site-nav" aria-label="Main navigation"><div class="container"><a class="nav-brand" href="../../index.html">Demon of Fire</a><ul class="nav-links" role="list"><li><a href="../../index.html">Home</a></li><li><a href="../../apps/accessible-studio.html">Open Full Accessible Studio App</a></li><li><a href="index.html">Back to Web Demos</a></li></ul></div></nav>
-<main id="main-content"><div class="container"><header class="project-hero"><p class="label">Accessible Studio</p><h1>Studio Demo</h1><p>Preview an image and adjust brightness/contrast. Basic image editing in the browser.</p></header>
-<section aria-labelledby="studio-demo-heading" class="demo-section">
-<h2 id="studio-demo-heading">Try Studio</h2>
-<p>Select an image below and adjust the sliders.</p>
-<div class="studio-wrapper">
-<label for="studio-image-expr">Image file</label>
-<input id="studio-image-expr" type="file" accept="image/*">
-<label for="studio-brightness-expr">Brightness</label>
-<input id="studio-brightness-expr" type="range" min="50" max="150" value="100">
-<label for="studio-contrast-expr">Contrast</label>
-<input id="studio-contrast-expr" type="range" min="50" max="150" value="100">
-<img id="studio-preview-expr" class="studio-preview" alt="Your selected image preview" hidden>
+<nav class="site-nav" aria-label="Main navigation"><div class="container"><a class="nav-brand" href="../index.html">Demon of Fire</a><ul class="nav-links" role="list"><li><a href="../index.html">Home</a></li><li><a href="../../apps/accessible-studio.html">Open Full Studio App</a></li><li><a href="index.html">Back to Web Demos</a></li></ul></div></nav>
+<main id="main-content"><div class="container"><header class="project-hero"><p class="label">Accessible Studio</p><h1>Studio</h1><p>Preview images and make basic adjustments. Free, open source, no install required.</p></header>
+<section aria-labelledby="studio-app-heading" class="studio-app">
+<h2 id="studio-app-heading">Studio – Image Preview</h2>
+<div class="studio-wrapper" role="region" aria-label="Image editing area">
+  <label for="studio-file">Image</label>
+  <input type="file" id="studio-file" accept="image/*">
+  <img id="studio-preview" class="studio-preview" alt="Preview image" style="max-width:100%; border:1px solid #ddd; margin:1rem 0; display:none;">
+  
+  <div class="studio-controls">
+    <div class="control-group">
+      <label for="studio-brightness">Brightness</label>
+      <input type="range" id="studio-brightness" min="50" max="150" value="100">
+      <span id="studio-brightness-val">100%</span>
+    </div>
+    <div class="control-group">
+      <label for="studio-contrast">Contrast</label>
+      <input type="range" id="studio-contrast" min="50" max="150" value="100">
+      <span id="studio-contrast-val">100%</span>
+    </div>
+  </div>
 </div>
 </section>
-<p class="section-action"><a href="../../apps/accessible-studio.html" class="btn btn-ghost">Open Full Accessible Studio App</a> <span aria-hidden="true">→</span></p></div></main>
-<script>(() => { const $ = id => document.getElementById(id); $('studio-image-expr').onchange = e => { const f = e.target.files[0]; if(f){ const i = $('studio-preview-expr'); i.src = URL.createObjectURL(f); i.hidden = false; } }; $('studio-brightness-expr').oninput = e => { const b = $('studio-brightness-expr').value; $('studio-preview-expr').style.filter = 'brightness('+b+'%)'; }; $('studio-contrast-expr').oninput = e => { const c = $('studio-contrast-expr').value; $('studio-preview-expr').style.filter = 'brightness(100%) contrast('+c+'%)'; }; })();</script></body></html>
+<p class="section-action"><a href="../../apps/accessible-studio.html" class="btn btn-block">Download Full Studio App →</a></p>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const fileInput = $('#studio-file');
+  const preview = $('#studio-preview');
+  const brightness = $('#studio-brightness');
+  const contrast = $('#studio-contrast');
+  const brightnessVal = $('#studio-brightness-val');
+  const contrastVal = $('#studio-contrast-val');
+  
+  fileInput.onchange = e => {
+    const f = e.target.files[0];
+    if(f) {
+      const url = URL.createObjectURL(f);
+      preview.src = url;
+      preview.style.display = 'block';
+    }
+  };
+  
+  brightness.oninput = e => {
+    const val = e.target.value;
+    brightnessVal.textContent = val + '%';
+    preview.style.filter = 'brightness('+val+'%)';
+  };
+  
+  contrast.oninput = e => {
+    const val = e.target.value;
+    contrastVal.textContent = val + '%';
+    preview.style.filter = 'brightness(100%) contrast('+val+'%)';
+  };
+})();
+</script>
+<style>
+.studio-wrapper { max-width: 600px; margin: 2rem auto; text-align: center; }
+.studio-preview { background: #fff; min-height: 200px; }
+.studio-controls { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; max-width: 300px; margin-left: auto; margin-right: auto; }
+.control-group { display: flex; align-items: center; justify-content: space-between; }
+.control-group label { min-width: 60px; font-size: 0.8rem; }
+</style></html>
