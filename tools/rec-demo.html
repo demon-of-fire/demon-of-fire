@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Accessible Recorder Demo – Demon of Fire"><title>Recorder Demo – Demon of Fire</title><link rel="stylesheet" href="../../css/styles.css"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"><meta property="og:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="author" content="Demon of Fire" /><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><meta property="og:site_name" content="Demon of Fire" /><meta property="og:locale" content="en_GB" /><meta property="og:url" content="https://demon-of-fire.github.io/demon-of-fire/tools/rec-demo.html" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Recorder Demo – Demon of Fire" /><meta name="twitter:description" content="Record microphone clips locally in the browser" /><meta name="twitter:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="twitter:image:alt" content="Demon of Fire — accessible Windows apps and game mods" /></head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="site-nav" aria-label="Main navigation"><div class="container"><a class="nav-brand" href="../../index.html">Demon of Fire</a><ul class="nav-links" role="list"><li><a href="../../index.html">Home</a></li><li><a href="../../apps/access-recorder.html">Open Full Recorder App</a></li><li><a href="index.html">Back to Web Demos</a></li></ul></div></nav>
+<main id="main-content"><div class="container"><header class="project-hero"><p class="label">Access Recorder</p><h1>Recorder Demo</h1><p>Record a short microphone clip locally. Your browser will ask before granting microphone access.</p></header>
+<section aria-labelledby="rec-demo-heading" class="demo-section">
+<h2 id="rec-demo-heading">Try the Recorder</h2>
+<p>Click below to start recording your microphone. Click stop to play back.</p>
+<div class="rec-wrapper">
+<button class="btn btn-primary" id="rec-start-expr">Start recording</button>
+<button class="btn btn-ghost" id="rec-stop-expr" disabled>Stop</button>
+<p id="rec-status-expr" aria-live="polite">Ready to record.</p>
+</div>
+<audio id="recording-expr" controls class="demo-media"></audio>
+<p class="tiny-note">Click stop to play back your recording</p>
+</section>
+<p class="section-action"><a href="../../apps/access-recorder.html" class="btn btn-ghost">Open Full Access Recorder App</a> <span aria-hidden="true">→</span></p></div></main>
+<script>(() => { const $ = id => document.getElementById(id); let recorder, chunks = []; $('rec-start-expr').onclick = async () => { try { const s = await navigator.mediaDevices.getUserMedia({audio:true}); recorder = new MediaRecorder(s); chunks = []; recorder.ondataavailable = e => chunks.push(e.data); recorder.onstop = () => { $('recording-expr').src = URL.createObjectURL(new Blob(chunks,{type:recorder.mimeType})); s.getTracks().forEach(t => t.stop()); }; recorder.start(); $('rec-status-expr').textContent='Recording…'; $('rec-start-expr').disabled=true; $('rec-stop-expr').disabled=false; } catch(e){ $('rec-status-expr').textContent='Microphone permission was not granted.'; } }; $('rec-stop-expr').onclick = () => { recorder.stop(); $('rec-status-expr').textContent='Recording ready to play.'; $('rec-start-expr').disabled=false; $('rec-stop-expr').disabled=true; }; })();</script></body></html>

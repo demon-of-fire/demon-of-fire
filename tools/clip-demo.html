@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Clipboard History Demo – Demon of Fire"><title>Clipboard History Demo – Demon of Fire</title><link rel="stylesheet" href="../../css/styles.css"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"><meta property="og:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="author" content="Demon of Fire" /><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><meta property="og:site_name" content="Demon of Fire" /><meta property="og:locale" content="en_GB" /><meta property="og:url" content="https://demon-of-fire.github.io/demon-of-fire/tools/clip-demo.html" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Clipboard History Demo – Demon of Fire" /><meta name="twitter:description" content="Save snippets in browser localStorage, persist across sessions" /><meta name="twitter:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="twitter:image:alt" content="Demon of Fire — accessible Windows apps and game mods" /></head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="site-nav" aria-label="Main navigation"><div class="container"><a class="nav-brand" href="../../index.html">Demon of Fire</a><ul class="nav-links" role="list"><li><a href="../../index.html">Home</a></li><li><a href="../../apps/clipboard-history.html">Open Full Clipboard History App</a></li><li><a href="index.html">Back to Web Demos</a></li></ul></div></nav>
+<main id="main-content"><div class="container"><header class="project-hero"><p class="label">Clipboard History</p><h1>Clipboard History Demo</h1><p>Save short snippets in this browser. Data stays local and encrypted.</p></header>
+<section aria-labelledby="clip-demo-heading" class="demo-section">
+<h2 id="clip-demo-heading">Try Clipboard History</h2>
+<p>Enter a snippet below and it will be saved to your browser.</p>
+<div class="clip-wrapper">
+<label for="clip-input-expr">New snippet</label>
+<textarea id="clip-input-expr" rows="3" aria-label="Enter snippet text"></textarea>
+<button class="btn btn-primary" id="clip-save-expr">Save snippet</button>
+<button class="btn btn-ghost" id="clip-clear-expr">Clear all</button>
+</div>
+<ul id="clip-list-expr" class="demo-list" aria-live="polite"></ul>
+<p class="tiny-note">Saved to browser localStorage, persists across sessions</p>
+</section>
+<p class="section-action"><a href="../../apps/clipboard-history.html" class="btn btn-ghost">Open Full Clipboard History App</a> <span aria-hidden="true">→</span></p></div></main>
+<script>(() => { const $ = id => document.getElementById(id); const list = $('clip-list-expr'); let clips = JSON.parse(localStorage.getItem('dof-clip-expr')||'[]'); const draw = () => { list.innerHTML = clips.map(x => '<li>' + x.replace(/[<>&]/g,'') + '</li>').join(''); }; draw(); $('clip-save-expr').onclick = () => { const v = $('clip-input-expr').value.trim(); if(v){ clips.unshift(v); localStorage.setItem('dof-clip-expr',JSON.stringify(clips.slice(0,8))); $('clip-input-expr').value=''; draw(); } }; $('clip-clear-expr').onclick = () => { localStorage.removeItem('dof-clip-expr'); clips.splice(0,clips.length); draw(); }; $('clip-input-expr').onkeypress = e => { if (e.key === 'Enter') { $('clip-save-expr').onclick(); } }; })();</script></body></html>

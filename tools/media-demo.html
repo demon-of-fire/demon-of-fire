@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Accessible Media Player Demo – Demon of Fire"><title>Media Player Demo – Demon of Fire</title><link rel="stylesheet" href="../../css/styles.css"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"><meta property="og:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="author" content="Demon of Fire" /><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><meta property="og:site_name" content="Demon of Fire" /><meta property="og:locale" content="en_GB" /><meta property="og:url" content="https://demon-of-fire.github.io/demon-of-fire/tools/media-demo.html" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Media Player Demo – Demon of Fire" /><meta name="twitter:description" content="Play audio or video with accessible controls" /><meta name="twitter:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="twitter:image:alt" content="Demon of Fire — accessible Windows apps and game mods" /></head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="site-nav" aria-label="Main navigation"><div class="container"><a class="nav-brand" href="../../index.html">Demon of Fire</a><ul class="nav-links" role="list"><li><a href="../../index.html">Home</a></li><li><a href="../../apps/media-player.html">Open Full Media Player App</a></li><li><a href="index.html">Back to Web Demos</a></li></ul></div></nav>
+<main id="main-content"><div class="container"><header class="project-hero"><p class="label">Accessible Media Player</p><h1>Media Player Demo</h1><p>Play audio or video with accessible controls. Adjust volume and playback speed.</p></header>
+<section aria-labelledby="media-demo-heading" class="demo-section">
+<h2 id="media-demo-heading">Try the Media Player</h2>
+<p>Select an audio or video file to play.</p>
+<div class="media-wrapper">
+<label for="media-file-expr">Media file</label>
+<input id="media-file-expr" type="file" accept="audio/*,video/*">
+<audio id="media-player-expr" controls class="demo-media"></audio>
+</div>
+<div class="player-controls">
+<button class="btn btn-ghost" id="volume-up-expr">🔊</button>
+<button class="btn btn-ghost" id="volume-down-expr">🔉</button>
+<button class="btn btn-ghost" id="speed-1x-expr">1x</button>
+</div>
+</section>
+<p class="section-action"><a href="../../apps/media-player.html" class="btn btn-ghost">Open Full Media Player App</a> <span aria-hidden="true">→</span></p></div></main>
+<script>(() => { const $ = id => document.getElementById(id); const media = $('media-player-expr'); $('media-file-expr').onchange = e => { const f = e.target.files[0]; if(f){ media.src = URL.createObjectURL(f); media.play().catch(()=>{}); } }; $('volume-up-expr').onclick = () => { media.volume = Math.min(media.volume + 0.1, 1); }; $('volume-down-expr').onclick = () => { media.volume = Math.max(media.volume - 0.1, 0); }; const speeds = [0.5, 1, 1.5, 2]; let si = speeds.findIndex(s => s === 1) || 0; $('speed-1x-expr').onclick = () => { si = (si + 1) % speeds.length; media.playbackRate = speeds[si]; $('speed-1x-expr').textContent = speeds[si] + 'x'; }; })();</script></body></html>

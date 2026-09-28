@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Accessible Studio Demo – Demon of Fire"><title>Studio Demo – Demon of Fire</title><link rel="stylesheet" href="../../css/styles.css"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"><meta property="og:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="author" content="Demon of Fire" /><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><meta property="og:site_name" content="Demon of Fire" /><meta property="og:locale" content="en_GB" /><meta property="og:url" content="https://demon-of-fire.github.io/demon-of-fire/tools/studio-demo.html" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Studio Demo – Demon of Fire" /><meta name="twitter:description" content="Preview images and adjust brightness/contrast in the browser" /><meta name="twitter:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="twitter:image:alt" content="Demon of Fire — accessible Windows apps and game mods" /></head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="site-nav" aria-label="Main navigation"><div class="container"><a class="nav-brand" href="../../index.html">Demon of Fire</a><ul class="nav-links" role="list"><li><a href="../../index.html">Home</a></li><li><a href="../../apps/accessible-studio.html">Open Full Accessible Studio App</a></li><li><a href="index.html">Back to Web Demos</a></li></ul></div></nav>
+<main id="main-content"><div class="container"><header class="project-hero"><p class="label">Accessible Studio</p><h1>Studio Demo</h1><p>Preview an image and adjust brightness/contrast. Basic image editing in the browser.</p></header>
+<section aria-labelledby="studio-demo-heading" class="demo-section">
+<h2 id="studio-demo-heading">Try Studio</h2>
+<p>Select an image below and adjust the sliders.</p>
+<div class="studio-wrapper">
+<label for="studio-image-expr">Image file</label>
+<input id="studio-image-expr" type="file" accept="image/*">
+<label for="studio-brightness-expr">Brightness</label>
+<input id="studio-brightness-expr" type="range" min="50" max="150" value="100">
+<label for="studio-contrast-expr">Contrast</label>
+<input id="studio-contrast-expr" type="range" min="50" max="150" value="100">
+<img id="studio-preview-expr" class="studio-preview" alt="Your selected image preview" hidden>
+</div>
+</section>
+<p class="section-action"><a href="../../apps/accessible-studio.html" class="btn btn-ghost">Open Full Accessible Studio App</a> <span aria-hidden="true">→</span></p></div></main>
+<script>(() => { const $ = id => document.getElementById(id); $('studio-image-expr').onchange = e => { const f = e.target.files[0]; if(f){ const i = $('studio-preview-expr'); i.src = URL.createObjectURL(f); i.hidden = false; } }; $('studio-brightness-expr').oninput = e => { const b = $('studio-brightness-expr').value; $('studio-preview-expr').style.filter = 'brightness('+b+'%)'; }; $('studio-contrast-expr').oninput = e => { const c = $('studio-contrast-expr').value; $('studio-preview-expr').style.filter = 'brightness(100%) contrast('+c+'%)'; }; })();</script></body></html>

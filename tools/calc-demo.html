@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Accessible Calculator – Demon of Fire"><title>Accessible Calculator Demo – Demon of Fire</title><link rel="stylesheet" href="../../css/styles.css"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"><meta property="og:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="author" content="Demon of Fire" /><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><meta property="og:site_name" content="Demon of Fire" /><meta property="og:locale" content="en_GB" /><meta property="og:url" content="https://demon-of-fire.github.io/demon-of-fire/tools/calc-demo.html" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Accessible Calculator Demo – Demon of Fire" /><meta name="twitter:description" content="Keyboard-first calculation with screen-reader friendly result" /><meta name="twitter:image" content="https://demon-of-fire.github.io/demon-of-fire/images/og.png" /><meta name="twitter:image:alt" content="Demon of Fire — accessible Windows apps and game mods" /></head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="site-nav" aria-label="Main navigation"><div class="container"><a class="nav-brand" href="../../index.html">Demon of Fire</a><ul class="nav-links" role="list"><li><a href="../../index.html">Home</a></li><li><a href="../../apps/calculator.html">Open Full Calculator App</a></li><li><a href="index.html">Back to Web Demos</a></li></ul></div></nav>
+<main id="main-content"><div class="container"><header class="project-hero"><p class="label">Accessible Calculator</p><h1>Calculator Demo</h1><p>Keyboard-first calculation with a simple, screen-reader friendly result.</p></header>
+<section aria-labelledby="calc-demo-heading" class="demo-section">
+<h2 id="calc-demo-heading">Try the Calculator</h2>
+<p>Enter a calculation below and hear the result spoken.</p>
+<div class="calc-wrapper">
+<label for="calc-input-expr">Expression</label>
+<input id="calc-input-expr" inputmode="decimal" value="12 * (4 + 3)" aria-describedby="calc-result-expr">
+<button class="btn btn-primary" id="calc-run-expr">Calculate</button>
+</div>
+<output id="calc-result-expr" class="demo-output" aria-live="polite">Result: 84</output>
+<p class="tiny-note">Supports + - * / % and natural language like "what is 15 percent of 200"</p>
+</section>
+<p class="section-action"><a href="../../apps/calculator.html" class="btn btn-ghost">Open Full Accessible Calculator App</a> <span aria-hidden="true">→</span></p></div></main>
+<script>(() => { const $ = id => document.getElementById(id); $('calc-run-expr').onclick = () => { const v = $('calc-input-expr').value; const result = /^[0-9+*/().%\s-]+$/.test(v) ? 'Result: ' + Function('return ('+v+')')() : 'Use numbers and basic operators only.'; $('calc-result-expr').textContent = result; }; $('calc-input-expr').onkeypress = e => { if (e.key === 'Enter') { $('calc-run-expr').onclick(); } }); })();</script></body></html>
