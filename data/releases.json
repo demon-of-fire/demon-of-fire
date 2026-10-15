@@ -1,10 +1,16 @@
 {
-  "generatedAt": "2026-10-15T17:11:42Z",
+  "generatedAt": "2026-10-15T21:32:30Z",
   "repos": [
     {
       "name": "Access Overlay",
       "repo": "access-overlay",
       "releases": [
+        {
+          "tag_name": "v1.1.0",
+          "published_at": "2026-10-15T18:02:20Z",
+          "html_url": "https://github.com/demon-of-fire/access-overlay/releases/tag/v1.1.0",
+          "body": "## What's new\n\n- **Auto-follow**: a live content watcher refreshes the reader when the window you're in changes, so you no longer close and reopen it.\n- **Inline editing**: type directly into a selected field from the reader; keystrokes flow straight to the real control.\n- **Value stepping**: Left/Right arrows change combo box, spinner, and slider values.\n- **Deeper capture**: resolves embedded browser content, warms up lazy accessibility trees, and falls back to on-screen OCR for custom-drawn interfaces so Enter still activates controls.\n- **Screen-reader conventions**: selection changes are read automatically, Space presses the focused control, and typing replaces a field's value by default.\n\n## Install\n\nDownload \\AccessOverlaySetup.exe\\ below and run it. Installs per-user to \\%LOCALAPPDATA%\\\\Programs\\\\Access Overlay\\."
+        },
         {
           "tag_name": "v1.0.0",
           "published_at": "2026-08-20T16:18:19Z",
