@@ -1,10 +1,16 @@
 {
-  "generatedAt": "2026-11-08T13:43:21Z",
+  "generatedAt": "2026-11-08T22:17:03Z",
   "repos": [
     {
       "name": "Access Overlay",
       "repo": "access-overlay",
       "releases": [
+        {
+          "tag_name": "v1.2.0",
+          "published_at": "2026-11-08T15:42:30Z",
+          "html_url": "https://github.com/demon-of-fire/access-overlay/releases/tag/v1.2.0",
+          "body": "## Access Overlay v1.2.0\n\nDownload and run **AccessOverlaySetup.exe**.\n\n### Added\n- Reader keys: H for headings, B or L for controls, Enter or Space to press or edit, F2 to edit, left and right to change a combo box or slider, Ctrl+F to find, and F5 to refresh.\n- Type into fields from the reader. Text goes to the real app or page.\n- Apps that expose nothing to accessibility tools are now read from the screen, with clickable lines.\n\n### Changed\n- Speech now comes from NVDA or another running screen reader, so one is required for speech.\n\n### Removed\n- Game Scan and the built-in speech output.\n"
+        },
         {
           "tag_name": "v1.1.0",
           "published_at": "2026-10-15T18:02:20Z",
@@ -36,6 +42,12 @@
       "repo": "accessable-studio",
       "releases": [
         {
+          "tag_name": "v3.5.0",
+          "published_at": "2026-11-08T15:29:22Z",
+          "html_url": "https://github.com/demon-of-fire/accessable-studio/releases/tag/v3.5.0",
+          "body": "## Accessable Studios v3.5.0\n\nDownload and run **Accessable-Studios-Setup-3.5.0.exe**. If you still have an older version installed, uninstall it first. Settings and projects are copied over on first launch.\n\n### Changed\n- The app is now named Accessable Studios.\n- YouTube and Twitch account linking now returns through a local sign-in server on `127.0.0.1:47823`. Redirect URLs registered with those services need updating.\n\n### Fixed\n- Connecting an account without a Client ID now explains the setup instead of opening a broken page.\n- Rename project and Add language track now work, using a screen-reader-friendly dialog.\n\n### Removed\n- Music Studio and Podcast Studio modes.\n\n### Known issues\n- Twitch account linking still needs a client secret, which the app cannot store yet.\n\n\n**Full Changelog**: https://github.com/demon-of-fire/accessable-studio/compare/v3.4.0...v3.5.0\n\n\n**Full Changelog**: https://github.com/demon-of-fire/accessable-studio/compare/v3.4.0...v3.5.0"
+        },
+        {
           "tag_name": "v3.4.0",
           "published_at": "2026-08-18T00:15:03Z",
           "html_url": "https://github.com/demon-of-fire/accessable-studio/releases/tag/v3.4.0",
@@ -47,6 +59,12 @@
       "name": "Accessible Media Player",
       "repo": "accessible-media-player",
       "releases": [
+        {
+          "tag_name": "v2.4.0",
+          "published_at": "2026-11-08T15:25:43Z",
+          "html_url": "https://github.com/demon-of-fire/accessible-media-player/releases/tag/v2.4.0",
+          "body": "Download **Accessible-Media-Player-Setup-2.4.0.exe** below, run it, and follow the prompts.\n\n## New\n- Plays links from sites such as YouTube, using yt-dlp. The player asks before downloading it the first time.\n- Plays AVI, WMV, WMA and similar formats by converting them with FFmpeg. The player asks before downloading it the first time.\n- Virtual Surround, 8D, Wide Stereo, Concert Hall and Headphone Comfort sound modes (Ctrl+D).\n- Speech boost, skip silence, sound cues, and lowering the media during announcements.\n- Remembers your place in every file, and the sleep timer fades out.\n- MKV and WebM chapter navigation.\n- Update checks that always ask before installing.\n\n## Changed\n- Every player shortcut now uses Ctrl so screen readers pass it through. Press F1 for the full list.\n- The queue, bookmarks and more work fully from the keyboard.\n- High Contrast and Large Text now apply across the app, and your settings are remembered.\n- Many rarely useful or duplicate features were removed.\n\n## Security\nThe player window is now fully sandboxed, with no direct access to your computer.\n\n## Fixed\nMany bugs, including broken drag and drop, fullscreen that could not be exited, files with # or % in their names failing to play, and Space not ticking checkboxes.\n\n## Good to know\nThe installer is not code-signed, so Windows SmartScreen may warn you. Choose \"More info\", then \"Run anyway\".\n"
+        },
         {
           "tag_name": "v2.1.0",
           "published_at": "2026-08-18T00:16:41Z",
